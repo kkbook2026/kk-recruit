@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- KK-RECRUITMENT v1.1 build 2026-10-29T11:47:24.650Z | 13 JS + 1 CSS + 1 vendor | 19079 dòng nguồn | Bản quyền Nguyễn Duy Điển (KK-2026) -->
+<!-- KK-RECRUITMENT v1.1 build 2026-10-29T11:58:42.404Z | 13 JS + 1 CSS + 1 vendor | 19095 dòng nguồn | Bản quyền Nguyễn Duy Điển (KK-2026) -->
 <html lang="vi" data-theme="light">
 <head>
 <meta charset="UTF-8">
@@ -4088,8 +4088,23 @@ window.KKR = window.KKR || {};
     },
     parse() {
       const hash = location.hash || '#/';
-      const [path, qs] = hash.slice(1).split('?');
-      return { path: path || '/', query: U.parseQS(qs) };
+      // Neo trong trang (#/#section hoặc #/jobs#x): tách phần sau dấu # thứ hai làm anchor
+      const body = hash.slice(1);
+      const ai = body.indexOf('#');
+      const main = ai >= 0 ? body.slice(0, ai) : body;
+      const anchor = ai >= 0 ? body.slice(ai + 1) : '';
+      const [path, qs] = main.split('?');
+      return { path: path || '/', query: U.parseQS(qs), anchor };
+    },
+    scrollToAnchor(anchor) {
+      if (!anchor) return;
+      let tries = 0;
+      const tick = () => {
+        const el = document.getElementById(anchor);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        else if (tries++ < 20) setTimeout(tick, 100);
+      };
+      tick();
     },
     go(hash) {
       if (location.hash === hash) this.refresh();
@@ -4099,7 +4114,8 @@ window.KKR = window.KKR || {};
       this.dispatch();
     },
     async dispatch() {
-      const { path, query } = this.parse();
+      const { path, query, anchor } = this.parse();
+      if (anchor) setTimeout(() => this.scrollToAnchor(anchor), 50);
       let match = null,
         params = {};
       for (const r of this.routes) {
@@ -18726,7 +18742,7 @@ self.onmessage = (e) => {
       ['BroadcastChannel', !!window.BroadcastChannel],
       ['Secure context', window.isSecureContext]
     ];
-    UI.renderPage(`${UI.pageHead('Health & số liệu lưu trữ', `Phiên bản ${KKR.VERSION} - ${esc(navigator.userAgent.slice(0, 90))}`)}
+    UI.renderPage(`${UI.pageHead('Health & số liệu lưu trữ', `Phiên bản ${KKR.VERSION} - ${KKR.MODE === 'backend' ? 'Chế độ Backend (REST + JWT + PostgreSQL đa tenant)' : 'Dữ liệu lưu cục bộ (IndexedDB) - mã hóa AES-256-GCM - backup 2 nơi'} - ${esc(navigator.userAgent.slice(0, 90))}`)}
       <div class="grid c4 mb">${UI.kpi('IndexedDB (ước lượng)', est ? U.fmtNum(est.usage / 1048576, 1) + ' MB' : '-', est ? 'Quota ' + U.fmtNum(est.quota / 1073741824, 1) + ' GB' : '', 'db')}${UI.kpi('localStorage', U.fmtNum(lsUsed / 1024, 0) + ' KB', 'snapshot backup + cấu hình', 'save', 'accent')}${UI.kpi('Media assets', media.length, U.fmtNum(mediaBytes / 1048576, 1) + ' MB (metadata)', 'video', 'purple')}${UI.kpi('Tổng bản ghi', U.sum(Object.values(st)), Object.keys(st).length + ' stores', 'layers', 'green')}</div>
       <div class="grid c2"><div class="card"><h3>Khả năng trình duyệt</h3><ul class="list-plain">${checks.map(([k, v]) => `<li>${esc(k)}${v ? '<span class="badge green">OK</span>' : '<span class="badge red">Không</span>'}</li>`).join('')}</ul></div>
       <div class="card"><h3>Số bản ghi theo store</h3><div class="health-grid mb">${Object.entries(st)
@@ -18896,7 +18912,7 @@ self.onmessage = (e) => {
     () => `<header class="pub-header"><div class="inner"><a class="brand" href="#/">${KKR.ICONS.logo}<span>KK-RECRUITMENT<small>AI Talent Assessment Platform</small></span></a>
     <nav class="pub-nav"><a href="#/" data-nav="/">${t('home')}</a><a href="#/jobs" data-nav="/jobs">${t('jobs')}</a><a href="#/#modules" class="hide-m">8 mô-đun</a>${KKR.Data.modePill()}${App.langBtn()}${App.themeBtn()}${State.isAuth() ? `<a class="btn primary sm" href="${State.homeRoute()}">${t('dashboard')}</a>` : `<a href="#/login" data-nav="/login">${t('login')}</a><a class="btn primary sm" href="#/register">${t('register')}</a>`}</nav></div></header>
     <main class="pub-main" id="page"></main>
-    <footer class="pub-footer"><b>KK-RECRUITMENT</b> - Nền tảng Tuyển dụng & Khảo thí AI Toàn cầu. Bản quyền ${esc(KKR.COPYRIGHT)}. v${KKR.VERSION} - ${KKR.MODE === 'backend' ? 'Chế độ Backend (REST + JWT + PostgreSQL đa tenant)' : 'Dữ liệu lưu cục bộ (IndexedDB) - mã hóa AES-256-GCM - backup 2 nơi'}.</footer>`;
+    <footer class="pub-footer"><b>KK-RECRUITMENT</b> - Nền tảng Tuyển dụng & Khảo thí AI Toàn cầu. Bản quyền ${esc(KKR.COPYRIGHT)}. v${KKR.VERSION}.</footer>`;
   App.navItems = function () {
     const r = State.role();
     if (r === 'CANDIDATE')
