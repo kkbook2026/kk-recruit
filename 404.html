@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- KK-RECRUITMENT v1.3 build 2026-10-30T04:14:07.022Z | 20 JS + 2 CSS + 1 vendor | 27814 dòng nguồn | Bản quyền Nguyễn Duy Điển (KK-2026) -->
+<!-- KK-RECRUITMENT v1.3 build 2026-10-30T05:35:38.634Z | 21 JS + 2 CSS + 1 vendor | 28305 dòng nguồn | Bản quyền Nguyễn Duy Điển (KK-2026) -->
 <html lang="vi" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'unsafe-inline' blob:; worker-src blob:; style-src 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob:; media-src 'self' blob: mediastream:; connect-src 'self' https: http: wss: ws:; font-src 'self' https://fonts.gstatic.com data:; object-src 'none'; base-uri 'none'; form-action 'none';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'unsafe-inline' blob:; worker-src blob:; style-src 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://www.kk-recruit.net; media-src 'self' blob: mediastream: https://www.kk-recruit.net; connect-src 'self' https: http: wss: ws:; font-src 'self' https://fonts.gstatic.com data:; object-src 'none'; base-uri 'none'; form-action 'none';">
 <meta name="description" content="KK-RECRUITMENT - Nền tảng Tuyển dụng & Khảo thí AI Toàn cầu. Bản quyền Nguyễn Duy Điển (KK-2026).">
 <meta name="author" content="Nguyễn Duy Điển (KK-2026)">
 <meta name="kkr-version" content="1.3.0">
@@ -3294,6 +3294,144 @@ code, kbd, pre, .mono, .code-block { font-family: var(--mono); font-size: .9em; 
 .hero-card .mini-row { gap: 1rem; }
 .hero-card .mini-row b { text-align: right; }
 
+/* =====================================================================
+ * v1.3 DESIGN REFRESH - nhận diện theo logo mới
+ * Mực navy (#0f2a6b) của ô logo, xanh lá chữ K (#16a34a) cho tiến độ/thành công,
+ * đỏ mặt trời (#e5372a) chỉ dùng cho logo và chỉ báo "đang ghi/đang thi".
+ * Phân cấp bo góc: thẻ 14px, điều khiển 10px, chip tròn. Bóng đổ chỉ dành cho lớp nổi.
+ * ===================================================================== */
+:root {
+  --ink: #0f2a6b;
+  --ink2: #1b3a8a;
+  --primary: #1d4ed8;
+  --primary2: #2563eb;
+  --primary-soft: #e3ebff;
+  --primary-text: #1e3a8a;
+  --accent: #16a34a;
+  --accent-soft: #dcfce7;
+  --accent-text: #15803d;
+  --sun: #e5372a;
+  --bg: #f4f6fa;
+  --surface2: #f8fafc;
+  --border: #e3e8f0;
+  --border2: #cfd8e5;
+  --text: #0b1b3f;
+  --text2: #44526b;
+  --text3: #8392aa;
+  --sidebar: #0c2257;
+  --sidebar-text: #c9d4ea;
+  --sidebar-active: rgba(255, 255, 255, 0.1);
+  --shadow: 0 1px 0 rgba(12, 34, 87, 0.04), 0 1px 3px rgba(12, 34, 87, 0.06);
+  --shadow-lg: 0 18px 50px -12px rgba(12, 34, 87, 0.28);
+  --radius: 14px;
+  --radius-sm: 10px;
+  --radius-lg: 20px;
+  --ring: 0 0 0 3px rgba(37, 99, 235, 0.28);
+}
+:root[data-theme='dark'] {
+  --ink: #9db7ff;
+  --accent: #22c55e;
+  --accent-soft: rgba(34, 197, 94, 0.15);
+  --accent-text: #86efac;
+  --sidebar: #081633;
+  --sidebar-active: rgba(255, 255, 255, 0.08);
+  --text: #e8edf7;
+  --shadow: 0 1px 0 rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) { --accent: #22c55e; }
+}
+::selection { background: rgba(37, 99, 235, 0.18); }
+body { background: var(--bg); color: var(--text); letter-spacing: -0.003em; }
+h1, h2, h3 { color: var(--text); }
+a { color: var(--primary); }
+
+/* --- Nút --- */
+.btn { border-radius: var(--radius-sm); padding: 0.58rem 1.05rem; font-weight: 650; transition: background-color .15s, border-color .15s, color .15s, box-shadow .15s, transform .05s; }
+.btn:active { transform: translateY(1px); }
+.btn:focus-visible, .input:focus-visible, a:focus-visible, [tabindex]:focus-visible { outline: none; box-shadow: var(--ring); }
+.btn.primary { background: linear-gradient(180deg, #2563eb, #1d4ed8); border-color: #1a45c4; box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 1px 2px rgba(29,78,216,.35); }
+.btn.primary:hover { background: linear-gradient(180deg, #1f5ae6, #1a45c4); color: #fff; }
+.btn.accent { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.accent:hover { background: #128a3e; border-color: #128a3e; color: #fff; }
+.btn.lg { padding: 0.8rem 1.4rem; font-size: 1rem; border-radius: 12px; }
+.btn.sm { padding: 0.36rem 0.7rem; font-size: 0.82rem; border-radius: 8px; }
+
+/* --- Ô nhập --- */
+.input, textarea.input, select.input { min-height: 44px; border-radius: var(--radius-sm); padding: 0.62rem 0.85rem; font-size: 0.95rem; background: var(--surface); }
+.input:hover { border-color: #b9c5d8; }
+.input:focus { border-color: var(--primary); box-shadow: var(--ring); }
+label, .field > label { font-weight: 600; color: var(--text2); font-size: 0.86rem; }
+
+/* --- Thẻ: viền rõ, bóng rất nhẹ; lớp nổi (hero, modal) mới có bóng sâu --- */
+.card { border-radius: var(--radius); box-shadow: var(--shadow); border-color: var(--border); }
+.card h3 { font-size: 1.08rem; }
+.kpi { border-radius: var(--radius); }
+.kpi-val { font-size: 1.9rem; color: var(--text); }
+.kpi-label { color: var(--text2); font-weight: 600; }
+.hero-card, .modal, #modal .modal-box { box-shadow: var(--shadow-lg); }
+
+/* --- Bảng: tiêu đề chữ thường, cố định khi cuộn, hàng thoáng --- */
+.table { font-size: 0.9rem; }
+.table th { text-transform: none; letter-spacing: 0; font-size: 0.8rem; color: var(--text2); background: var(--surface2); font-weight: 650; position: sticky; top: 0; z-index: 1; }
+.table td { padding: 0.78rem 0.9rem; }
+.table tbody tr:hover td { background: #f1f5fd; }
+:root[data-theme='dark'] .table tbody tr:hover td { background: rgba(255,255,255,.03); }
+.table td .small, .table td small { color: var(--text3); }
+
+/* --- Nhãn nhỏ phía trên tiêu đề: chữ thường, không giãn chữ --- */
+.eyebrow { text-transform: none; letter-spacing: 0; font-size: 0.85rem; font-weight: 650; color: var(--accent-text); background: var(--accent-soft); }
+.section-head h2::after { background: linear-gradient(90deg, var(--accent), var(--primary)); }
+
+/* --- Sidebar cùng màu ô logo, mục đang chọn có vạch xanh lá --- */
+.sidebar { background: linear-gradient(180deg, #0f2a6b 0%, #0b1f50 100%); }
+:root[data-theme='dark'] .sidebar { background: linear-gradient(180deg, #0b1d4a 0%, #060f29 100%); }
+.nav a { border-radius: 10px; position: relative; font-weight: 550; }
+.nav a:hover { background: rgba(255, 255, 255, 0.06); color: #fff; }
+.nav a.active { background: var(--sidebar-active); color: #fff; box-shadow: inset 3px 0 0 #22c55e; }
+.nav a.active svg { color: #4ade80; }
+.nav .group { color: #7f93bf; letter-spacing: 0.04em; font-size: 0.72rem; }
+.sidebar-foot { color: #8ea2c9; }
+
+/* --- Topbar --- */
+.topbar { background: color-mix(in srgb, var(--surface) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+.page-head h1 { letter-spacing: -0.025em; }
+.page-head p { color: var(--text2); }
+
+/* --- Badge / chip --- */
+.badge { border-radius: 999px; font-weight: 650; letter-spacing: 0; }
+
+/* --- Thử nghiệm vai trò --- */
+.lab-banner { display: flex; align-items: center; gap: .7rem; flex-wrap: wrap; padding: .6rem 1.25rem; background: linear-gradient(90deg, #fff7ed, #fef2f2); border-bottom: 1px solid #fed7aa; color: #7c2d12; font-size: .92rem; }
+.lab-banner > svg, .lab-banner > .ico { width: 18px; height: 18px; color: var(--sun); flex: none; }
+.lab-banner > span { flex: 1 1 260px; min-width: 200px; text-align: left; }
+.lab-banner .btn { flex: 0 0 auto; }
+:root[data-theme='dark'] .lab-banner { background: rgba(229, 55, 42, 0.12); border-color: rgba(229, 55, 42, .35); color: #fecaca; }
+.lab-card { border-left: 4px solid var(--accent); margin-bottom: 1rem; }
+.lab-card h3 svg { width: 18px; height: 18px; vertical-align: -3px; color: var(--accent); }
+.lab-btn span { margin-left: .2rem; }
+@media (max-width: 760px) { .lab-btn span { display: none; } }
+
+/* --- Hero công khai: nền sâu hơn, chữ trắng tinh --- */
+.hero h1 { color: var(--text); }
+.module-card .num { font-family: var(--mono); letter-spacing: 0; text-transform: none; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+/* --- Bảng ứng viên / NTD Admin: cột ngành không bẻ 4 dòng, hành động nằm ngang --- */
+.status-badge { font-size: 0.76rem; letter-spacing: 0; }
+#cd-table td:nth-child(2), #tn-table td:nth-child(2) { min-width: 190px; }
+#cd-table td:nth-child(5) { white-space: nowrap; }
+#cd-table td:last-child .row, #cd-table td:last-child, #tn-table td:last-child { white-space: nowrap; }
+#cd-table td:last-child > * { display: inline-flex; vertical-align: middle; margin: 0 .15rem; }
+.kpi-val { font-size: 1.75rem; line-height: 1.12; overflow-wrap: anywhere; }
+.status-strip .ss-item { border-radius: 999px; }
+.eyebrow.small { text-transform: none; letter-spacing: 0; font-size: 0.82rem; }
+.track-card { border-left-color: var(--accent); }
+/* --- Video hướng dẫn --- */
+.guide-sec { background: linear-gradient(180deg, var(--bg), var(--surface)); }
+.guide-video { max-width: 1040px; margin: 0 auto; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--border); background: #0c2257; aspect-ratio: 16 / 9; }
+.guide-video video { width: 100%; height: 100%; display: block; background: #0c2257; }
+
 </style>
 </head>
 <body>
@@ -3361,6 +3499,7 @@ window.KKR = window.KKR || {};
   KKR.APP_NAME = 'KK-RECRUITMENT';
   KKR.COPYRIGHT = 'Nguyễn Duy Điển (KK-2026)';
   KKR.OWNER_EMAIL = 'nguyenduydien75@gmail.com';
+  KKR.GUIDE_BASE = 'https://www.kk-recruit.net'; // video hướng dẫn VI/EN (GitHub Pages)
   KKR.OWNER_NAME = 'Nguyễn Duy Điển';
   // Khóa thiết lập Admin trên site công khai: chỉ SHA-256 của khóa được nhúng; khóa thật lưu trong 00_THONG_TIN_TAI_KHOAN.md
   KKR.SETUP_KEY_HASH = '65c12ff6cec012fc6b15ea7e58188d4060ceb75cad74a113b2126b8460866057';
@@ -4186,6 +4325,7 @@ window.KKR = window.KKR || {};
       this.masterKeyVerified = false;
       this._masterPlain = null;
       sessionStorage.removeItem('kkr_session');
+      sessionStorage.removeItem('kkr_lab_admin');
       clearInterval(this.timer);
     }
   };
@@ -5696,6 +5836,34 @@ window.KKR = window.KKR || {};
       'auth.current_password': 'Mật khẩu hiện tại',
       'auth.current_password_is_incorrect': 'Mật khẩu hiện tại sai',
       'auth.demo_accounts': 'Tài khoản demo',
+      'guide.nav': 'Video hướng dẫn',
+      'guide.title': 'Video hướng dẫn sử dụng',
+      'guide.sub': 'Từ đăng ký theo ngành, làm bài 8 mô-đun, Hội đồng AI chấm điểm đến quản trị - có giọng đọc tiếng Việt.',
+      'guide.note': 'Đổi ngôn ngữ (VI/EN) ở góc trên để xem bản thuyết minh tiếng Anh. Độ phân giải Full HD 1920x1080.',
+      'setup.backend_subtitle': 'Máy chủ Backend chưa có Quản trị viên. Tạo tài khoản Admin chủ sở hữu (chỉ 1 lần).',
+      'setup.backend_mfa_note': 'Sau khi tạo, đăng nhập bằng email + mật khẩu; hệ thống mở ngay hộp thoại bật MFA (quét QR bằng ứng dụng Authenticator).',
+      'setup.backend_done': 'Đã tạo Admin trên máy chủ. Đăng nhập để bật MFA.',
+      'lab.title': 'Thử nghiệm vai trò',
+      'lab.try_roles': 'Thử vai trò',
+      'lab.intro': 'Dùng chính tài khoản Admin để trải nghiệm đầy đủ tính năng của Ứng viên hoặc Nhà tuyển dụng. Tài khoản thử nghiệm được tạo tự động 1 lần, gắn với Admin, không cần đăng xuất hay nhập MFA lại.',
+      'lab.role_candidate': 'Ứng viên',
+      'lab.role_recruiter': 'Nhà tuyển dụng',
+      'lab.role_candidate_desc': 'Lộ trình 8 mô-đun theo ngành, làm bài, AI chấm, Phiếu điểm 360',
+      'lab.role_recruiter_desc': 'Tạo job, AI viết JD, pipeline, Talent Pool, báo cáo',
+      'lab.note': 'Dữ liệu thử nghiệm được gắn nhãn "test" và có thể xóa bất kỳ lúc nào. Mọi lần chuyển vai trò đều ghi vào Audit trail.',
+      'lab.start': 'Bắt đầu thử nghiệm',
+      'lab.preparing': 'Đang chuẩn bị tài khoản thử nghiệm...',
+      'lab.switched': 'Đang dùng vai trò {role} (thử nghiệm)',
+      'lab.admin_only': 'Chỉ Admin dùng được tính năng này',
+      'lab.backend_not_supported': 'Thử nghiệm vai trò chỉ có ở chế độ Standalone; chế độ Backend dùng tài khoản thật theo phân quyền máy chủ.',
+      'lab.banner': 'Chế độ thử nghiệm: bạn đang dùng vai trò {role} bằng tài khoản Admin.',
+      'lab.back_to_admin': 'Quay lại Admin',
+      'lab.to_recruiter': 'Đổi sang Nhà tuyển dụng',
+      'lab.to_candidate': 'Đổi sang Ứng viên',
+      'lab.card_body': 'Kiểm chứng toàn bộ quy trình như Ứng viên hoặc Nhà tuyển dụng ngay trên tài khoản Admin của bạn.',
+      'lab.candidate_suffix': 'Ứng viên thử nghiệm',
+      'lab.recruiter_suffix': 'NTD thử nghiệm',
+      'lab.company_name': 'KK Test Lab (thử nghiệm)',
       'nav.connection_mode': 'Kết nối & Lưu trữ',
       'api.connection_admin_only': 'Cài đặt kết nối chỉ dành cho Quản trị viên.',
       'app.hero_card_title': 'Phiếu điểm 360',
@@ -6910,6 +7078,34 @@ window.KKR = window.KKR || {};
       'auth.current_password': 'Current password',
       'auth.current_password_is_incorrect': 'Current password is incorrect',
       'auth.demo_accounts': 'Demo accounts',
+      'guide.nav': 'Video guide',
+      'guide.title': 'Video guide',
+      'guide.sub': 'From industry sign-up and the 8 modules to AI council grading and administration - narrated in English.',
+      'guide.note': 'Switch the language (VI/EN) at the top to watch the Vietnamese narration. Full HD 1920x1080.',
+      'setup.backend_subtitle': 'The Backend server has no administrator yet. Create the owner Admin account (one time only).',
+      'setup.backend_mfa_note': 'After creating it, sign in with email + password; the MFA setup dialog opens right away (scan the QR with an Authenticator app).',
+      'setup.backend_done': 'Admin created on the server. Sign in to enable MFA.',
+      'lab.title': 'Role testing',
+      'lab.try_roles': 'Try roles',
+      'lab.intro': 'Use your Admin account to experience every Candidate or Recruiter feature. A test account is created automatically once, linked to your Admin, with no sign-out or MFA re-entry.',
+      'lab.role_candidate': 'Candidate',
+      'lab.role_recruiter': 'Recruiter',
+      'lab.role_candidate_desc': '8-module industry track, take tests, AI grading, Scorecard 360',
+      'lab.role_recruiter_desc': 'Create jobs, AI-written JDs, pipeline, Talent Pool, reports',
+      'lab.note': 'Test data is labelled "test" and can be removed at any time. Every role switch is written to the Audit trail.',
+      'lab.start': 'Start testing',
+      'lab.preparing': 'Preparing the test account...',
+      'lab.switched': 'Now using the {role} role (test)',
+      'lab.admin_only': 'Only Admins can use this feature',
+      'lab.backend_not_supported': 'Role testing is available in Standalone mode only; Backend mode uses real accounts under server RBAC.',
+      'lab.banner': 'Test mode: you are using the {role} role with your Admin account.',
+      'lab.back_to_admin': 'Back to Admin',
+      'lab.to_recruiter': 'Switch to Recruiter',
+      'lab.to_candidate': 'Switch to Candidate',
+      'lab.card_body': 'Verify the whole flow as a Candidate or a Recruiter directly from your Admin account.',
+      'lab.candidate_suffix': 'Test candidate',
+      'lab.recruiter_suffix': 'Test recruiter',
+      'lab.company_name': 'KK Test Lab (test)',
       'nav.connection_mode': 'Connection & Storage',
       'api.connection_admin_only': 'Connection settings are for administrators only.',
       'app.hero_card_title': 'Scorecard 360',
@@ -8133,11 +8329,11 @@ window.KKR = window.KKR || {};
       'common.page': 'trang',
       'common.pager_range': 'Hiển thị {from}-{to} / {total}',
       // trạng thái khảo thí
-      'status.not_started': 'CHƯA THI',
-      'status.in_progress': 'ĐANG THI',
-      'status.submitted': 'ĐÃ NỘP - CHỜ CHẤM',
-      'status.graded': 'ĐÃ CHẤM AI',
-      'status.calibration': 'CẦN HIỆU CHUẨN NGƯỜI',
+      'status.not_started': 'Chưa thi',
+      'status.in_progress': 'Đang thi',
+      'status.submitted': 'Đã nộp - chờ chấm',
+      'status.graded': 'Đã chấm AI',
+      'status.calibration': 'Cần hiệu chuẩn người',
       // lộ trình theo ngành
       'track.nav': 'Lộ trình theo ngành',
       'track.title': 'Lộ trình khảo thí theo ngành',
@@ -8352,11 +8548,11 @@ window.KKR = window.KKR || {};
       'common.delete': 'Delete',
       'common.page': 'page',
       'common.pager_range': 'Showing {from}-{to} of {total}',
-      'status.not_started': 'NOT TESTED',
-      'status.in_progress': 'IN PROGRESS',
-      'status.submitted': 'SUBMITTED - AWAITING GRADING',
-      'status.graded': 'AI GRADED',
-      'status.calibration': 'NEEDS HUMAN CALIBRATION',
+      'status.not_started': 'Not tested',
+      'status.in_progress': 'In progress',
+      'status.submitted': 'Submitted - awaiting grading',
+      'status.graded': 'AI graded',
+      'status.calibration': 'Needs human calibration',
       'track.nav': 'Industry track',
       'track.title': 'Industry assessment track',
       'track.badge': 'Industry assessment',
@@ -14904,7 +15100,7 @@ window.KKR.EMPLOYERS_SEED = {"schema_version":1,"title":"KK-RECRUITMENT - 100 nh
     // Nút thiết lập Admin chỉ hiện cho chủ sở hữu (máy cục bộ hoặc liên kết có khóa) - khách truy cập không thấy
     const ownerOk = KKR.MODE !== 'backend' && KKR.Setup && (await KKR.Setup.keyOk());
     const claim = ownerOk && (await KKR.Setup.claimable());
-    const noAdmin = ownerOk && !(await KKR.Seed.hasAdmin());
+    const noAdmin = ownerOk ? !(await KKR.Seed.hasAdmin()) : KKR.MODE === 'backend' && KKR.Setup && (await KKR.Setup.backendNeedsAdmin());
     const notice =
       q && q.reason === 'pending'
         ? `<div class="callout info mb">${KKR.icon('info')}<div>${t('acct.account_pending_notice')}</div></div>`
@@ -14923,6 +15119,16 @@ window.KKR.EMPLOYERS_SEED = {"schema_version":1,"title":"KK-RECRUITMENT - 100 nh
     </div></div></div>`,
       'public'
     );
+    try {
+      const pre = sessionStorage.getItem('kkr_login_prefill');
+      if (pre) {
+        document.getElementById('lg-email').value = pre;
+        sessionStorage.removeItem('kkr_login_prefill');
+        document.getElementById('lg-pw').focus();
+      }
+    } catch (e) {
+      /* bỏ qua */
+    }
     document.getElementById('login-form').onsubmit = async (e) => {
       e.preventDefault();
       const email = document.getElementById('lg-email').value,
@@ -15216,6 +15422,8 @@ window.KKR.EMPLOYERS_SEED = {"schema_version":1,"title":"KK-RECRUITMENT - 100 nh
     const target = after && after !== '#/login' && !/^#\/(setup|join|register)/.test(after) ? after : State.homeRoute();
     UI.layout = null;
     KKR.Router.go(target);
+    if (KKR.MODE === 'backend' && user.role === 'ADMIN' && !user.mfa_enabled && Auth.mfaSetupDialogBackend)
+      setTimeout(() => Auth.mfaSetupDialogBackend(user), 900);
     if (KKR.Backup.dailyReminderDue() && user.role === 'ADMIN')
       setTimeout(() => UI.toast(t('auth.reminder_more_than_24h_since_the'), 'warn', 7000), 1500);
   };
@@ -16039,7 +16247,8 @@ window.KKR.EMPLOYERS_SEED = {"schema_version":1,"title":"KK-RECRUITMENT - 100 nh
     if (!sid) return true;
     const row = await KKR.DB.get('user_sessions', sid);
     if (!row) return true;
-    return row.status === 'ACTIVE' && row.user_id === user.user_id;
+    // Phiên Admin đang ở vai trò thử nghiệm (RoleLab): tài khoản thử nghiệm thuộc Admin sở hữu phiên
+    return row.status === 'ACTIVE' && (row.user_id === user.user_id || (!!user.lab_owner && row.user_id === user.lab_owner));
   };
   let lastBeat = 0;
   Account.heartbeat = async function () {
@@ -16867,10 +17076,12 @@ window.KKR.EMPLOYERS_SEED = {"schema_version":1,"title":"KK-RECRUITMENT - 100 nh
     }
     const m = (location.search + '&' + location.hash).match(/[?&]key=([^&#]+)/);
     if (!m || !KKR.SETUP_KEY_HASH) return false;
-    const ok = (await C.sha256(decodeURIComponent(m[1]).trim().toUpperCase())) === KKR.SETUP_KEY_HASH;
+    const raw = decodeURIComponent(m[1]).trim().toUpperCase();
+    const ok = (await C.sha256(raw)) === KKR.SETUP_KEY_HASH;
     if (ok) {
       try {
         sessionStorage.setItem('kkr_setup_ok', '1');
+        sessionStorage.setItem('kkr_setup_key', raw);
       } catch (e) {
         /* bỏ qua */
       }
@@ -16886,7 +17097,56 @@ window.KKR.EMPLOYERS_SEED = {"schema_version":1,"title":"KK-RECRUITMENT - 100 nh
   };
   /** Admin mẫu: có cờ is_demo (v1.2+) hoặc là tài khoản mẫu của bản v1.0/v1.1 (chưa có cờ) */
   Setup.isDemoAdmin = (u) => !!u && (u.is_demo || (KKR.Seed && KKR.Seed.DEMO && u.email === KKR.Seed.DEMO.admin.email));
+  /** Backend: máy chủ cần tạo Admin đầu tiên? (chỉ hỏi khi chủ sở hữu có khóa) */
+  Setup.backendNeedsAdmin = async function () {
+    if (!backend() || !(await Setup.keyOk())) return false;
+    try {
+      const r = await KKR.Api.get('/setup/status', { noAuth: true, timeout: 70000 });
+      return !!(r && r.needs_admin);
+    } catch (e) {
+      return false;
+    }
+  };
+  Setup.backendPage = async function () {
+    if (!(await Setup.keyOk()) || !(await Setup.backendNeedsAdmin())) {
+      location.hash = State.isAuth() ? State.homeRoute() : '#/login';
+      return;
+    }
+    UI.renderPage(
+      `<div class="container setup-wrap"><div class="card"><div class="mb"><span class="eyebrow">${icon('zap')} KK-RECRUITMENT - Backend</span><h1 style="margin:.3rem 0 0">${t('setup.title')}</h1><p class="muted mb0">${t('setup.backend_subtitle')}</p></div>
+      <form id="sb-form" novalidate><div class="form-grid">${UI.field(t('common.full_name'), `<input class="input" id="sb-name" value="${esc(KKR.OWNER_NAME)}" required>`)}${UI.field('Email', `<input class="input" id="sb-email" type="email" value="${esc(KKR.OWNER_EMAIL)}" required>`)}</div>
+      ${UI.field(t('common.password'), `<input class="input" id="sb-pw" type="password" autocomplete="new-password"><div class="pw-meter"><div id="sb-bar" style="width:0"></div></div><div class="small muted" id="sb-hint">${esc(t('acct.pw_rules', { n: 12 }))}</div>`)}
+      ${UI.field(t('auth.confirm_password'), '<input class="input" id="sb-pw2" type="password" autocomplete="new-password">')}
+      <div class="callout info mt">${icon('lock')}<div>${t('setup.backend_mfa_note')}</div></div>
+      <div class="row right mt"><button class="btn primary lg" type="submit">${t('setup.finish')} ${icon('check')}</button></div></form></div></div>`,
+      'public'
+    );
+    const g = (id) => document.getElementById(id).value.trim();
+    const pw = document.getElementById('sb-pw');
+    pw.oninput = () => Account.renderPwMeter(pw.value, g('sb-email'), document.getElementById('sb-bar'), document.getElementById('sb-hint'));
+    document.getElementById('sb-form').onsubmit = async (e) => {
+      e.preventDefault();
+      const email = g('sb-email').toLowerCase();
+      const chk = Account.pwCheck(pw.value, email);
+      if (!g('sb-name')) return UI.toast(t('acct.enter_full_name'), 'error');
+      if (!U.validEmail(email)) return UI.toast(t('common.invalid_email'), 'error');
+      if (!chk.ok) return UI.toast(chk.issues.join('; '), 'error', 6000);
+      if (pw.value !== document.getElementById('sb-pw2').value) return UI.toast(t('auth.password_confirmation_does_not_match'), 'error');
+      UI.loading(true, t('setup.creating'));
+      try {
+        await KKR.Api.post('/setup/admin', { email, password: pw.value, full_name: g('sb-name'), setup_key: sessionStorage.getItem('kkr_setup_key') || '' }, { noAuth: true, timeout: 70000 });
+        UI.loading(false);
+        UI.toast(t('setup.backend_done'), 'success', 8000);
+        sessionStorage.setItem('kkr_login_prefill', email);
+        location.hash = '#/login';
+      } catch (err) {
+        UI.loading(false);
+        UI.toast((err && err.message) || String(err), 'error', 8000);
+      }
+    };
+  };
   Setup.page = async function () {
+    if (backend()) return Setup.backendPage();
     Setup.claim = await Setup.claimable();
     if (!(await Setup.keyOk()) || (!Setup.required && !(await Setup.check()) && !Setup.noAdmin && !Setup.claim)) {
       location.hash = State.isAuth() ? State.homeRoute() : '#/login';
@@ -24794,6 +25054,7 @@ self.onmessage = (e) => {
     const bm = KKR.Backup.meta();
     const byInd = U.groupBy(cards, 'industry_code');
     UI.renderPage(`${UI.pageHead(KKR.t('admin.system_administration'), `KK-RECRUITMENT v${KKR.VERSION} - ${esc(KKR.COPYRIGHT)}`, `<a class="btn" href="#/a/backup">${icon('save')} Backup</a><a class="btn primary" href="#/a/ai">${icon('cpu')} ${KKR.t('common.ai_configuration')}</a>`)}
+      ${KKR.RoleLab ? KKR.RoleLab.dashboardCard() : ''}
       <div class="grid c4 mb">${UI.kpi('Tenants', st.tenants, `${users.filter((u) => u.role === 'RECRUITER').length} recruiters`, 'building')}${UI.kpi(KKR.t('common.candidates'), st.candidate_pii_vault, KKR.t('admin.pii_encrypted_aes_256_gcm'), 'users', 'accent')}${UI.kpi(KKR.t('common.item_bank'), st.assessment_items, `${st.competencies} ${KKR.t('admin.competencies')}`, 'book', 'purple')}${UI.kpi('Scorecards', st.scorecards, `${cards.filter((c) => c.requires_human_calibration).length} ${KKR.t('admin.need_calibration')}`, 'award', 'amber')}</div>
       <div class="grid c4 mb">${UI.kpi(KKR.t('admin.sessions'), st.assessment_sessions, `${sessions.filter((s) => s.session_status === 'IN_PROGRESS').length} ${KKR.t('common.in_progress')}`, 'exam')}${UI.kpi(KKR.t('admin.high_alerts'), high, `${st.proctoring_logs} ${KKR.t('admin.proctoring_events')}`, 'alert', high ? 'red' : 'green')}${UI.kpi(KKR.t('admin.ai_mode'), cfg.offline_mode ? 'OFFLINE' : 'ONLINE', cfg.offline_mode ? 'heuristic-offline-v1' : cfg.model, 'cpu', cfg.offline_mode ? 'amber' : 'green')}${UI.kpi(KKR.t('admin.latest_backup'), bm ? U.fmtDate(bm.at, true) : '-', bm ? `${U.fmtNum(bm.packed / 1024, 0)} ${KKR.t('admin.kb_compressed')}` : KKR.t('common.none_yet_2'), 'save', 'green')}</div>
       <div class="grid c2"><div class="card"><h3>${KKR.t('admin.average_cts_by_industry')}</h3>${KKR.Chart.bars(
@@ -24806,6 +25067,7 @@ self.onmessage = (e) => {
       <div class="card"><h3>${KKR.t('admin.storage_health')}</h3><div class="health-grid">${Object.entries(st)
         .map(([k, v]) => `<div class="hc">${esc(k)}<b>${v}</b></div>`)
         .join('')}</div></div></div>`);
+    if (KKR.RoleLab) KKR.RoleLab.bindAll(document.getElementById('page'));
   };
 
   /* ---------- Tenants & users (v1.3: bảng đầy đủ) ---------- */
@@ -27596,6 +27858,233 @@ self.onmessage = (e) => {
 })(window.KKR);
 
 
+/* ===== 84_role_lab.js ===== */
+/* =====================================================================
+ * KK-RECRUITMENT - 84_role_lab.js (v1.3)
+ * KKR.RoleLab - "Phòng thử nghiệm vai trò" cho Admin:
+ *   - Admin chuyển nhanh sang vai trò Ứng viên hoặc Nhà tuyển dụng để kiểm chứng toàn bộ tính năng
+ *     mà không cần tạo tài khoản / đăng xuất / MFA lại.
+ *   - Tài khoản thử nghiệm được tạo tự động 1 lần, gắn với Admin (lab_owner), cờ is_test:
+ *       Ứng viên thử nghiệm  : hồ sơ ẩn danh theo ngành + cấp bậc Admin chọn
+ *       Nhà tuyển dụng thử nghiệm: tenant "KK Test Lab" (đã duyệt) theo ngành Admin chọn
+ *   - Thanh thông báo "Chế độ thử nghiệm" + nút Quay lại Admin; mọi lần chuyển đều ghi Audit (HIGH).
+ *   - Chỉ chế độ Standalone (Backend dùng tài khoản thật theo RBAC máy chủ).
+ * Bản quyền: Nguyễn Duy Điển (KK-2026)
+ * ===================================================================== */
+(function (KKR) {
+  'use strict';
+  const U = KKR.U,
+    DB = KKR.DB,
+    UI = KKR.UI,
+    State = KKR.State,
+    esc = U.esc,
+    icon = KKR.icon,
+    t = KKR.t;
+  const KEY = 'kkr_lab_admin';
+  const Lab = {};
+
+  Lab.available = () => KKR.MODE !== 'backend';
+  Lab.adminId = () => {
+    try {
+      return sessionStorage.getItem(KEY);
+    } catch (e) {
+      return null;
+    }
+  };
+  /** Đang ở vai trò thử nghiệm (do Admin chuyển sang) */
+  Lab.active = () => !!(State.user && State.user.lab_owner && Lab.adminId() === State.user.lab_owner);
+
+  const rnd = () => Math.random().toString(36).slice(2, 8);
+  const randomPw = () => 'Lab#' + U.uuid().replace(/-/g, '').slice(0, 20) + '!aA9';
+
+  Lab.findLabUser = async function (adminId, role) {
+    return (await DB.where('users', 'role', role)).find((u) => u.lab_owner === adminId && u.status !== 'DELETED') || null;
+  };
+
+  /** Tạo (1 lần) hoặc cập nhật ứng viên thử nghiệm theo ngành + cấp bậc */
+  Lab.ensureCandidate = async function (admin, industry, level) {
+    let u = await Lab.findLabUser(admin.user_id, 'CANDIDATE');
+    if (!u) {
+      u = await KKR.Account.createCandidate({
+        email: `lab.candidate.${rnd()}@kk-test.local`,
+        password: randomPw(),
+        full_name: `${admin.full_name || 'Admin'} - ${t('lab.candidate_suffix')}`,
+        phone: '',
+        industry,
+        level,
+        stealth: false,
+        email_verified: true,
+        userExtra: { is_test: true, lab_owner: admin.user_id, status: 'ACTIVE' }
+      });
+    }
+    // Đồng bộ ngành / cấp bậc mỗi lần chọn
+    const prof = await DB.get('candidate_anonymous_profiles', u.anonymous_token);
+    if (prof && (prof.primary_industry !== industry || prof.current_position_level !== level)) {
+      prof.primary_industry = industry;
+      prof.current_position_level = level;
+      prof.industry_experience = [{ industry_code: industry, years: (prof.industry_experience && prof.industry_experience[0] && prof.industry_experience[0].years) || 0 }];
+      prof.updated_at = U.now();
+      await DB.put('candidate_anonymous_profiles', prof);
+      const v = await DB.one('candidate_pii_vault', 'anonymous_token', u.anonymous_token);
+      if (v) {
+        v.current_position_level = level;
+        await DB.put('candidate_pii_vault', v);
+      }
+    }
+    return u;
+  };
+
+  /** Tạo (1 lần) nhà tuyển dụng thử nghiệm + tenant "KK Test Lab" đã duyệt */
+  Lab.ensureRecruiter = async function (admin, industry) {
+    let u = await Lab.findLabUser(admin.user_id, 'RECRUITER');
+    if (!u) {
+      const r = await KKR.Account.createRecruiterTenant({
+        email: `lab.recruiter.${rnd()}@kk-test.local`,
+        password: randomPw(),
+        full_name: `${admin.full_name || 'Admin'} - ${t('lab.recruiter_suffix')}`,
+        title: 'HR Director (Test)',
+        company: t('lab.company_name'),
+        industry,
+        approved: true,
+        email_verified: true
+      });
+      u = Object.assign(r.user, { is_test: true, lab_owner: admin.user_id });
+      await DB.put('users', u);
+      await DB.put('tenants', Object.assign(r.tenant, { is_test: true, lab_owner: admin.user_id, approval_status: 'APPROVED' }));
+    }
+    const tn = u.tenant_id ? await DB.get('tenants', u.tenant_id) : null;
+    if (tn && tn.industry_gics_code !== industry) {
+      tn.industry_gics_code = industry;
+      await DB.put('tenants', tn);
+    }
+    return u;
+  };
+
+  /** Chuyển phiên hiện tại sang tài khoản thử nghiệm (giữ Admin để quay lại) */
+  Lab.switchTo = async function (role, opts) {
+    if (!Lab.available()) return UI.toast(t('lab.backend_not_supported'), 'warn', 6000);
+    const admin = State.user;
+    if (!admin || admin.role !== 'ADMIN') return UI.toast(t('lab.admin_only'), 'error');
+    UI.loading(true, t('lab.preparing'));
+    try {
+      const industry = (opts && opts.industry) || 'GICS45';
+      const level = (opts && opts.level) || 'MID_SENIOR';
+      const u = role === 'CANDIDATE' ? await Lab.ensureCandidate(admin, industry, level) : await Lab.ensureRecruiter(admin, industry);
+      sessionStorage.setItem(KEY, admin.user_id);
+      State.user = u;
+      State.tenant = u.tenant_id ? await DB.get('tenants', u.tenant_id) : null;
+      State.persist();
+      KKR.Audit.log('ROLE_LAB_SWITCH', { admin: admin.email, role, test_user: u.email, industry, level }, 'HIGH');
+      UI.loading(false);
+      UI.layout = null;
+      UI.toast(t('lab.switched', { role: t(role === 'CANDIDATE' ? 'lab.role_candidate' : 'lab.role_recruiter') }), 'success', 4000);
+      KKR.Router.go(role === 'CANDIDATE' ? '#/c/track' : '#/r/dashboard');
+    } catch (e) {
+      UI.loading(false);
+      UI.toast(e.message, 'error', 7000);
+    }
+  };
+
+  /** Quay lại phiên Admin */
+  Lab.back = async function () {
+    const id = Lab.adminId();
+    const admin = id ? await DB.get('users', id) : null;
+    if (!admin || admin.status !== 'ACTIVE' || admin.role !== 'ADMIN') {
+      sessionStorage.removeItem(KEY);
+      return KKR.Auth.logout(false);
+    }
+    KKR.Audit.log('ROLE_LAB_BACK', { admin: admin.email, from: State.user ? State.user.email : null }, 'HIGH');
+    sessionStorage.removeItem(KEY);
+    State.user = admin;
+    State.tenant = null;
+    State.persist();
+    UI.layout = null;
+    KKR.Router.go('#/a/dashboard');
+  };
+
+  /** Thanh thông báo khi đang ở vai trò thử nghiệm */
+  Lab.banner = function () {
+    if (!Lab.active()) return '';
+    const role = State.user.role === 'CANDIDATE' ? t('lab.role_candidate') : t('lab.role_recruiter');
+    return `<div class="lab-banner">${icon('zap')}<span>${t('lab.banner', { role: '<b>' + esc(role) + '</b>' })}</span><button class="btn sm" id="lab-other">${icon('users')} ${t(State.user.role === 'CANDIDATE' ? 'lab.to_recruiter' : 'lab.to_candidate')}</button><button class="btn sm primary" id="lab-back">${icon('arrowL')} ${t('lab.back_to_admin')}</button></div>`;
+  };
+  Lab.bindBanner = function () {
+    const b = document.getElementById('lab-back');
+    if (b) b.onclick = () => Lab.back();
+    const o = document.getElementById('lab-other');
+    if (o)
+      o.onclick = async () => {
+        const target = State.user.role === 'CANDIDATE' ? 'RECRUITER' : 'CANDIDATE';
+        const id = Lab.adminId();
+        const admin = id ? await DB.get('users', id) : null;
+        if (!admin) return Lab.back();
+        // Về Admin rồi mở hộp chọn vai trò còn lại
+        sessionStorage.removeItem(KEY);
+        State.user = admin;
+        State.tenant = null;
+        State.persist();
+        Lab.dialog(target);
+      };
+  };
+
+  /** Hộp thoại chọn vai trò thử nghiệm (ngành + cấp bậc) */
+  Lab.dialog = async function (preset) {
+    if (!Lab.available()) return UI.toast(t('lab.backend_not_supported'), 'warn', 6000);
+    const industries = (await DB.all('industries')).filter((i) => i.industry_code !== 'ALL');
+    const tiers = Object.values(KKR.TIERS);
+    let role = preset || 'CANDIDATE';
+    UI.modal({
+      title: t('lab.title'),
+      body: `<p class="muted">${t('lab.intro')}</p>
+        <div class="role-pick big" id="lab-role"><button type="button" data-r="CANDIDATE" class="${role === 'CANDIDATE' ? 'sel' : ''}">${icon('user')}<b>${t('lab.role_candidate')}</b><span>${t('lab.role_candidate_desc')}</span></button><button type="button" data-r="RECRUITER" class="${role === 'RECRUITER' ? 'sel' : ''}">${icon('building')}<b>${t('lab.role_recruiter')}</b><span>${t('lab.role_recruiter_desc')}</span></button></div>
+        <div class="form-grid mt">${UI.field(t('common.industry'), UI.select('lab-ind', industries.map((i) => ({ value: i.industry_code, label: KKR.L(i, 'name') })), 'GICS45'))}<div id="lab-lvl-wrap">${UI.field(t('common.current_level'), UI.select('lab-lvl', tiers.map((x) => ({ value: x.code, label: KKR.L(x) })), 'MID_SENIOR'))}</div></div>
+        <div class="callout info mt">${icon('shield')}<div>${t('lab.note')}</div></div>`,
+      footer: `<button class="btn ghost" data-close>${t('common.cancel')}</button><button class="btn primary" id="lab-go">${icon('arrowR')} ${t('lab.start')}</button>`,
+      onMount: (el) => {
+        const sync = () => {
+          el.querySelectorAll('#lab-role button').forEach((b) => b.classList.toggle('sel', b.dataset.r === role));
+          el.querySelector('#lab-lvl-wrap').style.display = role === 'CANDIDATE' ? '' : 'none';
+        };
+        el.querySelectorAll('#lab-role button').forEach(
+          (b) =>
+            (b.onclick = () => {
+              role = b.dataset.r;
+              sync();
+            })
+        );
+        sync();
+        el.querySelector('#lab-go').onclick = () => {
+          const industry = el.querySelector('#lab-ind').value;
+          const level = el.querySelector('#lab-lvl').value;
+          UI.closeModal();
+          Lab.switchTo(role, { industry, level });
+        };
+      }
+    });
+  };
+
+  /** Nút trên topbar Admin */
+  Lab.topbarButton = () =>
+    Lab.available() && State.role() === 'ADMIN'
+      ? `<button class="btn sm lab-btn" id="lab-open" title="${t('lab.title')}">${icon('users')}<span>${t('lab.try_roles')}</span></button>`
+      : '';
+  /** Thẻ trên Dashboard Admin */
+  Lab.dashboardCard = () =>
+    Lab.available()
+      ? `<div class="card lab-card"><div class="row between wrap"><div><h3 style="margin:0">${icon('zap')} ${t('lab.title')}</h3><p class="muted mb0">${t('lab.card_body')}</p></div><div class="row"><button class="btn" data-lab="CANDIDATE">${icon('user')} ${t('lab.role_candidate')}</button><button class="btn primary" data-lab="RECRUITER">${icon('building')} ${t('lab.role_recruiter')}</button></div></div></div>`
+      : '';
+  Lab.bindAll = function (root) {
+    const r = root || document;
+    const ob = r.querySelector('#lab-open');
+    if (ob) ob.onclick = () => Lab.dialog();
+    r.querySelectorAll('[data-lab]').forEach((b) => (b.onclick = () => Lab.dialog(b.dataset.lab)));
+    Lab.bindBanner();
+  };
+
+  KKR.RoleLab = Lab;
+})(window.KKR);
+
+
 /* ===== 90_app.js ===== */
 /* =====================================================================
  * KK-RECRUITMENT - 90_app.js
@@ -27621,7 +28110,7 @@ self.onmessage = (e) => {
     `<span class="lang-toggle"><button class="${KKR.lang === 'vi' ? 'active' : ''}" data-lang="vi">VI</button><button class="${KKR.lang === 'en' ? 'active' : ''}" data-lang="en">EN</button></span>`;
   App.publicShell =
     () => `<header class="pub-header"><div class="inner"><a class="brand" href="#/">${KKR.ICONS.logo}<span>KK-RECRUITMENT<small>AI Talent Assessment Platform</small></span></a>
-    <nav class="pub-nav"><a href="#/" data-nav="/">${t('home')}</a><a href="#/jobs" data-nav="/jobs">${t('jobs')}</a><a href="#/employers" data-nav="/employers" class="hide-m">${t('emp.nav')}</a><a href="#/#modules" class="hide-m">${KKR.t('app.n8_modules')}</a>${KKR.Data.modePill('public')}${App.langBtn()}${App.themeBtn()}${State.isAuth() ? `<a class="btn primary sm" href="${State.homeRoute()}">${t('dashboard')}</a>` : `<a href="#/login" data-nav="/login">${t('login')}</a><a class="btn primary sm" href="#/register">${t('register')}</a>`}</nav></div></header>
+    <nav class="pub-nav"><a href="#/" data-nav="/">${t('home')}</a><a href="#/jobs" data-nav="/jobs">${t('jobs')}</a><a href="#/employers" data-nav="/employers" class="hide-m">${t('emp.nav')}</a><a href="#/#modules" class="hide-m">${KKR.t('app.n8_modules')}</a><a href="#/#guide" class="hide-m">${KKR.t('guide.nav')}</a>${KKR.Data.modePill('public')}${App.langBtn()}${App.themeBtn()}${State.isAuth() ? `<a class="btn primary sm" href="${State.homeRoute()}">${t('dashboard')}</a>` : `<a href="#/login" data-nav="/login">${t('login')}</a><a class="btn primary sm" href="#/register">${t('register')}</a>`}</nav></div></header>
     <main class="pub-main" id="page"></main>
     <footer class="pub-footer"><b>KK-RECRUITMENT</b> ${KKR.t('app.global_ai_recruitment_assessment_platform_copyri')} ${esc(KKR.COPYRIGHT)}. v${KKR.VERSION}.</footer>`;
   App.navItems = function () {
@@ -27694,7 +28183,7 @@ self.onmessage = (e) => {
           ['/a/audit', 'list', t('audit')],
           ['/a/backup', 'save', t('backup')],
           ['/a/health', 'heart', t('health')],
-          ['/settings/connection', 'plug', KKR.t('nav.connection_mode') + ' - ' + (KKR.MODE === 'backend' ? 'Backend' : 'Standalone')],
+          ['/settings/connection', 'plug', KKR.t('nav.connection_mode')],
           ['/a/security', 'lock', t('sec_log')],
           ['/account', 'gear', t('acct.my_account')]
         ]
@@ -27713,8 +28202,8 @@ self.onmessage = (e) => {
         .join('')}</nav>
       <div class="sidebar-foot"><div class="backup"><span class="dot" id="bk-dot"></span><span id="bk-info">Backup: ${bm ? U.fmtDate(bm.at, true) : KKR.t('common.none_yet_2')}</span></div><div class="mt" style="margin-top:.4rem">v${KKR.VERSION} - ${esc(KKR.COPYRIGHT)}</div></div></aside>
       <div class="main"><header class="topbar"><div class="row"><button class="icon-btn menu-toggle" id="menu-toggle">${KKR.ICONS.menu}</button><div class="crumbs" id="crumbs">${t('dashboard')}</div></div>
-        <div class="row">${State.role() === 'ADMIN' ? KKR.Data.modePill() : ''}${App.langBtn()}${App.themeBtn()}<div class="user-chip"><span class="avatar">${esc(U.initials(u.full_name || u.email))}</span><div class="meta"><b>${esc(u.full_name || u.anonymous_token || u.email)}</b><span>${esc(u.role)}${u.mfa_enabled ? ' - MFA' : ''}</span></div></div><a class="icon-btn" href="#/logout" title="${t('logout')}">${KKR.ICONS.logout}</a></div></header>
-      <div class="shell-banner" id="shell-banner">${KKR.Account ? KKR.Account.pendingBanner() : ''}</div><main class="content" id="page"></main></div></div>`;
+        <div class="row">${KKR.RoleLab ? KKR.RoleLab.topbarButton() : ''}${State.role() === 'ADMIN' ? KKR.Data.modePill() : ''}${App.langBtn()}${App.themeBtn()}<div class="user-chip"><span class="avatar">${esc(U.initials(u.full_name || u.email))}</span><div class="meta"><b>${esc(u.full_name || u.anonymous_token || u.email)}</b><span>${esc(u.role)}${u.mfa_enabled ? ' - MFA' : ''}</span></div></div><a class="icon-btn" href="#/logout" title="${t('logout')}">${KKR.ICONS.logout}</a></div></header>
+      <div class="shell-banner" id="shell-banner">${KKR.RoleLab ? KKR.RoleLab.banner() : ''}${KKR.Account ? KKR.Account.pendingBanner() : ''}</div><main class="content" id="page"></main></div></div>`;
   };
   App.bindShell = function (name) {
     const tt = document.getElementById('theme-toggle');
@@ -27732,6 +28221,7 @@ self.onmessage = (e) => {
           KKR.setLang(b.dataset.lang);
         })
     );
+    if (KKR.RoleLab) KKR.RoleLab.bindAll(document.querySelector('.topbar') ? document : null);
     const mt = document.getElementById('menu-toggle');
     if (mt) mt.onclick = () => document.getElementById('sidebar').classList.toggle('open');
     document.addEventListener('click', (e) => {
@@ -27774,6 +28264,9 @@ self.onmessage = (e) => {
         KKR.MODULES.map((m) => KKR.L(m, 'short')),
         300
       )}<div class="mini-row"><span>${KKR.t('app.hero_card_cts')}</span><b>${KKR.t('app.hero_card_cts_val')}</b></div><div class="mini-row"><span>${KKR.t('app.hero_card_decision')}</span><b style="color:var(--green)">${KKR.t('app.hero_card_decision_val')}</b></div><div class="mini-row"><span>${KKR.t('app.hero_card_trust')}</span><b>${KKR.t('app.hero_card_trust_val')}</b></div><div class="mini-row"><span>${KKR.t('app.hero_card_emotion')}</span><b>${KKR.t('app.hero_card_emotion_val')}</b></div></div></div></div></section>
+    <section class="section guide-sec" id="guide"><div class="container"><div class="section-head"><h2>${KKR.t('guide.title')}</h2><p>${KKR.t('guide.sub')}</p></div>
+      <div class="guide-video"><video controls preload="none" playsinline poster="${KKR.GUIDE_BASE}/videos/kk-guide-poster-${KKR.lang}.jpg" src="${KKR.GUIDE_BASE}/videos/kk-recruitment-guide-${KKR.lang}.mp4"></video></div>
+      <p class="small muted center mt">${KKR.t('guide.note')}</p></div></section>
     <section class="section" id="modules"><div class="container"><div class="section-head"><h2>${KKR.t('app.n8_comprehensive_assessment_modules')}</h2><p>${KKR.t('app.from_deep_domain_expertise_to_strategic')}</p></div>
       <div class="grid c4">${KKR.MODULES.map((m) => `<div class="module-card"><span class="num">${KKR.t('app.module')} ${m.code.slice(1)}</span><h3>${esc(KKR.L(m))}</h3><p>${esc(m.en)}</p><p>${esc(KKR.L(m, 'method'))}</p><div class="meta">${esc(KKR.L(m, 'scale'))}</div></div>`).join('')}</div></div></section>
     <section class="section alt"><div class="container"><div class="section-head"><h2>${KKR.t('app.n3_talent_tiers_automatic_weighting')}</h2><p>${KKR.t('app.cts_w_i_s_i_c')}</p></div>
