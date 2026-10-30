@@ -4,7 +4,7 @@
   "note": "Số liệu nhân sự / doanh thu là ƯỚC LƯỢNG THAM KHẢO (tham khảo Fortune Global 500, Forbes, VNR500, Anphabe, Wikidata); các bản ghi có wikidata_id được scripts/update_employers.js làm giàu hằng ngày từ Wikidata (P1128 employees, P2139 revenue, P856 website, P159 HQ). Gạch nối (-) được dùng thay gạch dài.",
   "copyright": "Nguyễn Duy Điển (KK-2026)",
   "generated_at": "2026-10-29T00:00:00Z",
-  "updated_at": "2026-10-29T00:00:00Z",
+  "updated_at": "2026-10-30T03:45:03.669Z",
   "count": 100,
   "regions": {
     "VN": 50,
@@ -1828,9 +1828,9 @@
       "industry_gics": "GICS45",
       "hq_city": "Mountain View",
       "founded": 1998,
-      "employees_approx": 182000,
-      "revenue_usd_bn_approx": 350,
-      "website": "https://abc.xyz",
+      "employees_approx": 190234,
+      "revenue_usd_bn_approx": 402.84,
+      "website": "https://abc.xyz/",
       "careers_url": "https://careers.google.com",
       "wikidata_id": "Q20800404",
       "hiring_focus": [
@@ -1853,7 +1853,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-02-microsoft",
@@ -1865,8 +1866,8 @@
       "hq_city": "Redmond",
       "founded": 1975,
       "employees_approx": 228000,
-      "revenue_usd_bn_approx": 245,
-      "website": "https://www.microsoft.com",
+      "revenue_usd_bn_approx": 331.84,
+      "website": "https://www.microsoft.com/",
       "careers_url": "https://careers.microsoft.com",
       "wikidata_id": "Q2283",
       "hiring_focus": [
@@ -1889,7 +1890,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-03-apple",
@@ -1901,8 +1903,8 @@
       "hq_city": "Cupertino",
       "founded": 1976,
       "employees_approx": 164000,
-      "revenue_usd_bn_approx": 391,
-      "website": "https://www.apple.com",
+      "revenue_usd_bn_approx": 416.16,
+      "website": "https://apple.com/at/",
       "careers_url": "https://www.apple.com/careers",
       "wikidata_id": "Q312",
       "hiring_focus": [
@@ -1925,7 +1927,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-04-amazon",
@@ -1936,9 +1939,9 @@
       "industry_gics": "GICS25_30",
       "hq_city": "Seattle",
       "founded": 1994,
-      "employees_approx": 1550000,
-      "revenue_usd_bn_approx": 638,
-      "website": "https://www.amazon.com",
+      "employees_approx": 1500000,
+      "revenue_usd_bn_approx": 716.92,
+      "website": "https://www.amazon.com/",
       "careers_url": "https://www.amazon.jobs",
       "wikidata_id": "Q3884",
       "hiring_focus": [
@@ -1961,7 +1964,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-05-meta",
@@ -1972,9 +1976,9 @@
       "industry_gics": "GICS45",
       "hq_city": "Menlo Park",
       "founded": 2004,
-      "employees_approx": 74000,
-      "revenue_usd_bn_approx": 165,
-      "website": "https://www.meta.com",
+      "employees_approx": 58604,
+      "revenue_usd_bn_approx": 200.97,
+      "website": "https://www.meta.com/",
       "careers_url": "https://www.metacareers.com",
       "wikidata_id": "Q380",
       "hiring_focus": [
@@ -1997,7 +2001,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-06-nvidia",
@@ -2008,9 +2013,9 @@
       "industry_gics": "GICS45",
       "hq_city": "Santa Clara",
       "founded": 1993,
-      "employees_approx": 36000,
-      "revenue_usd_bn_approx": 130,
-      "website": "https://www.nvidia.com",
+      "employees_approx": 42000,
+      "revenue_usd_bn_approx": 215.94,
+      "website": "https://www.nvidia.com/",
       "careers_url": "https://www.nvidia.com",
       "wikidata_id": "Q182477",
       "hiring_focus": [
@@ -2033,7 +2038,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-07-tesla",
@@ -2044,9 +2050,9 @@
       "industry_gics": "GICS20_30",
       "hq_city": "Austin",
       "founded": 2003,
-      "employees_approx": 125000,
-      "revenue_usd_bn_approx": 98,
-      "website": "https://www.tesla.com",
+      "employees_approx": 140473,
+      "revenue_usd_bn_approx": 94.83,
+      "website": "https://www.tesla.com/",
       "careers_url": "https://www.tesla.com/careers",
       "wikidata_id": "Q478214",
       "hiring_focus": [
@@ -2069,7 +2075,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-08-samsung-electronics",
@@ -2080,9 +2087,9 @@
       "industry_gics": "GICS45",
       "hq_city": "Suwon",
       "founded": 1969,
-      "employees_approx": 267000,
+      "employees_approx": 109541,
       "revenue_usd_bn_approx": 230,
-      "website": "https://www.samsung.com",
+      "website": "https://samsung.com/",
       "careers_url": "https://www.samsung.com",
       "wikidata_id": "Q20718",
       "hiring_focus": [
@@ -2105,7 +2112,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-09-toyota",
@@ -2114,10 +2122,10 @@
       "country": "JP",
       "region": "GLOBAL",
       "industry_gics": "GICS20_30",
-      "hq_city": "Toyota City",
+      "hq_city": "Toyota",
       "founded": 1937,
-      "employees_approx": 380000,
-      "revenue_usd_bn_approx": 310,
+      "employees_approx": 359542,
+      "revenue_usd_bn_approx": 410.89,
       "website": "https://global.toyota",
       "careers_url": "https://global.toyota",
       "wikidata_id": "Q53268",
@@ -2141,7 +2149,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-10-siemens",
@@ -2150,11 +2159,11 @@
       "country": "DE",
       "region": "GLOBAL",
       "industry_gics": "GICS20_30",
-      "hq_city": "Munich",
+      "hq_city": "München",
       "founded": 1847,
       "employees_approx": 320000,
-      "revenue_usd_bn_approx": 82,
-      "website": "https://www.siemens.com",
+      "revenue_usd_bn_approx": 83.99,
+      "website": "https://www.siemens.com/",
       "careers_url": "https://www.siemens.com",
       "wikidata_id": "Q81230",
       "hiring_focus": [
@@ -2177,7 +2186,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-11-unilever",
@@ -2186,11 +2196,11 @@
       "country": "UK",
       "region": "GLOBAL",
       "industry_gics": "GICS25_30",
-      "hq_city": "London",
+      "hq_city": "Wolfsburg",
       "founded": 1929,
-      "employees_approx": 128000,
-      "revenue_usd_bn_approx": 65,
-      "website": "https://www.unilever.com",
+      "employees_approx": 672800,
+      "revenue_usd_bn_approx": 347.67,
+      "website": "https://www.volkswagenag.com/",
       "careers_url": "https://careers.unilever.com",
       "wikidata_id": "Q156578",
       "hiring_focus": [
@@ -2213,7 +2223,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-12-procter-gamble",
@@ -2224,9 +2235,9 @@
       "industry_gics": "GICS25_30",
       "hq_city": "Cincinnati",
       "founded": 1837,
-      "employees_approx": 108000,
-      "revenue_usd_bn_approx": 84,
-      "website": "https://www.pg.com",
+      "employees_approx": 105000,
+      "revenue_usd_bn_approx": 84.28,
+      "website": "http://www.pg.com/",
       "careers_url": "https://www.pgcareers.com",
       "wikidata_id": "Q212405",
       "hiring_focus": [
@@ -2249,7 +2260,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-13-johnson-johnson",
@@ -2260,8 +2272,8 @@
       "industry_gics": "GICS35",
       "hq_city": "New Brunswick",
       "founded": 1886,
-      "employees_approx": 138000,
-      "revenue_usd_bn_approx": 89,
+      "employees_approx": 136400,
+      "revenue_usd_bn_approx": 88.82,
       "website": "https://www.jnj.com",
       "careers_url": "https://www.careers.jnj.com",
       "wikidata_id": "Q333718",
@@ -2285,7 +2297,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-14-pfizer",
@@ -2294,11 +2307,11 @@
       "country": "US",
       "region": "GLOBAL",
       "industry_gics": "GICS35",
-      "hq_city": "New York",
+      "hq_city": "Thành phố New York",
       "founded": 1849,
-      "employees_approx": 88000,
-      "revenue_usd_bn_approx": 64,
-      "website": "https://www.pfizer.com",
+      "employees_approx": 88300,
+      "revenue_usd_bn_approx": 63.63,
+      "website": "https://www.pfizer.com/",
       "careers_url": "https://www.pfizer.com",
       "wikidata_id": "Q206921",
       "hiring_focus": [
@@ -2321,7 +2334,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-15-jpmorgan-chase",
@@ -2330,11 +2344,11 @@
       "country": "US",
       "region": "GLOBAL",
       "industry_gics": "GICS40",
-      "hq_city": "New York",
+      "hq_city": "Thành phố New York",
       "founded": 2000,
-      "employees_approx": 317000,
-      "revenue_usd_bn_approx": 180,
-      "website": "https://www.jpmorganchase.com",
+      "employees_approx": 271025,
+      "revenue_usd_bn_approx": 177.56,
+      "website": "https://www.jpmorganchase.com/",
       "careers_url": "https://careers.jpmorgan.com",
       "wikidata_id": "Q192314",
       "hiring_focus": [
@@ -2357,7 +2371,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-16-goldman-sachs",
@@ -2366,11 +2381,11 @@
       "country": "US",
       "region": "GLOBAL",
       "industry_gics": "GICS40",
-      "hq_city": "New York",
+      "hq_city": "200 West Street",
       "founded": 1869,
-      "employees_approx": 46000,
-      "revenue_usd_bn_approx": 53,
-      "website": "https://www.goldmansachs.com",
+      "employees_approx": 34400,
+      "revenue_usd_bn_approx": 53.51,
+      "website": "https://www.goldmansachs.com/",
       "careers_url": "https://www.goldmansachs.com/careers",
       "wikidata_id": "Q193326",
       "hiring_focus": [
@@ -2393,7 +2408,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-17-mckinsey-company",
@@ -2406,7 +2422,7 @@
       "founded": 1926,
       "employees_approx": 45000,
       "revenue_usd_bn_approx": 16,
-      "website": "https://www.mckinsey.com",
+      "website": "http://www.bonnetan.fr/",
       "careers_url": "https://www.mckinsey.com/careers",
       "wikidata_id": "Q271366",
       "hiring_focus": [
@@ -2429,7 +2445,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-18-boston-consulting-group",
@@ -2510,10 +2527,10 @@
       "country": "UK",
       "region": "GLOBAL",
       "industry_gics": "GICS25_30",
-      "hq_city": "London",
+      "hq_city": "Thành phố New York",
       "founded": 1845,
-      "employees_approx": 460000,
-      "revenue_usd_bn_approx": 67,
+      "employees_approx": 345374,
+      "revenue_usd_bn_approx": 50.2,
       "website": "https://www.deloitte.com",
       "careers_url": "https://www.deloitte.com",
       "wikidata_id": "Q491748",
@@ -2537,7 +2554,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-21-pwc",
@@ -2546,11 +2564,11 @@
       "country": "UK",
       "region": "GLOBAL",
       "industry_gics": "GICS25_30",
-      "hq_city": "London",
+      "hq_city": "Luân Đôn",
       "founded": 1998,
-      "employees_approx": 370000,
-      "revenue_usd_bn_approx": 55,
-      "website": "https://www.pwc.com",
+      "employees_approx": 295371,
+      "revenue_usd_bn_approx": 45.14,
+      "website": "https://www.pwc.com/",
       "careers_url": "https://www.pwc.com",
       "wikidata_id": "Q488048",
       "hiring_focus": [
@@ -2573,7 +2591,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-22-ey",
@@ -2582,10 +2601,10 @@
       "country": "UK",
       "region": "GLOBAL",
       "industry_gics": "GICS25_30",
-      "hq_city": "London",
+      "hq_city": "More London",
       "founded": 1989,
-      "employees_approx": 400000,
-      "revenue_usd_bn_approx": 51,
+      "employees_approx": 300000,
+      "revenue_usd_bn_approx": 39.96,
       "website": "https://www.ey.com",
       "careers_url": "https://www.ey.com",
       "wikidata_id": "Q489097",
@@ -2609,7 +2628,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-23-kpmg",
@@ -2618,11 +2638,11 @@
       "country": "NL",
       "region": "GLOBAL",
       "industry_gics": "GICS25_30",
-      "hq_city": "Amstelveen",
+      "hq_city": "Luân Đôn",
       "founded": 1987,
-      "employees_approx": 275000,
-      "revenue_usd_bn_approx": 38,
-      "website": "https://kpmg.com",
+      "employees_approx": 236000,
+      "revenue_usd_bn_approx": 38.4,
+      "website": "https://kpmg.com/",
       "careers_url": "https://kpmg.com",
       "wikidata_id": "Q493751",
       "hiring_focus": [
@@ -2645,7 +2665,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-24-accenture",
@@ -2681,7 +2702,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-29T00:00:00Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-25-ibm",
@@ -2692,9 +2714,9 @@
       "industry_gics": "GICS45",
       "hq_city": "Armonk",
       "founded": 1911,
-      "employees_approx": 283000,
-      "revenue_usd_bn_approx": 63,
-      "website": "https://www.ibm.com",
+      "employees_approx": 352600,
+      "revenue_usd_bn_approx": 62.75,
+      "website": "https://www.ibm.com/",
       "careers_url": "https://www.ibm.com/careers",
       "wikidata_id": "Q37156",
       "hiring_focus": [
@@ -2717,7 +2739,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-26-oracle",
@@ -2726,11 +2749,11 @@
       "country": "US",
       "region": "GLOBAL",
       "industry_gics": "GICS45",
-      "hq_city": "Austin",
+      "hq_city": "Zagreb",
       "founded": 1977,
       "employees_approx": 159000,
       "revenue_usd_bn_approx": 57,
-      "website": "https://www.oracle.com",
+      "website": "http://www.kkcedevita.hr",
       "careers_url": "https://www.oracle.com/careers",
       "wikidata_id": "Q185173",
       "hiring_focus": [
@@ -2753,7 +2776,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-27-sap",
@@ -2789,7 +2813,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-29T00:00:00Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-28-salesforce",
@@ -2798,10 +2823,10 @@
       "country": "US",
       "region": "GLOBAL",
       "industry_gics": "GICS45",
-      "hq_city": "San Francisco",
+      "hq_city": "Salesforce Tower",
       "founded": 1999,
-      "employees_approx": 73000,
-      "revenue_usd_bn_approx": 38,
+      "employees_approx": 35000,
+      "revenue_usd_bn_approx": 37.9,
       "website": "https://www.salesforce.com",
       "careers_url": "https://careers.salesforce.com",
       "wikidata_id": "Q941127",
@@ -2825,7 +2850,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-29-netflix",
@@ -2838,7 +2864,7 @@
       "founded": 1997,
       "employees_approx": 14000,
       "revenue_usd_bn_approx": 39,
-      "website": "https://www.netflix.com",
+      "website": "https://www.netflix.com/",
       "careers_url": "https://jobs.netflix.com",
       "wikidata_id": "Q907311",
       "hiring_focus": [
@@ -2861,7 +2887,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-30-nike",
@@ -2872,9 +2899,9 @@
       "industry_gics": "GICS25_30",
       "hq_city": "Beaverton",
       "founded": 1964,
-      "employees_approx": 79000,
-      "revenue_usd_bn_approx": 51,
-      "website": "https://www.nike.com",
+      "employees_approx": 76700,
+      "revenue_usd_bn_approx": 46.71,
+      "website": "https://www.nike.com/",
       "careers_url": "https://jobs.nike.com",
       "wikidata_id": "Q483915",
       "hiring_focus": [
@@ -2897,7 +2924,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-31-the-coca-cola-company",
@@ -2908,9 +2936,9 @@
       "industry_gics": "GICS25_30",
       "hq_city": "Atlanta",
       "founded": 1892,
-      "employees_approx": 70000,
-      "revenue_usd_bn_approx": 47,
-      "website": "https://www.coca-colacompany.com",
+      "employees_approx": 69700,
+      "revenue_usd_bn_approx": 47.06,
+      "website": "https://www.coca-colacompany.com/",
       "careers_url": "https://www.coca-colacompany.com",
       "wikidata_id": "Q3295867",
       "hiring_focus": [
@@ -2933,7 +2961,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-32-pepsico",
@@ -2942,11 +2971,11 @@
       "country": "US",
       "region": "GLOBAL",
       "industry_gics": "GICS25_30",
-      "hq_city": "Purchase, New York",
+      "hq_city": "Purchase",
       "founded": 1965,
-      "employees_approx": 318000,
-      "revenue_usd_bn_approx": 92,
-      "website": "https://www.pepsico.com",
+      "employees_approx": 309000,
+      "revenue_usd_bn_approx": 91.85,
+      "website": "https://www.pepsico.com/",
       "careers_url": "https://www.pepsicojobs.com",
       "wikidata_id": "Q334800",
       "hiring_focus": [
@@ -2969,7 +2998,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-33-nestle",
@@ -2980,9 +3010,9 @@
       "industry_gics": "GICS25_30",
       "hq_city": "Vevey",
       "founded": 1866,
-      "employees_approx": 277000,
-      "revenue_usd_bn_approx": 105,
-      "website": "https://www.nestle.com",
+      "employees_approx": 270000,
+      "revenue_usd_bn_approx": 100.23,
+      "website": "https://www.nestle.com/",
       "careers_url": "https://www.nestle.com",
       "wikidata_id": "Q160746",
       "hiring_focus": [
@@ -3005,7 +3035,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-34-l-oreal",
@@ -3088,9 +3119,9 @@
       "industry_gics": "GICS25_30",
       "hq_city": "Bentonville",
       "founded": 1962,
-      "employees_approx": 2100000,
-      "revenue_usd_bn_approx": 681,
-      "website": "https://www.walmart.com",
+      "employees_approx": 2300000,
+      "revenue_usd_bn_approx": 680.99,
+      "website": "https://www.walmart.com/",
       "careers_url": "https://careers.walmart.com",
       "wikidata_id": "Q483551",
       "hiring_focus": [
@@ -3113,7 +3144,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-37-costco",
@@ -3124,9 +3156,9 @@
       "industry_gics": "GICS25_30",
       "hq_city": "Issaquah",
       "founded": 1983,
-      "employees_approx": 333000,
-      "revenue_usd_bn_approx": 254,
-      "website": "https://www.costco.com",
+      "employees_approx": 316000,
+      "revenue_usd_bn_approx": 275.24,
+      "website": "https://www.costco.com/",
       "careers_url": "https://www.costco.com",
       "wikidata_id": "Q715583",
       "hiring_focus": [
@@ -3149,7 +3181,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-38-shell",
@@ -3158,11 +3191,11 @@
       "country": "UK",
       "region": "GLOBAL",
       "industry_gics": "GICS20_30",
-      "hq_city": "London",
+      "hq_city": "Luân Đôn",
       "founded": 1907,
-      "employees_approx": 96000,
-      "revenue_usd_bn_approx": 285,
-      "website": "https://www.shell.com",
+      "employees_approx": 90000,
+      "revenue_usd_bn_approx": 316.62,
+      "website": "https://www.shell.com/",
       "careers_url": "https://www.shell.com",
       "wikidata_id": "Q154950",
       "hiring_focus": [
@@ -3185,7 +3218,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-39-exxonmobil",
@@ -3194,11 +3228,11 @@
       "country": "US",
       "region": "GLOBAL",
       "industry_gics": "GICS20_30",
-      "hq_city": "Spring, Texas",
+      "hq_city": "Spring",
       "founded": 1999,
-      "employees_approx": 61000,
-      "revenue_usd_bn_approx": 350,
-      "website": "https://corporate.exxonmobil.com",
+      "employees_approx": 74900,
+      "revenue_usd_bn_approx": 349.59,
+      "website": "https://corporate.exxonmobil.com/",
       "careers_url": "https://corporate.exxonmobil.com",
       "wikidata_id": "Q156238",
       "hiring_focus": [
@@ -3221,7 +3255,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-40-bp",
@@ -3230,11 +3265,11 @@
       "country": "UK",
       "region": "GLOBAL",
       "industry_gics": "GICS20_30",
-      "hq_city": "London",
+      "hq_city": "Luân Đôn",
       "founded": 1909,
-      "employees_approx": 90000,
-      "revenue_usd_bn_approx": 195,
-      "website": "https://www.bp.com",
+      "employees_approx": 70100,
+      "revenue_usd_bn_approx": 194.63,
+      "website": "https://bp.com",
       "careers_url": "https://www.bp.com",
       "wikidata_id": "Q152057",
       "hiring_focus": [
@@ -3257,7 +3292,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-41-tsmc",
@@ -3266,11 +3302,11 @@
       "country": "TW",
       "region": "GLOBAL",
       "industry_gics": "GICS45",
-      "hq_city": "Hsinchu",
+      "hq_city": "Hsinchu Science Park",
       "founded": 1987,
-      "employees_approx": 83000,
-      "revenue_usd_bn_approx": 90,
-      "website": "https://www.tsmc.com",
+      "employees_approx": 65152,
+      "revenue_usd_bn_approx": 49.21,
+      "website": "https://www.tsmc.com/",
       "careers_url": "https://careers.tsmc.com",
       "wikidata_id": "Q713418",
       "hiring_focus": [
@@ -3293,7 +3329,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-42-sony",
@@ -3302,11 +3339,11 @@
       "country": "JP",
       "region": "GLOBAL",
       "industry_gics": "GICS45",
-      "hq_city": "Tokyo",
+      "hq_city": "Minato",
       "founded": 1946,
-      "employees_approx": 113000,
-      "revenue_usd_bn_approx": 85,
-      "website": "https://www.sony.com",
+      "employees_approx": 112300,
+      "revenue_usd_bn_approx": 74.32,
+      "website": "https://www.sony.com/en/",
       "careers_url": "https://www.sony.com",
       "wikidata_id": "Q41187",
       "hiring_focus": [
@@ -3329,7 +3366,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-43-hitachi",
@@ -3446,11 +3484,11 @@
       "country": "CN",
       "region": "GLOBAL",
       "industry_gics": "GICS25_30",
-      "hq_city": "Hangzhou",
+      "hq_city": "Tân Giang",
       "founded": 1999,
-      "employees_approx": 200000,
-      "revenue_usd_bn_approx": 130,
-      "website": "https://www.alibabagroup.com",
+      "employees_approx": 251462,
+      "revenue_usd_bn_approx": 100.42,
+      "website": "https://www.alibabagroup.com/",
       "careers_url": "https://www.alibabagroup.com",
       "wikidata_id": "Q1359568",
       "hiring_focus": [
@@ -3473,7 +3511,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-47-tencent",
@@ -3482,11 +3521,11 @@
       "country": "CN",
       "region": "GLOBAL",
       "industry_gics": "GICS45",
-      "hq_city": "Shenzhen",
+      "hq_city": "Maling",
       "founded": 1998,
-      "employees_approx": 105000,
-      "revenue_usd_bn_approx": 92,
-      "website": "https://www.tencent.com",
+      "employees_approx": 62885,
+      "revenue_usd_bn_approx": 43.78,
+      "website": "https://www.tencent.com/",
       "careers_url": "https://careers.tencent.com",
       "wikidata_id": "Q860580",
       "hiring_focus": [
@@ -3509,7 +3548,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-48-bytedance",
@@ -3554,11 +3594,11 @@
       "country": "CN",
       "region": "GLOBAL",
       "industry_gics": "GICS45",
-      "hq_city": "Shenzhen",
+      "hq_city": "Thâm Quyến",
       "founded": 1987,
-      "employees_approx": 207000,
-      "revenue_usd_bn_approx": 118,
-      "website": "https://www.huawei.com",
+      "employees_approx": 197000,
+      "revenue_usd_bn_approx": 100.97,
+      "website": "https://www.huawei.com/",
       "careers_url": "https://career.huawei.com",
       "wikidata_id": "Q160120",
       "hiring_focus": [
@@ -3581,7 +3621,8 @@
         "Forbes Global 2000 (tham khảo)",
         "Wikidata (tham khảo)"
       ],
-      "updated_at": "2026-10-29T00:00:00Z"
+      "updated_at": "2026-10-30T03:45:03.669Z",
+      "wikidata_checked_at": "2026-10-30T03:45:03.669Z"
     },
     {
       "id": "global-50-grab",
@@ -3619,5 +3660,13 @@
       ],
       "updated_at": "2026-10-29T00:00:00Z"
     }
-  ]
+  ],
+  "last_update_run": {
+    "at": "2026-10-30T03:45:03.669Z",
+    "checked": 41,
+    "changed": 39,
+    "errors": 0,
+    "dry_run": false,
+    "mock": false
+  }
 }
