@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- KK-RECRUITMENT v1.3 build 2026-10-30T03:32:31.377Z | 20 JS + 2 CSS + 1 vendor | 27769 dòng nguồn | Bản quyền Nguyễn Duy Điển (KK-2026) -->
+<!-- KK-RECRUITMENT v1.3 build 2026-10-30T04:02:46.724Z | 20 JS + 2 CSS + 1 vendor | 27771 dòng nguồn | Bản quyền Nguyễn Duy Điển (KK-2026) -->
 <html lang="vi" data-theme="light">
 <head>
 <meta charset="UTF-8">
@@ -16840,8 +16840,10 @@ window.KKR.EMPLOYERS_SEED = {"schema_version":1,"title":"KK-RECRUITMENT - 100 nh
     if (backend()) return false;
     const admins = (await DB.where('users', 'role', 'ADMIN')).filter((u) => u.status !== 'DELETED');
     if (!admins.length) return false;
-    return admins.every((u) => u.is_demo) && !admins.some((u) => u.email === KKR.OWNER_EMAIL);
+    return admins.every(Setup.isDemoAdmin) && !admins.some((u) => u.email === KKR.OWNER_EMAIL);
   };
+  /** Admin mẫu: có cờ is_demo (v1.2+) hoặc là tài khoản mẫu của bản v1.0/v1.1 (chưa có cờ) */
+  Setup.isDemoAdmin = (u) => !!u && (u.is_demo || (KKR.Seed && KKR.Seed.DEMO && u.email === KKR.Seed.DEMO.admin.email));
   Setup.page = async function () {
     Setup.claim = await Setup.claimable();
     if (!Setup.required && !(await Setup.check()) && !Setup.noAdmin && !Setup.claim) {
@@ -16996,7 +16998,7 @@ window.KKR.EMPLOYERS_SEED = {"schema_version":1,"title":"KK-RECRUITMENT - 100 nh
       await KKR.DB.put('users', admin);
       if (claim) {
         for (const u of await DB.where('users', 'role', 'ADMIN')) {
-          if (u.is_demo) await KKR.DB.put('users', Object.assign({}, u, { status: 'DELETED' }));
+          if (Setup.isDemoAdmin(u)) await KKR.DB.put('users', Object.assign({}, u, { status: 'DELETED', is_demo: true }));
         }
       }
       await DB.setSetting('platform', {
