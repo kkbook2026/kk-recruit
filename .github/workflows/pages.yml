@@ -1,36 +1,38 @@
-name: Deploy KK-RECRUITMENT to GitHub Pages
-# Triển khai khi push + cập nhật dữ liệu 100 nhà tuyển dụng hàng đầu (50 VN + 50 toàn cầu) hằng ngày 03:00 giờ Việt Nam.
+name: Cap nhat 100 nha tuyen dung hang ngay
+# Lịch 03:00 giờ Việt Nam (20:00 UTC): cập nhật data/employers.json (50 VN + 50 toàn cầu) từ Wikidata,
+# commit nếu có thay đổi rồi yêu cầu GitHub Pages dựng lại (Pages phục vụ từ nhánh main, thư mục gốc).
 on:
-  push:
-    branches: [main]
   schedule:
     - cron: '0 20 * * *'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
   pages: write
-  id-token: write
 concurrency:
-  group: pages
-  cancel-in-progress: true
+  group: employers-update
+  cancel-in-progress: false
 jobs:
-  deploy:
+  update:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Cập nhật data/employers.json từ Wikidata (lỗi mạng không làm hỏng bản triển khai)
-        run: node scripts/update_employers.js --file=site/data/employers.json --quiet || echo "Giữ dữ liệu hiện có"
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Cập nhật từ Wikidata (lỗi mạng giữ dữ liệu cũ)
+        run: |
+          node scripts/update_employers.js --file=data/employers.json --quiet || echo "Giữ dữ liệu hiện có"
+          mkdir -p site/data && cp data/employers.json site/data/employers.json
+      - name: Commit nếu có thay đổi
+        id: commit
+        run: |
+          git config user.name "kk-recruit-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/employers.json site/data/employers.json
+          if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; else
+            git commit -m "Cập nhật dữ liệu nhà tuyển dụng $(date -u +%Y-%m-%d)" && git push && echo "changed=true" >> "$GITHUB_OUTPUT"; fi
+      - name: Yêu cầu GitHub Pages dựng lại
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
