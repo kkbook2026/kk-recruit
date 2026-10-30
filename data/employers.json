@@ -2,7 +2,7 @@
   "schema_version": 1,
   "title": "KK-RECRUITMENT - 100 nhà tuyển dụng hàng đầu (50 Việt Nam + 50 toàn cầu)",
   "note": "Số liệu nhân sự / doanh thu là ƯỚC LƯỢNG THAM KHẢO (tham khảo Fortune Global 500, Forbes, VNR500, Anphabe, Wikidata); các bản ghi có wikidata_id được scripts/update_employers.js làm giàu hằng ngày từ Wikidata (P1128 employees, P2139 revenue, P856 website, P159 HQ). Gạch nối (-) được dùng thay gạch dài.",
-  "copyright": "Nguyễn Duy Điển (KK-2026)",
+  "copyright": "Nguyễn Duy Điển",
   "generated_at": "2026-10-29T00:00:00Z",
   "updated_at": "2026-10-30T03:45:03.669Z",
   "count": 100,

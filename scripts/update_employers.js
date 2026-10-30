@@ -13,7 +13,7 @@
  *   --mock    : dùng dữ liệu Wikidata giả lập (kiểm thử offline)
  * Lỗi mạng/bản ghi được bỏ qua (không dừng), mã thoát 0; chỉ thoát 1 khi không đọc/ghi được file.
  * Module: module.exports = { run, parseEntity, parseArgs, extractTime, FX } - test có thể tiêm fetchImpl.
- * Bản quyền: Nguyễn Duy Điển (KK-2026)
+ * Bản quyền: Nguyễn Duy Điển
  * ===================================================================== */
 'use strict';
 const fs = require('fs');
