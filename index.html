@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- KK-RECRUITMENT v1.3 build 2026-10-30T04:02:46.724Z | 20 JS + 2 CSS + 1 vendor | 27771 dòng nguồn | Bản quyền Nguyễn Duy Điển (KK-2026) -->
+<!-- KK-RECRUITMENT v1.3 build 2026-10-30T04:14:07.022Z | 20 JS + 2 CSS + 1 vendor | 27814 dòng nguồn | Bản quyền Nguyễn Duy Điển (KK-2026) -->
 <html lang="vi" data-theme="light">
 <head>
 <meta charset="UTF-8">
@@ -3362,6 +3362,8 @@ window.KKR = window.KKR || {};
   KKR.COPYRIGHT = 'Nguyễn Duy Điển (KK-2026)';
   KKR.OWNER_EMAIL = 'nguyenduydien75@gmail.com';
   KKR.OWNER_NAME = 'Nguyễn Duy Điển';
+  // Khóa thiết lập Admin trên site công khai: chỉ SHA-256 của khóa được nhúng; khóa thật lưu trong 00_THONG_TIN_TAI_KHOAN.md
+  KKR.SETUP_KEY_HASH = '65c12ff6cec012fc6b15ea7e58188d4060ceb75cad74a113b2126b8460866057';
   KKR.DEFAULT_MASTER_KEY = 'KK-MASTER-2026';
   KKR.SESSION_TIMEOUT_MS = 30 * 60 * 1000;
   KKR.MAX_LOGIN_FAILS = 5;
@@ -5694,6 +5696,8 @@ window.KKR = window.KKR || {};
       'auth.current_password': 'Mật khẩu hiện tại',
       'auth.current_password_is_incorrect': 'Mật khẩu hiện tại sai',
       'auth.demo_accounts': 'Tài khoản demo',
+      'nav.connection_mode': 'Kết nối & Lưu trữ',
+      'api.connection_admin_only': 'Cài đặt kết nối chỉ dành cho Quản trị viên.',
       'app.hero_card_title': 'Phiếu điểm 360',
       'app.hero_card_top': 'Nhóm 2,5% cao nhất',
       'app.hero_card_cts': 'Điểm năng lực tổng hợp (CTS)',
@@ -6906,6 +6910,8 @@ window.KKR = window.KKR || {};
       'auth.current_password': 'Current password',
       'auth.current_password_is_incorrect': 'Current password is incorrect',
       'auth.demo_accounts': 'Demo accounts',
+      'nav.connection_mode': 'Connection & Storage',
+      'api.connection_admin_only': 'Connection settings are for administrators only.',
       'app.hero_card_title': 'Scorecard 360',
       'app.hero_card_top': 'Top 2.5%',
       'app.hero_card_cts': 'Composite Talent Score',
@@ -10321,8 +10327,11 @@ window.KKR = window.KKR || {};
   });
 
   /** Pill trạng thái chế độ hiển thị ở header */
-  Data.modePill = function () {
+  Data.modePill = function (ctx) {
     const esc = U.esc;
+    // Chế độ lưu trữ là thông tin quản trị: ẩn với khách/ứng viên/nhà tuyển dụng,
+    // chỉ hiện ở header công khai khi Backend mất kết nối (để khôi phục)
+    if (ctx === 'public' && !(KKR.MODE === 'backend' && Config.healthError)) return '';
     if (KKR.MODE === 'backend') {
       const bad = !!Config.healthError;
       const label = Config.tenantName ? `Backend - ${Config.tenantName}` : 'Backend';
@@ -10429,6 +10438,18 @@ window.KKR = window.KKR || {};
       esc = U.esc,
       icon = KKR.icon,
       t = KKR.t;
+    // Chỉ Admin (trong menu quản trị); ngoại lệ trước đăng nhập: máy cục bộ, chủ sở hữu có khóa, hoặc Backend mất kết nối
+    const isAdmin = KKR.State.role() === 'ADMIN';
+    if (!isAdmin) {
+      const preLogin =
+        !KKR.State.isAuth() &&
+        ((KKR.Setup && (await KKR.Setup.keyOk())) || (KKR.MODE === 'backend' && !!Config.healthError));
+      if (!preLogin) {
+        UI.toast(t('api.connection_admin_only'), 'warn', 5000);
+        location.hash = KKR.State.isAuth() ? KKR.State.homeRoute() : '#/login';
+        return;
+      }
+    }
     const injected = Config.source === 'injected';
     const curBase = Config.apiBase || '';
     const curLk = Config.livekitUrl || '';
@@ -10450,7 +10471,7 @@ window.KKR = window.KKR || {};
       `<div class="conn-empty">${icon('plug')}<div><b>${t('api.no_check_yet_title')}</b><p>${t('api.no_check_yet_body')}</p></div></div>`;
     const hist = Conn.history();
     UI.renderPage(
-      `<div class="container conn-page">${UI.pageHead(t('api.connection_settings'), t('api.one_dist_index_html_file_runs'))}
+      `<div class="${isAdmin ? '' : 'container '}conn-page">${UI.pageHead(t('api.connection_settings'), t('api.one_dist_index_html_file_runs'))}
       <div class="conn-grid">
       <div class="card conn-card" id="conn-card-mode"><div class="row between wrap"><div><div class="small muted" style="text-transform:uppercase;letter-spacing:.08em;font-weight:700">${t('api.current_mode')}</div><h3 style="margin:.15rem 0 0">${isBackend ? 'Backend' : 'Standalone'}${Config.tenantName ? ` <span class="small muted">- ${esc(Config.tenantName)}</span>` : ''}</h3><p class="muted small mb0">${
         isBackend ? `${t('api.backend_at')} <code>${esc(curBase)}</code>` : t('api.standalone_all_data_lives_in_this')
@@ -10476,7 +10497,7 @@ window.KKR = window.KKR || {};
       <div class="card conn-card" id="conn-card-market">${KKR.Employers ? await KKR.Employers.settingsCard() : ''}</div>
       </div>
       <p class="small muted mt">${t('api.jwt_is_kept_in_sessionstorage_and')}</p></div>`,
-      'public'
+      isAdmin ? 'app' : 'public'
     );
     if (KKR.Employers && KKR.Employers.bindSettingsCard) KKR.Employers.bindSettingsCard(document.getElementById('conn-card-market'));
 
@@ -14880,8 +14901,10 @@ window.KKR.EMPLOYERS_SEED = {"schema_version":1,"title":"KK-RECRUITMENT - 100 nh
 
   /* ---------- Đăng nhập ---------- */
   Auth.loginPage = async function (p, q) {
-    const claim = KKR.MODE !== 'backend' && KKR.Setup && (await KKR.Setup.claimable());
-    const noAdmin = KKR.MODE !== 'backend' && !(await KKR.Seed.hasAdmin());
+    // Nút thiết lập Admin chỉ hiện cho chủ sở hữu (máy cục bộ hoặc liên kết có khóa) - khách truy cập không thấy
+    const ownerOk = KKR.MODE !== 'backend' && KKR.Setup && (await KKR.Setup.keyOk());
+    const claim = ownerOk && (await KKR.Setup.claimable());
+    const noAdmin = ownerOk && !(await KKR.Seed.hasAdmin());
     const notice =
       q && q.reason === 'pending'
         ? `<div class="callout info mb">${KKR.icon('info')}<div>${t('acct.account_pending_notice')}</div></div>`
@@ -16828,12 +16851,31 @@ window.KKR.EMPLOYERS_SEED = {"schema_version":1,"title":"KK-RECRUITMENT - 100 nh
     }
     const noAdmin = !(await KKR.Seed.hasAdmin());
     Setup.noAdmin = noAdmin;
-    // Site công khai (https host): mỗi trình duyệt là một CSDL riêng -> không ép khách vào wizard;
-    // chỉ bắt buộc khi chạy cục bộ (file:// hoặc localhost) hoặc khi có ?setup=1.
-    const local = location.protocol === 'file:' || /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
-    const forced = /[?&]setup=1/.test(location.search) || localStorage.getItem('kkr_force_setup') === '1';
-    Setup.required = noAdmin && (local || forced);
+    // Site công khai (https host): khách truy cập KHÔNG bao giờ thấy thiết lập Admin;
+    // chỉ chạy cục bộ (file:// hoặc localhost) hoặc khi mở bằng liên kết có khóa chủ sở hữu (?key=...).
+    Setup.required = noAdmin && (await Setup.keyOk());
     return Setup.required;
+  };
+  Setup.isLocal = () => location.protocol === 'file:' || /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+  /** Quyền thiết lập Admin: máy cục bộ, hoặc liên kết có khóa chủ sở hữu khớp KKR.SETUP_KEY_HASH (nhớ trong phiên) */
+  Setup.keyOk = async function () {
+    if (Setup.isLocal()) return true;
+    try {
+      if (sessionStorage.getItem('kkr_setup_ok') === '1') return true;
+    } catch (e) {
+      /* bỏ qua */
+    }
+    const m = (location.search + '&' + location.hash).match(/[?&]key=([^&#]+)/);
+    if (!m || !KKR.SETUP_KEY_HASH) return false;
+    const ok = (await C.sha256(decodeURIComponent(m[1]).trim().toUpperCase())) === KKR.SETUP_KEY_HASH;
+    if (ok) {
+      try {
+        sessionStorage.setItem('kkr_setup_ok', '1');
+      } catch (e) {
+        /* bỏ qua */
+      }
+    }
+    return ok;
   };
   /** Trình duyệt chỉ còn Admin mẫu (is_demo) và chưa có Admin chủ sở hữu -> cho phép tạo Admin chủ sở hữu (thay Admin mẫu) */
   Setup.claimable = async function () {
@@ -16846,7 +16888,7 @@ window.KKR.EMPLOYERS_SEED = {"schema_version":1,"title":"KK-RECRUITMENT - 100 nh
   Setup.isDemoAdmin = (u) => !!u && (u.is_demo || (KKR.Seed && KKR.Seed.DEMO && u.email === KKR.Seed.DEMO.admin.email));
   Setup.page = async function () {
     Setup.claim = await Setup.claimable();
-    if (!Setup.required && !(await Setup.check()) && !Setup.noAdmin && !Setup.claim) {
+    if (!(await Setup.keyOk()) || (!Setup.required && !(await Setup.check()) && !Setup.noAdmin && !Setup.claim)) {
       location.hash = State.isAuth() ? State.homeRoute() : '#/login';
       return;
     }
@@ -27579,7 +27621,7 @@ self.onmessage = (e) => {
     `<span class="lang-toggle"><button class="${KKR.lang === 'vi' ? 'active' : ''}" data-lang="vi">VI</button><button class="${KKR.lang === 'en' ? 'active' : ''}" data-lang="en">EN</button></span>`;
   App.publicShell =
     () => `<header class="pub-header"><div class="inner"><a class="brand" href="#/">${KKR.ICONS.logo}<span>KK-RECRUITMENT<small>AI Talent Assessment Platform</small></span></a>
-    <nav class="pub-nav"><a href="#/" data-nav="/">${t('home')}</a><a href="#/jobs" data-nav="/jobs">${t('jobs')}</a><a href="#/employers" data-nav="/employers" class="hide-m">${t('emp.nav')}</a><a href="#/#modules" class="hide-m">${KKR.t('app.n8_modules')}</a>${KKR.Data.modePill()}${App.langBtn()}${App.themeBtn()}${State.isAuth() ? `<a class="btn primary sm" href="${State.homeRoute()}">${t('dashboard')}</a>` : `<a href="#/login" data-nav="/login">${t('login')}</a><a class="btn primary sm" href="#/register">${t('register')}</a>`}</nav></div></header>
+    <nav class="pub-nav"><a href="#/" data-nav="/">${t('home')}</a><a href="#/jobs" data-nav="/jobs">${t('jobs')}</a><a href="#/employers" data-nav="/employers" class="hide-m">${t('emp.nav')}</a><a href="#/#modules" class="hide-m">${KKR.t('app.n8_modules')}</a>${KKR.Data.modePill('public')}${App.langBtn()}${App.themeBtn()}${State.isAuth() ? `<a class="btn primary sm" href="${State.homeRoute()}">${t('dashboard')}</a>` : `<a href="#/login" data-nav="/login">${t('login')}</a><a class="btn primary sm" href="#/register">${t('register')}</a>`}</nav></div></header>
     <main class="pub-main" id="page"></main>
     <footer class="pub-footer"><b>KK-RECRUITMENT</b> ${KKR.t('app.global_ai_recruitment_assessment_platform_copyri')} ${esc(KKR.COPYRIGHT)}. v${KKR.VERSION}.</footer>`;
   App.navItems = function () {
@@ -27652,6 +27694,7 @@ self.onmessage = (e) => {
           ['/a/audit', 'list', t('audit')],
           ['/a/backup', 'save', t('backup')],
           ['/a/health', 'heart', t('health')],
+          ['/settings/connection', 'plug', KKR.t('nav.connection_mode') + ' - ' + (KKR.MODE === 'backend' ? 'Backend' : 'Standalone')],
           ['/a/security', 'lock', t('sec_log')],
           ['/account', 'gear', t('acct.my_account')]
         ]
@@ -27670,7 +27713,7 @@ self.onmessage = (e) => {
         .join('')}</nav>
       <div class="sidebar-foot"><div class="backup"><span class="dot" id="bk-dot"></span><span id="bk-info">Backup: ${bm ? U.fmtDate(bm.at, true) : KKR.t('common.none_yet_2')}</span></div><div class="mt" style="margin-top:.4rem">v${KKR.VERSION} - ${esc(KKR.COPYRIGHT)}</div></div></aside>
       <div class="main"><header class="topbar"><div class="row"><button class="icon-btn menu-toggle" id="menu-toggle">${KKR.ICONS.menu}</button><div class="crumbs" id="crumbs">${t('dashboard')}</div></div>
-        <div class="row">${KKR.Data.modePill()}${App.langBtn()}${App.themeBtn()}<div class="user-chip"><span class="avatar">${esc(U.initials(u.full_name || u.email))}</span><div class="meta"><b>${esc(u.full_name || u.anonymous_token || u.email)}</b><span>${esc(u.role)}${u.mfa_enabled ? ' - MFA' : ''}</span></div></div><a class="icon-btn" href="#/logout" title="${t('logout')}">${KKR.ICONS.logout}</a></div></header>
+        <div class="row">${State.role() === 'ADMIN' ? KKR.Data.modePill() : ''}${App.langBtn()}${App.themeBtn()}<div class="user-chip"><span class="avatar">${esc(U.initials(u.full_name || u.email))}</span><div class="meta"><b>${esc(u.full_name || u.anonymous_token || u.email)}</b><span>${esc(u.role)}${u.mfa_enabled ? ' - MFA' : ''}</span></div></div><a class="icon-btn" href="#/logout" title="${t('logout')}">${KKR.ICONS.logout}</a></div></header>
       <div class="shell-banner" id="shell-banner">${KKR.Account ? KKR.Account.pendingBanner() : ''}</div><main class="content" id="page"></main></div></div>`;
   };
   App.bindShell = function (name) {
