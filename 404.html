@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- KK-RECRUITMENT v1.3 build 2026-10-30T05:35:38.634Z | 21 JS + 2 CSS + 1 vendor | 28305 dòng nguồn | Bản quyền Nguyễn Duy Điển (KK-2026) -->
+<!-- KK-RECRUITMENT v1.3 build 2026-10-30T06:28:14.163Z | 21 JS + 2 CSS + 1 vendor | 28327 dòng nguồn | Bản quyền Nguyễn Duy Điển (KK-2026) -->
 <html lang="vi" data-theme="light">
 <head>
 <meta charset="UTF-8">
@@ -3433,6 +3433,7 @@ label, .field > label { font-weight: 600; color: var(--text2); font-size: 0.86re
 .guide-video video { width: 100%; height: 100%; display: block; background: #0c2257; }
 
 </style>
+<script>window.KKR_CONFIG={"apiBase":"https://kk-recruit-api.onrender.com/api/v1","mode":"backend","source":"pages"};</script>
 </head>
 <body>
 <div id="app"><div class="loader-wrap"><div class="loader-box"><div class="spinner"></div><div class="loader-msg">Đang khởi động KK-RECRUITMENT... / Starting KK-RECRUITMENT...</div></div></div></div>
@@ -5836,6 +5837,7 @@ window.KKR = window.KKR || {};
       'auth.current_password': 'Mật khẩu hiện tại',
       'auth.current_password_is_incorrect': 'Mật khẩu hiện tại sai',
       'auth.demo_accounts': 'Tài khoản demo',
+      'api.waking_server': 'Đang đánh thức máy chủ (gói miễn phí ngủ khi không dùng) - {s} giây, tối đa khoảng 1 phút...',
       'guide.nav': 'Video hướng dẫn',
       'guide.title': 'Video hướng dẫn sử dụng',
       'guide.sub': 'Từ đăng ký theo ngành, làm bài 8 mô-đun, Hội đồng AI chấm điểm đến quản trị - có giọng đọc tiếng Việt.',
@@ -7078,6 +7080,7 @@ window.KKR = window.KKR || {};
       'auth.current_password': 'Current password',
       'auth.current_password_is_incorrect': 'Current password is incorrect',
       'auth.demo_accounts': 'Demo accounts',
+      'api.waking_server': 'Waking up the server (the free plan sleeps when idle) - {s} s, up to about a minute...',
       'guide.nav': 'Video guide',
       'guide.title': 'Video guide',
       'guide.sub': 'From industry sign-up and the 8 modules to AI council grading and administration - narrated in English.',
@@ -9640,6 +9643,26 @@ window.KKR = window.KKR || {};
       } catch (e) {
         Config.health = null;
         Config.healthError = e.message || String(e);
+      }
+      // Máy chủ miễn phí (Render Free) ngủ sau 15 phút: đánh thức tối đa ~90 giây, hiển thị tiến trình
+      if (Config.healthError && /^https?:\/\//.test(Config.apiBase || '')) {
+        const t0 = Date.now();
+        for (let i = 0; i < 7 && Config.healthError; i++) {
+          const sec = Math.round((Date.now() - t0) / 1000);
+          if (KKR.UI && KKR.UI.loading) KKR.UI.loading(true, KKR.t('api.waking_server', { s: sec }));
+          try {
+            const res = await fetch(Config.origin() + '/health', { headers: { accept: 'application/json' }, signal: AbortSignal.timeout(15000) });
+            if (res.ok) {
+              Config.health = Object.assign({ status: 'ok' }, await res.json().catch(() => ({})));
+              Config.healthError = null;
+              break;
+            }
+          } catch (e) {
+            /* thử lại */
+          }
+          await new Promise((r) => setTimeout(r, 2500));
+        }
+        if (KKR.UI && KKR.UI.loading) KKR.UI.loading(false);
       }
       return !Config.healthError;
     },
