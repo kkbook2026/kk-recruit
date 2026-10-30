@@ -1,0 +1,3623 @@
+{
+  "schema_version": 1,
+  "title": "KK-RECRUITMENT - 100 nhà tuyển dụng hàng đầu (50 Việt Nam + 50 toàn cầu)",
+  "note": "Số liệu nhân sự / doanh thu là ƯỚC LƯỢNG THAM KHẢO (tham khảo Fortune Global 500, Forbes, VNR500, Anphabe, Wikidata); các bản ghi có wikidata_id được scripts/update_employers.js làm giàu hằng ngày từ Wikidata (P1128 employees, P2139 revenue, P856 website, P159 HQ). Gạch nối (-) được dùng thay gạch dài.",
+  "copyright": "Nguyễn Duy Điển (KK-2026)",
+  "generated_at": "2026-10-29T00:00:00Z",
+  "updated_at": "2026-10-29T00:00:00Z",
+  "count": 100,
+  "regions": {
+    "VN": 50,
+    "GLOBAL": 50
+  },
+  "industries": [
+    "GICS45",
+    "GICS20_60",
+    "GICS20_30",
+    "GICS40",
+    "GICS25_30",
+    "GICS35"
+  ],
+  "employers": [
+    {
+      "id": "vn-01-vingroup",
+      "name": "Vingroup",
+      "name_local": "Tập đoàn Vingroup",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS20_60",
+      "hq_city": "Hà Nội",
+      "founded": 1993,
+      "employees_approx": 50000,
+      "revenue_usd_bn_approx": 7.5,
+      "website": "https://vingroup.net",
+      "careers_url": "https://vingroup.net/tuyen-dung",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Real estate development",
+        "Automotive & EV",
+        "Technology & AI",
+        "Hospitality & retail",
+        "Finance & investment"
+      ],
+      "hiring_focus_vi": [
+        "Phát triển bất động sản",
+        "Ô tô & xe điện",
+        "Công nghệ & AI",
+        "Du lịch nghỉ dưỡng & bán lẻ",
+        "Tài chính & đầu tư"
+      ],
+      "rank_vn": 1,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-02-viettel-group",
+      "name": "Viettel Group",
+      "name_local": "Tập đoàn Công nghiệp - Viễn thông Quân đội",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS45",
+      "hq_city": "Hà Nội",
+      "founded": 1989,
+      "employees_approx": 50000,
+      "revenue_usd_bn_approx": 7,
+      "website": "https://viettel.com.vn",
+      "careers_url": "https://tuyendung.viettel.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Telecom network engineering",
+        "Software & digital platforms",
+        "Cybersecurity",
+        "High-tech manufacturing",
+        "Data & AI"
+      ],
+      "hiring_focus_vi": [
+        "Kỹ thuật mạng viễn thông",
+        "Phần mềm & nền tảng số",
+        "An ninh mạng",
+        "Sản xuất công nghệ cao",
+        "Dữ liệu & AI"
+      ],
+      "rank_vn": 2,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-03-fpt-corporation",
+      "name": "FPT Corporation",
+      "name_local": "Công ty Cổ phần FPT",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS45",
+      "hq_city": "Hà Nội",
+      "founded": 1988,
+      "employees_approx": 75000,
+      "revenue_usd_bn_approx": 2.5,
+      "website": "https://fpt.com",
+      "careers_url": "https://fpt.com",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Software engineering",
+        "Cloud & DevOps",
+        "AI & data science",
+        "IT services & consulting",
+        "Telecom & education"
+      ],
+      "hiring_focus_vi": [
+        "Kỹ thuật phần mềm",
+        "Cloud & DevOps",
+        "AI & khoa học dữ liệu",
+        "Dịch vụ & tư vấn CNTT",
+        "Viễn thông & giáo dục"
+      ],
+      "rank_vn": 3,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-04-samsung-electronics-vietnam",
+      "name": "Samsung Electronics Vietnam",
+      "name_local": "Samsung Electronics Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS45",
+      "hq_city": "Thái Nguyên / Bắc Ninh",
+      "founded": 2008,
+      "employees_approx": 100000,
+      "revenue_usd_bn_approx": 60,
+      "website": "https://www.samsung.com/vn",
+      "careers_url": "https://www.samsung.com/vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Electronics manufacturing",
+        "Process & quality engineering",
+        "R&D mobile software",
+        "Supply chain & logistics",
+        "HSE"
+      ],
+      "hiring_focus_vi": [
+        "Sản xuất điện tử",
+        "Kỹ thuật quy trình & chất lượng",
+        "R&D phần mềm di động",
+        "Chuỗi cung ứng & logistics",
+        "An toàn - sức khỏe - môi trường"
+      ],
+      "rank_vn": 4,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-05-vinfast",
+      "name": "VinFast",
+      "name_local": "VinFast Auto",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS20_30",
+      "hq_city": "Hải Phòng",
+      "founded": 2017,
+      "employees_approx": 15000,
+      "revenue_usd_bn_approx": 1.2,
+      "website": "https://vinfastauto.com",
+      "careers_url": "https://vinfastauto.com",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Automotive engineering",
+        "Battery & powertrain",
+        "Embedded software & ADAS",
+        "Manufacturing & quality",
+        "Global sales & aftersales"
+      ],
+      "hiring_focus_vi": [
+        "Kỹ thuật ô tô",
+        "Pin & hệ truyền động",
+        "Phần mềm nhúng & ADAS",
+        "Sản xuất & chất lượng",
+        "Bán hàng & hậu mãi toàn cầu"
+      ],
+      "rank_vn": 5,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-06-masan-group",
+      "name": "Masan Group",
+      "name_local": "Tập đoàn Masan",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS25_30",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 1996,
+      "employees_approx": 40000,
+      "revenue_usd_bn_approx": 3.2,
+      "website": "https://masangroup.com",
+      "careers_url": "https://masangroup.com",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Retail operations (WinMart)",
+        "Brand & trade marketing",
+        "Supply chain",
+        "Finance & M&A",
+        "Data analytics"
+      ],
+      "hiring_focus_vi": [
+        "Vận hành bán lẻ (WinMart)",
+        "Thương hiệu & trade marketing",
+        "Chuỗi cung ứng",
+        "Tài chính & M&A",
+        "Phân tích dữ liệu"
+      ],
+      "rank_vn": 6,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-07-techcombank",
+      "name": "Techcombank",
+      "name_local": "Ngân hàng TMCP Kỹ Thương Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS40",
+      "hq_city": "Hà Nội",
+      "founded": 1993,
+      "employees_approx": 12000,
+      "revenue_usd_bn_approx": 2,
+      "website": "https://techcombank.com",
+      "careers_url": "https://techcombank.com",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Digital banking & product",
+        "Data & AI",
+        "Risk management",
+        "Wealth & retail banking",
+        "Technology engineering"
+      ],
+      "hiring_focus_vi": [
+        "Ngân hàng số & sản phẩm",
+        "Dữ liệu & AI",
+        "Quản trị rủi ro",
+        "Ngân hàng bán lẻ & quản lý tài sản",
+        "Kỹ thuật công nghệ"
+      ],
+      "rank_vn": 7,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-08-vietcombank",
+      "name": "Vietcombank",
+      "name_local": "Ngân hàng TMCP Ngoại thương Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS40",
+      "hq_city": "Hà Nội",
+      "founded": 1963,
+      "employees_approx": 23000,
+      "revenue_usd_bn_approx": 3.5,
+      "website": "https://www.vietcombank.com.vn",
+      "careers_url": "https://www.vietcombank.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Corporate & retail banking",
+        "Treasury & trade finance",
+        "Risk & compliance",
+        "Digital transformation",
+        "Branch operations"
+      ],
+      "hiring_focus_vi": [
+        "Ngân hàng doanh nghiệp & bán lẻ",
+        "Nguồn vốn & tài trợ thương mại",
+        "Rủi ro & tuân thủ",
+        "Chuyển đổi số",
+        "Vận hành chi nhánh"
+      ],
+      "rank_vn": 8,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-09-bidv",
+      "name": "BIDV",
+      "name_local": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS40",
+      "hq_city": "Hà Nội",
+      "founded": 1957,
+      "employees_approx": 28000,
+      "revenue_usd_bn_approx": 3.3,
+      "website": "https://www.bidv.com.vn",
+      "careers_url": "https://www.bidv.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Corporate banking",
+        "Credit appraisal & risk",
+        "Digital banking",
+        "Treasury",
+        "Branch operations"
+      ],
+      "hiring_focus_vi": [
+        "Ngân hàng doanh nghiệp",
+        "Thẩm định tín dụng & rủi ro",
+        "Ngân hàng số",
+        "Nguồn vốn",
+        "Vận hành chi nhánh"
+      ],
+      "rank_vn": 9,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-10-vietinbank",
+      "name": "VietinBank",
+      "name_local": "Ngân hàng TMCP Công Thương Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS40",
+      "hq_city": "Hà Nội",
+      "founded": 1988,
+      "employees_approx": 25000,
+      "revenue_usd_bn_approx": 3,
+      "website": "https://www.vietinbank.vn",
+      "careers_url": "https://www.vietinbank.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Corporate & SME banking",
+        "Risk management",
+        "IT & digital",
+        "Retail banking",
+        "Treasury & investment"
+      ],
+      "hiring_focus_vi": [
+        "Ngân hàng doanh nghiệp & SME",
+        "Quản trị rủi ro",
+        "CNTT & số hóa",
+        "Ngân hàng bán lẻ",
+        "Nguồn vốn & đầu tư"
+      ],
+      "rank_vn": 10,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-11-agribank",
+      "name": "Agribank",
+      "name_local": "Ngân hàng Nông nghiệp và Phát triển Nông thôn Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS40",
+      "hq_city": "Hà Nội",
+      "founded": 1988,
+      "employees_approx": 40000,
+      "revenue_usd_bn_approx": 3,
+      "website": "https://www.agribank.com.vn",
+      "careers_url": "https://www.agribank.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Rural & agricultural credit",
+        "Retail banking",
+        "Risk & compliance",
+        "IT & digital banking",
+        "Branch network operations"
+      ],
+      "hiring_focus_vi": [
+        "Tín dụng nông nghiệp - nông thôn",
+        "Ngân hàng bán lẻ",
+        "Rủi ro & tuân thủ",
+        "CNTT & ngân hàng số",
+        "Vận hành mạng lưới chi nhánh"
+      ],
+      "rank_vn": 11,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-12-mb-bank",
+      "name": "MB Bank",
+      "name_local": "Ngân hàng TMCP Quân đội",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS40",
+      "hq_city": "Hà Nội",
+      "founded": 1994,
+      "employees_approx": 17000,
+      "revenue_usd_bn_approx": 2.3,
+      "website": "https://www.mbbank.com.vn",
+      "careers_url": "https://www.mbbank.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Digital banking",
+        "Data science",
+        "Corporate banking",
+        "Risk management",
+        "Technology engineering"
+      ],
+      "hiring_focus_vi": [
+        "Ngân hàng số",
+        "Khoa học dữ liệu",
+        "Ngân hàng doanh nghiệp",
+        "Quản trị rủi ro",
+        "Kỹ thuật công nghệ"
+      ],
+      "rank_vn": 12,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-13-vpbank",
+      "name": "VPBank",
+      "name_local": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS40",
+      "hq_city": "Hà Nội",
+      "founded": 1993,
+      "employees_approx": 28000,
+      "revenue_usd_bn_approx": 2.4,
+      "website": "https://www.vpbank.com.vn",
+      "careers_url": "https://www.vpbank.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Retail & consumer finance",
+        "Digital products",
+        "Risk & collections",
+        "SME banking",
+        "Data & analytics"
+      ],
+      "hiring_focus_vi": [
+        "Bán lẻ & tài chính tiêu dùng",
+        "Sản phẩm số",
+        "Rủi ro & thu hồi nợ",
+        "Ngân hàng SME",
+        "Dữ liệu & phân tích"
+      ],
+      "rank_vn": 13,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-14-acb",
+      "name": "ACB",
+      "name_local": "Ngân hàng TMCP Á Châu",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS40",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 1993,
+      "employees_approx": 13000,
+      "revenue_usd_bn_approx": 1.4,
+      "website": "https://acb.com.vn",
+      "careers_url": "https://acb.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Retail banking",
+        "SME banking",
+        "Digital & IT",
+        "Risk management",
+        "Wealth management"
+      ],
+      "hiring_focus_vi": [
+        "Ngân hàng bán lẻ",
+        "Ngân hàng SME",
+        "Số hóa & CNTT",
+        "Quản trị rủi ro",
+        "Quản lý tài sản"
+      ],
+      "rank_vn": 14,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-15-tpbank",
+      "name": "TPBank",
+      "name_local": "Ngân hàng TMCP Tiên Phong",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS40",
+      "hq_city": "Hà Nội",
+      "founded": 2008,
+      "employees_approx": 8000,
+      "revenue_usd_bn_approx": 0.7,
+      "website": "https://tpb.vn",
+      "careers_url": "https://tpb.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Digital banking & LiveBank",
+        "Data & AI",
+        "Retail lending",
+        "IT engineering",
+        "Risk management"
+      ],
+      "hiring_focus_vi": [
+        "Ngân hàng số & LiveBank",
+        "Dữ liệu & AI",
+        "Cho vay bán lẻ",
+        "Kỹ thuật CNTT",
+        "Quản trị rủi ro"
+      ],
+      "rank_vn": 15,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-16-sacombank",
+      "name": "Sacombank",
+      "name_local": "Ngân hàng TMCP Sài Gòn Thương Tín",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS40",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 1991,
+      "employees_approx": 18000,
+      "revenue_usd_bn_approx": 1.1,
+      "website": "https://www.sacombank.com.vn",
+      "careers_url": "https://www.sacombank.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Retail banking",
+        "Branch operations",
+        "Digital banking",
+        "Credit & risk",
+        "Cards & payments"
+      ],
+      "hiring_focus_vi": [
+        "Ngân hàng bán lẻ",
+        "Vận hành chi nhánh",
+        "Ngân hàng số",
+        "Tín dụng & rủi ro",
+        "Thẻ & thanh toán"
+      ],
+      "rank_vn": 16,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-17-momo",
+      "name": "MoMo",
+      "name_local": "Ví điện tử MoMo (M_Service)",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS40",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 2007,
+      "employees_approx": 2500,
+      "revenue_usd_bn_approx": 0.25,
+      "website": "https://momo.vn",
+      "careers_url": "https://momo.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Fintech product",
+        "Mobile & backend engineering",
+        "Data science & AI",
+        "Risk & compliance",
+        "Growth marketing"
+      ],
+      "hiring_focus_vi": [
+        "Sản phẩm fintech",
+        "Kỹ thuật mobile & backend",
+        "Khoa học dữ liệu & AI",
+        "Rủi ro & tuân thủ",
+        "Growth marketing"
+      ],
+      "rank_vn": 17,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-18-vng-corporation",
+      "name": "VNG Corporation",
+      "name_local": "Công ty Cổ phần VNG",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS45",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 2004,
+      "employees_approx": 4000,
+      "revenue_usd_bn_approx": 0.35,
+      "website": "https://www.vng.com.vn",
+      "careers_url": "https://career.vng.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Game development",
+        "Zalo platform engineering",
+        "Cloud & AI",
+        "Fintech (ZaloPay)",
+        "Product management"
+      ],
+      "hiring_focus_vi": [
+        "Phát triển game",
+        "Kỹ thuật nền tảng Zalo",
+        "Cloud & AI",
+        "Fintech (ZaloPay)",
+        "Quản lý sản phẩm"
+      ],
+      "rank_vn": 18,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-19-petrovietnam",
+      "name": "Petrovietnam",
+      "name_local": "Tập đoàn Dầu khí Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS20_30",
+      "hq_city": "Hà Nội",
+      "founded": 1975,
+      "employees_approx": 60000,
+      "revenue_usd_bn_approx": 38,
+      "website": "https://www.pvn.vn",
+      "careers_url": "https://www.pvn.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Oil & gas engineering",
+        "Petrochemicals & refining",
+        "Offshore operations",
+        "Energy transition",
+        "Project management"
+      ],
+      "hiring_focus_vi": [
+        "Kỹ thuật dầu khí",
+        "Hóa dầu & lọc dầu",
+        "Vận hành ngoài khơi",
+        "Chuyển dịch năng lượng",
+        "Quản lý dự án"
+      ],
+      "rank_vn": 19,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-20-evn",
+      "name": "EVN",
+      "name_local": "Tập đoàn Điện lực Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS20_30",
+      "hq_city": "Hà Nội",
+      "founded": 1994,
+      "employees_approx": 96000,
+      "revenue_usd_bn_approx": 20,
+      "website": "https://www.evn.com.vn",
+      "careers_url": "https://www.evn.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Power systems engineering",
+        "Grid operations",
+        "Renewable integration",
+        "Digital transformation",
+        "Project & finance"
+      ],
+      "hiring_focus_vi": [
+        "Kỹ thuật hệ thống điện",
+        "Vận hành lưới điện",
+        "Tích hợp năng lượng tái tạo",
+        "Chuyển đổi số",
+        "Dự án & tài chính"
+      ],
+      "rank_vn": 20,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-21-hoa-phat-group",
+      "name": "Hoa Phat Group",
+      "name_local": "Tập đoàn Hòa Phát",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS20_30",
+      "hq_city": "Hà Nội",
+      "founded": 1992,
+      "employees_approx": 30000,
+      "revenue_usd_bn_approx": 5.5,
+      "website": "https://www.hoaphat.com.vn",
+      "careers_url": "https://www.hoaphat.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Steel manufacturing",
+        "Metallurgy & process engineering",
+        "Supply chain & logistics",
+        "HSE",
+        "Sales & export"
+      ],
+      "hiring_focus_vi": [
+        "Sản xuất thép",
+        "Luyện kim & kỹ thuật quy trình",
+        "Chuỗi cung ứng & logistics",
+        "An toàn - môi trường",
+        "Bán hàng & xuất khẩu"
+      ],
+      "rank_vn": 21,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-22-mobile-world-group",
+      "name": "Mobile World Group",
+      "name_local": "Công ty Cổ phần Đầu tư Thế Giới Di Động",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS25_30",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 2004,
+      "employees_approx": 60000,
+      "revenue_usd_bn_approx": 5,
+      "website": "https://mwg.vn",
+      "careers_url": "https://mwg.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Retail chain operations",
+        "Omnichannel e-commerce",
+        "Supply chain",
+        "Store management",
+        "Data analytics"
+      ],
+      "hiring_focus_vi": [
+        "Vận hành chuỗi bán lẻ",
+        "E-commerce đa kênh",
+        "Chuỗi cung ứng",
+        "Quản lý cửa hàng",
+        "Phân tích dữ liệu"
+      ],
+      "rank_vn": 22,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-23-unilever-vietnam",
+      "name": "Unilever Vietnam",
+      "name_local": "Unilever Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS25_30",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 1995,
+      "employees_approx": 1600,
+      "revenue_usd_bn_approx": 1.1,
+      "website": "https://www.unilever.com.vn",
+      "careers_url": "https://www.unilever.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Brand management",
+        "Customer development & trade marketing",
+        "Supply chain",
+        "Finance",
+        "R&D"
+      ],
+      "hiring_focus_vi": [
+        "Quản trị thương hiệu",
+        "Phát triển khách hàng & trade marketing",
+        "Chuỗi cung ứng",
+        "Tài chính",
+        "Nghiên cứu & phát triển"
+      ],
+      "rank_vn": 23,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-24-nestle-vietnam",
+      "name": "Nestlé Vietnam",
+      "name_local": "Nestlé Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS25_30",
+      "hq_city": "Đồng Nai / TP. Hồ Chí Minh",
+      "founded": 1995,
+      "employees_approx": 2300,
+      "revenue_usd_bn_approx": 0.9,
+      "website": "https://www.nestle.com.vn",
+      "careers_url": "https://www.nestle.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Manufacturing & quality",
+        "Sales & distribution",
+        "Marketing",
+        "Supply chain",
+        "Sustainability"
+      ],
+      "hiring_focus_vi": [
+        "Sản xuất & chất lượng",
+        "Bán hàng & phân phối",
+        "Marketing",
+        "Chuỗi cung ứng",
+        "Phát triển bền vững"
+      ],
+      "rank_vn": 24,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-25-intel-products-vietnam",
+      "name": "Intel Products Vietnam",
+      "name_local": "Intel Products Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS45",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 2006,
+      "employees_approx": 2800,
+      "revenue_usd_bn_approx": 10,
+      "website": "https://www.intel.vn",
+      "careers_url": "https://www.intel.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Semiconductor assembly & test",
+        "Process & equipment engineering",
+        "Industrial automation",
+        "Quality & reliability",
+        "Supply chain"
+      ],
+      "hiring_focus_vi": [
+        "Lắp ráp & kiểm thử bán dẫn",
+        "Kỹ thuật quy trình & thiết bị",
+        "Tự động hóa công nghiệp",
+        "Chất lượng & độ tin cậy",
+        "Chuỗi cung ứng"
+      ],
+      "rank_vn": 25,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-26-bosch-vietnam",
+      "name": "Bosch Vietnam",
+      "name_local": "Bosch Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS20_30",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 1994,
+      "employees_approx": 6000,
+      "revenue_usd_bn_approx": 0.5,
+      "website": "https://www.bosch.com.vn",
+      "careers_url": "https://www.bosch.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Automotive components manufacturing",
+        "Embedded software (R&D)",
+        "Industry 4.0",
+        "Quality engineering",
+        "Sales & services"
+      ],
+      "hiring_focus_vi": [
+        "Sản xuất linh kiện ô tô",
+        "Phần mềm nhúng (R&D)",
+        "Công nghiệp 4.0",
+        "Kỹ thuật chất lượng",
+        "Bán hàng & dịch vụ"
+      ],
+      "rank_vn": 26,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-27-lg-electronics-vietnam",
+      "name": "LG Electronics Vietnam",
+      "name_local": "LG Electronics Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS45",
+      "hq_city": "Hải Phòng",
+      "founded": 1995,
+      "employees_approx": 15000,
+      "revenue_usd_bn_approx": 8,
+      "website": "https://www.lg.com/vn",
+      "careers_url": "https://www.lg.com/vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Electronics manufacturing",
+        "R&D software (LG VS)",
+        "Quality engineering",
+        "Supply chain",
+        "Sales & marketing"
+      ],
+      "hiring_focus_vi": [
+        "Sản xuất điện tử",
+        "R&D phần mềm",
+        "Kỹ thuật chất lượng",
+        "Chuỗi cung ứng",
+        "Bán hàng & marketing"
+      ],
+      "rank_vn": 27,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-28-shopee-vietnam",
+      "name": "Shopee Vietnam",
+      "name_local": "Shopee Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS25_30",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 2015,
+      "employees_approx": 5000,
+      "revenue_usd_bn_approx": 1.5,
+      "website": "https://shopee.vn",
+      "careers_url": "https://careers.shopee.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "E-commerce operations",
+        "Software engineering",
+        "Logistics (SPX)",
+        "Business development",
+        "Data analytics"
+      ],
+      "hiring_focus_vi": [
+        "Vận hành thương mại điện tử",
+        "Kỹ thuật phần mềm",
+        "Logistics (SPX)",
+        "Phát triển kinh doanh",
+        "Phân tích dữ liệu"
+      ],
+      "rank_vn": 28,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-29-grab-vietnam",
+      "name": "Grab Vietnam",
+      "name_local": "Grab Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS45",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 2014,
+      "employees_approx": 2000,
+      "revenue_usd_bn_approx": 0.4,
+      "website": "https://www.grab.com/vn",
+      "careers_url": "https://www.grab.com/vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Operations & city management",
+        "Product & engineering",
+        "Marketing & partnerships",
+        "Driver & merchant operations",
+        "Fintech (GrabPay)"
+      ],
+      "hiring_focus_vi": [
+        "Vận hành & quản lý thành phố",
+        "Sản phẩm & kỹ thuật",
+        "Marketing & đối tác",
+        "Vận hành tài xế & đối tác bán",
+        "Fintech (GrabPay)"
+      ],
+      "rank_vn": 29,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-30-vinamilk",
+      "name": "Vinamilk",
+      "name_local": "Công ty Cổ phần Sữa Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS25_30",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 1976,
+      "employees_approx": 10000,
+      "revenue_usd_bn_approx": 2.5,
+      "website": "https://www.vinamilk.com.vn",
+      "careers_url": "https://www.vinamilk.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Dairy manufacturing & QA",
+        "Sales & distribution",
+        "Brand marketing",
+        "Supply chain & farms",
+        "R&D nutrition"
+      ],
+      "hiring_focus_vi": [
+        "Sản xuất sữa & QA",
+        "Bán hàng & phân phối",
+        "Marketing thương hiệu",
+        "Chuỗi cung ứng & trang trại",
+        "R&D dinh dưỡng"
+      ],
+      "rank_vn": 30,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-31-sabeco",
+      "name": "Sabeco",
+      "name_local": "Tổng Công ty CP Bia - Rượu - Nước giải khát Sài Gòn",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS25_30",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 1977,
+      "employees_approx": 8000,
+      "revenue_usd_bn_approx": 1.3,
+      "website": "https://www.sabeco.com.vn",
+      "careers_url": "https://www.sabeco.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Brewing & manufacturing",
+        "Sales & trade marketing",
+        "Supply chain",
+        "Finance",
+        "Quality & sustainability"
+      ],
+      "hiring_focus_vi": [
+        "Sản xuất bia",
+        "Bán hàng & trade marketing",
+        "Chuỗi cung ứng",
+        "Tài chính",
+        "Chất lượng & bền vững"
+      ],
+      "rank_vn": 31,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-32-pnj",
+      "name": "PNJ",
+      "name_local": "Công ty Cổ phần Vàng bạc Đá quý Phú Nhuận",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS25_30",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 1988,
+      "employees_approx": 7000,
+      "revenue_usd_bn_approx": 1.5,
+      "website": "https://www.pnj.com.vn",
+      "careers_url": "https://www.pnj.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Retail operations",
+        "Jewelry design & manufacturing",
+        "Omnichannel marketing",
+        "Supply chain",
+        "Finance"
+      ],
+      "hiring_focus_vi": [
+        "Vận hành bán lẻ",
+        "Thiết kế & chế tác trang sức",
+        "Marketing đa kênh",
+        "Chuỗi cung ứng",
+        "Tài chính"
+      ],
+      "rank_vn": 32,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-33-novaland",
+      "name": "Novaland",
+      "name_local": "Tập đoàn Đầu tư Địa ốc No Va",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS20_60",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 1992,
+      "employees_approx": 1500,
+      "revenue_usd_bn_approx": 0.3,
+      "website": "https://www.novaland.com.vn",
+      "careers_url": "https://www.novaland.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Real estate development",
+        "Project management",
+        "Sales & marketing",
+        "Finance & investment",
+        "Design & planning"
+      ],
+      "hiring_focus_vi": [
+        "Phát triển bất động sản",
+        "Quản lý dự án",
+        "Bán hàng & marketing",
+        "Tài chính & đầu tư",
+        "Thiết kế & quy hoạch"
+      ],
+      "rank_vn": 33,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-34-sun-group",
+      "name": "Sun Group",
+      "name_local": "Tập đoàn Sun Group",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS20_60",
+      "hq_city": "Hà Nội / Đà Nẵng",
+      "founded": 2007,
+      "employees_approx": 15000,
+      "revenue_usd_bn_approx": 1,
+      "website": "https://sungroup.com.vn",
+      "careers_url": "https://sungroup.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Tourism & hospitality development",
+        "Construction project management",
+        "Entertainment operations",
+        "Sales & marketing",
+        "Finance"
+      ],
+      "hiring_focus_vi": [
+        "Phát triển du lịch & nghỉ dưỡng",
+        "Quản lý dự án xây dựng",
+        "Vận hành giải trí",
+        "Bán hàng & marketing",
+        "Tài chính"
+      ],
+      "rank_vn": 34,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-35-coteccons",
+      "name": "Coteccons",
+      "name_local": "Công ty Cổ phần Xây dựng Coteccons",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS20_60",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 2004,
+      "employees_approx": 2500,
+      "revenue_usd_bn_approx": 0.8,
+      "website": "https://coteccons.vn",
+      "careers_url": "https://coteccons.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Construction project management",
+        "Site engineering & BIM",
+        "QS & contracts",
+        "HSE",
+        "Procurement"
+      ],
+      "hiring_focus_vi": [
+        "Quản lý dự án xây dựng",
+        "Kỹ thuật công trường & BIM",
+        "QS & hợp đồng",
+        "An toàn lao động",
+        "Mua hàng"
+      ],
+      "rank_vn": 35,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-36-deloitte-vietnam",
+      "name": "Deloitte Vietnam",
+      "name_local": "Deloitte Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS25_30",
+      "hq_city": "Hà Nội / TP. Hồ Chí Minh",
+      "founded": 1991,
+      "employees_approx": 1500,
+      "revenue_usd_bn_approx": 0.1,
+      "website": "https://www2.deloitte.com/vn",
+      "careers_url": "https://www2.deloitte.com/vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Audit & assurance",
+        "Tax & legal",
+        "Consulting & technology",
+        "Risk advisory",
+        "Financial advisory"
+      ],
+      "hiring_focus_vi": [
+        "Kiểm toán & đảm bảo",
+        "Thuế & pháp lý",
+        "Tư vấn & công nghệ",
+        "Tư vấn rủi ro",
+        "Tư vấn tài chính"
+      ],
+      "rank_vn": 36,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-37-pwc-vietnam",
+      "name": "PwC Vietnam",
+      "name_local": "PwC Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS25_30",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 1994,
+      "employees_approx": 1200,
+      "revenue_usd_bn_approx": 0.09,
+      "website": "https://www.pwc.com/vn",
+      "careers_url": "https://www.pwc.com/vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Assurance",
+        "Tax & legal",
+        "Deals & advisory",
+        "Consulting & digital",
+        "ESG"
+      ],
+      "hiring_focus_vi": [
+        "Kiểm toán",
+        "Thuế & pháp lý",
+        "Thương vụ & tư vấn",
+        "Tư vấn & số hóa",
+        "ESG"
+      ],
+      "rank_vn": 37,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-38-kpmg-vietnam",
+      "name": "KPMG Vietnam",
+      "name_local": "KPMG Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS25_30",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 1994,
+      "employees_approx": 1700,
+      "revenue_usd_bn_approx": 0.1,
+      "website": "https://kpmg.com/vn",
+      "careers_url": "https://kpmg.com/vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Audit",
+        "Tax",
+        "Advisory & deals",
+        "Technology consulting",
+        "Risk & compliance"
+      ],
+      "hiring_focus_vi": [
+        "Kiểm toán",
+        "Thuế",
+        "Tư vấn & thương vụ",
+        "Tư vấn công nghệ",
+        "Rủi ro & tuân thủ"
+      ],
+      "rank_vn": 38,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-39-ey-vietnam",
+      "name": "EY Vietnam",
+      "name_local": "EY Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS25_30",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 1992,
+      "employees_approx": 1500,
+      "revenue_usd_bn_approx": 0.1,
+      "website": "https://www.ey.com/vi_vn",
+      "careers_url": "https://www.ey.com/vi_vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Assurance",
+        "Tax",
+        "Strategy & transactions",
+        "Consulting",
+        "Technology risk"
+      ],
+      "hiring_focus_vi": [
+        "Kiểm toán",
+        "Thuế",
+        "Chiến lược & giao dịch",
+        "Tư vấn",
+        "Rủi ro công nghệ"
+      ],
+      "rank_vn": 39,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-40-manulife-vietnam",
+      "name": "Manulife Vietnam",
+      "name_local": "Manulife Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS40",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 1999,
+      "employees_approx": 1200,
+      "revenue_usd_bn_approx": 1,
+      "website": "https://www.manulife.com.vn",
+      "careers_url": "https://www.manulife.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Insurance operations",
+        "Actuarial & risk",
+        "Digital & data",
+        "Agency & bancassurance",
+        "Customer service"
+      ],
+      "hiring_focus_vi": [
+        "Vận hành bảo hiểm",
+        "Định phí & rủi ro",
+        "Số hóa & dữ liệu",
+        "Đại lý & bancassurance",
+        "Dịch vụ khách hàng"
+      ],
+      "rank_vn": 40,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-41-prudential-vietnam",
+      "name": "Prudential Vietnam",
+      "name_local": "Prudential Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS40",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 1999,
+      "employees_approx": 1500,
+      "revenue_usd_bn_approx": 1.2,
+      "website": "https://www.prudential.com.vn",
+      "careers_url": "https://www.prudential.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Life insurance operations",
+        "Actuarial",
+        "Digital transformation",
+        "Distribution & partnerships",
+        "Compliance"
+      ],
+      "hiring_focus_vi": [
+        "Vận hành bảo hiểm nhân thọ",
+        "Định phí",
+        "Chuyển đổi số",
+        "Phân phối & đối tác",
+        "Tuân thủ"
+      ],
+      "rank_vn": 41,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-42-honda-vietnam",
+      "name": "Honda Vietnam",
+      "name_local": "Honda Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS20_30",
+      "hq_city": "Vĩnh Phúc",
+      "founded": 1996,
+      "employees_approx": 10000,
+      "revenue_usd_bn_approx": 4,
+      "website": "https://www.honda.com.vn",
+      "careers_url": "https://www.honda.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Motorcycle & auto manufacturing",
+        "Quality engineering",
+        "Supply chain",
+        "Sales & dealer network",
+        "R&D localization"
+      ],
+      "hiring_focus_vi": [
+        "Sản xuất xe máy & ô tô",
+        "Kỹ thuật chất lượng",
+        "Chuỗi cung ứng",
+        "Bán hàng & mạng lưới đại lý",
+        "R&D nội địa hóa"
+      ],
+      "rank_vn": 42,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-43-toyota-vietnam",
+      "name": "Toyota Vietnam",
+      "name_local": "Toyota Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS20_30",
+      "hq_city": "Vĩnh Phúc",
+      "founded": 1995,
+      "employees_approx": 2000,
+      "revenue_usd_bn_approx": 2,
+      "website": "https://www.toyota.com.vn",
+      "careers_url": "https://www.toyota.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Auto assembly & TPS",
+        "Quality & kaizen",
+        "Supply chain",
+        "Dealer & aftersales",
+        "Marketing"
+      ],
+      "hiring_focus_vi": [
+        "Lắp ráp ô tô & TPS",
+        "Chất lượng & kaizen",
+        "Chuỗi cung ứng",
+        "Đại lý & hậu mãi",
+        "Marketing"
+      ],
+      "rank_vn": 43,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-44-vietjet-air",
+      "name": "Vietjet Air",
+      "name_local": "Công ty Cổ phần Hàng không Vietjet",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS20_30",
+      "hq_city": "Hà Nội",
+      "founded": 2007,
+      "employees_approx": 6000,
+      "revenue_usd_bn_approx": 2.5,
+      "website": "https://www.vietjetair.com",
+      "careers_url": "https://www.vietjetair.com",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Flight operations & crew",
+        "Aircraft engineering & maintenance",
+        "Commercial & revenue management",
+        "Ground operations",
+        "Digital & IT"
+      ],
+      "hiring_focus_vi": [
+        "Vận hành bay & phi hành đoàn",
+        "Kỹ thuật & bảo dưỡng tàu bay",
+        "Thương mại & quản trị doanh thu",
+        "Vận hành mặt đất",
+        "Số hóa & CNTT"
+      ],
+      "rank_vn": 44,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-45-vietnam-airlines",
+      "name": "Vietnam Airlines",
+      "name_local": "Tổng Công ty Hàng không Việt Nam",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS20_30",
+      "hq_city": "Hà Nội",
+      "founded": 1956,
+      "employees_approx": 20000,
+      "revenue_usd_bn_approx": 3.8,
+      "website": "https://www.vietnamairlines.com",
+      "careers_url": "https://www.vietnamairlines.com",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Pilots & cabin crew",
+        "Aircraft maintenance (VAECO)",
+        "Commercial & network planning",
+        "Ground services",
+        "Finance & IT"
+      ],
+      "hiring_focus_vi": [
+        "Phi công & tiếp viên",
+        "Bảo dưỡng tàu bay (VAECO)",
+        "Thương mại & kế hoạch mạng bay",
+        "Dịch vụ mặt đất",
+        "Tài chính & CNTT"
+      ],
+      "rank_vn": 45,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-46-viettel-post",
+      "name": "Viettel Post",
+      "name_local": "Tổng Công ty CP Bưu chính Viettel",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS20_30",
+      "hq_city": "Hà Nội",
+      "founded": 1997,
+      "employees_approx": 22000,
+      "revenue_usd_bn_approx": 0.8,
+      "website": "https://viettelpost.com.vn",
+      "careers_url": "https://viettelpost.com.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Logistics operations",
+        "Last-mile delivery",
+        "Warehouse automation",
+        "Technology & data",
+        "Sales & key accounts"
+      ],
+      "hiring_focus_vi": [
+        "Vận hành logistics",
+        "Giao hàng chặng cuối",
+        "Tự động hóa kho",
+        "Công nghệ & dữ liệu",
+        "Bán hàng & khách hàng lớn"
+      ],
+      "rank_vn": 46,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-47-vinhomes",
+      "name": "Vinhomes",
+      "name_local": "Công ty Cổ phần Vinhomes",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS20_60",
+      "hq_city": "Hà Nội",
+      "founded": 2008,
+      "employees_approx": 9000,
+      "revenue_usd_bn_approx": 4.3,
+      "website": "https://vinhomes.vn",
+      "careers_url": "https://vinhomes.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Real estate development",
+        "Project & construction management",
+        "Sales & marketing",
+        "Property management",
+        "Finance & investment"
+      ],
+      "hiring_focus_vi": [
+        "Phát triển bất động sản",
+        "Quản lý dự án & xây dựng",
+        "Bán hàng & marketing",
+        "Quản lý vận hành khu đô thị",
+        "Tài chính & đầu tư"
+      ],
+      "rank_vn": 47,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-48-masan-consumer",
+      "name": "Masan Consumer",
+      "name_local": "Công ty Cổ phần Hàng tiêu dùng Masan",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS25_30",
+      "hq_city": "TP. Hồ Chí Minh",
+      "founded": 2000,
+      "employees_approx": 5000,
+      "revenue_usd_bn_approx": 1.2,
+      "website": "https://www.masanconsumer.com",
+      "careers_url": "https://www.masanconsumer.com",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Brand management",
+        "Sales & distribution",
+        "Manufacturing & quality",
+        "R&D",
+        "Supply chain"
+      ],
+      "hiring_focus_vi": [
+        "Quản trị thương hiệu",
+        "Bán hàng & phân phối",
+        "Sản xuất & chất lượng",
+        "Nghiên cứu & phát triển",
+        "Chuỗi cung ứng"
+      ],
+      "rank_vn": 48,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-49-fpt-software",
+      "name": "FPT Software",
+      "name_local": "Công ty TNHH Phần mềm FPT",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS45",
+      "hq_city": "Hà Nội",
+      "founded": 1999,
+      "employees_approx": 30000,
+      "revenue_usd_bn_approx": 1.2,
+      "website": "https://fptsoftware.com",
+      "careers_url": "https://career.fpt-software.com",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Software engineering (Java/.NET/Cloud)",
+        "Automotive software",
+        "AI & data",
+        "Business analysis & PM",
+        "Japanese/English bridge engineers"
+      ],
+      "hiring_focus_vi": [
+        "Kỹ thuật phần mềm (Java/.NET/Cloud)",
+        "Phần mềm ô tô",
+        "AI & dữ liệu",
+        "Phân tích nghiệp vụ & quản lý dự án",
+        "Kỹ sư cầu nối tiếng Nhật/Anh"
+      ],
+      "rank_vn": 49,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "vn-50-viettel-solutions",
+      "name": "Viettel Solutions",
+      "name_local": "Tổng Công ty Giải pháp Doanh nghiệp Viettel",
+      "country": "VN",
+      "region": "VN",
+      "industry_gics": "GICS45",
+      "hq_city": "Hà Nội",
+      "founded": 2019,
+      "employees_approx": 3000,
+      "revenue_usd_bn_approx": 0.5,
+      "website": "https://solutions.viettel.vn",
+      "careers_url": "https://solutions.viettel.vn",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Enterprise solutions & cloud",
+        "Smart city & e-government",
+        "Data & AI",
+        "Cybersecurity services",
+        "Solution consulting"
+      ],
+      "hiring_focus_vi": [
+        "Giải pháp doanh nghiệp & cloud",
+        "Đô thị thông minh & chính phủ điện tử",
+        "Dữ liệu & AI",
+        "Dịch vụ an ninh mạng",
+        "Tư vấn giải pháp"
+      ],
+      "rank_vn": 50,
+      "sources": [
+        "VNR500 (tham khảo)",
+        "Anphabe Best Places to Work Vietnam (tham khảo)",
+        "Forbes Vietnam (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-01-alphabet-google",
+      "name": "Alphabet (Google)",
+      "name_local": "Alphabet Inc.",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "Mountain View",
+      "founded": 1998,
+      "employees_approx": 182000,
+      "revenue_usd_bn_approx": 350,
+      "website": "https://abc.xyz",
+      "careers_url": "https://careers.google.com",
+      "wikidata_id": "Q20800404",
+      "hiring_focus": [
+        "Software engineering",
+        "AI/ML research",
+        "Cloud infrastructure",
+        "Product management",
+        "Ads & sales"
+      ],
+      "hiring_focus_vi": [
+        "Kỹ thuật phần mềm",
+        "Nghiên cứu AI/ML",
+        "Hạ tầng cloud",
+        "Quản lý sản phẩm",
+        "Quảng cáo & bán hàng"
+      ],
+      "rank_global": 1,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-02-microsoft",
+      "name": "Microsoft",
+      "name_local": "Microsoft Corporation",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "Redmond",
+      "founded": 1975,
+      "employees_approx": 228000,
+      "revenue_usd_bn_approx": 245,
+      "website": "https://www.microsoft.com",
+      "careers_url": "https://careers.microsoft.com",
+      "wikidata_id": "Q2283",
+      "hiring_focus": [
+        "Cloud (Azure) engineering",
+        "AI & Copilot",
+        "Security",
+        "Enterprise sales",
+        "Product & design"
+      ],
+      "hiring_focus_vi": [
+        "Kỹ thuật cloud (Azure)",
+        "AI & Copilot",
+        "Bảo mật",
+        "Bán hàng doanh nghiệp",
+        "Sản phẩm & thiết kế"
+      ],
+      "rank_global": 2,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-03-apple",
+      "name": "Apple",
+      "name_local": "Apple Inc.",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "Cupertino",
+      "founded": 1976,
+      "employees_approx": 164000,
+      "revenue_usd_bn_approx": 391,
+      "website": "https://www.apple.com",
+      "careers_url": "https://www.apple.com/careers",
+      "wikidata_id": "Q312",
+      "hiring_focus": [
+        "Hardware & silicon engineering",
+        "Software & services",
+        "Operations & supply chain",
+        "Retail",
+        "Machine learning"
+      ],
+      "hiring_focus_vi": [
+        "Kỹ thuật phần cứng & chip",
+        "Phần mềm & dịch vụ",
+        "Vận hành & chuỗi cung ứng",
+        "Bán lẻ",
+        "Học máy"
+      ],
+      "rank_global": 3,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-04-amazon",
+      "name": "Amazon",
+      "name_local": "Amazon.com, Inc.",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS25_30",
+      "hq_city": "Seattle",
+      "founded": 1994,
+      "employees_approx": 1550000,
+      "revenue_usd_bn_approx": 638,
+      "website": "https://www.amazon.com",
+      "careers_url": "https://www.amazon.jobs",
+      "wikidata_id": "Q3884",
+      "hiring_focus": [
+        "Fulfillment & operations",
+        "AWS cloud engineering",
+        "Software development",
+        "Supply chain",
+        "Retail & marketplace"
+      ],
+      "hiring_focus_vi": [
+        "Hoàn tất đơn hàng & vận hành",
+        "Kỹ thuật cloud AWS",
+        "Phát triển phần mềm",
+        "Chuỗi cung ứng",
+        "Bán lẻ & sàn giao dịch"
+      ],
+      "rank_global": 4,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-05-meta",
+      "name": "Meta",
+      "name_local": "Meta Platforms, Inc.",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "Menlo Park",
+      "founded": 2004,
+      "employees_approx": 74000,
+      "revenue_usd_bn_approx": 165,
+      "website": "https://www.meta.com",
+      "careers_url": "https://www.metacareers.com",
+      "wikidata_id": "Q380",
+      "hiring_focus": [
+        "AI research & infrastructure",
+        "Software engineering",
+        "Product management",
+        "Reality Labs hardware",
+        "Trust & safety"
+      ],
+      "hiring_focus_vi": [
+        "Nghiên cứu & hạ tầng AI",
+        "Kỹ thuật phần mềm",
+        "Quản lý sản phẩm",
+        "Phần cứng Reality Labs",
+        "Tin cậy & an toàn"
+      ],
+      "rank_global": 5,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-06-nvidia",
+      "name": "NVIDIA",
+      "name_local": "NVIDIA Corporation",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "Santa Clara",
+      "founded": 1993,
+      "employees_approx": 36000,
+      "revenue_usd_bn_approx": 130,
+      "website": "https://www.nvidia.com",
+      "careers_url": "https://www.nvidia.com",
+      "wikidata_id": "Q182477",
+      "hiring_focus": [
+        "GPU & chip design",
+        "AI software & CUDA",
+        "Data center systems",
+        "Autonomous vehicles",
+        "Research"
+      ],
+      "hiring_focus_vi": [
+        "Thiết kế GPU & chip",
+        "Phần mềm AI & CUDA",
+        "Hệ thống trung tâm dữ liệu",
+        "Xe tự hành",
+        "Nghiên cứu"
+      ],
+      "rank_global": 6,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-07-tesla",
+      "name": "Tesla",
+      "name_local": "Tesla, Inc.",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS20_30",
+      "hq_city": "Austin",
+      "founded": 2003,
+      "employees_approx": 125000,
+      "revenue_usd_bn_approx": 98,
+      "website": "https://www.tesla.com",
+      "careers_url": "https://www.tesla.com/careers",
+      "wikidata_id": "Q478214",
+      "hiring_focus": [
+        "Manufacturing engineering",
+        "Battery & energy",
+        "Autopilot & AI",
+        "Vehicle engineering",
+        "Service & delivery"
+      ],
+      "hiring_focus_vi": [
+        "Kỹ thuật sản xuất",
+        "Pin & năng lượng",
+        "Autopilot & AI",
+        "Kỹ thuật xe",
+        "Dịch vụ & giao xe"
+      ],
+      "rank_global": 7,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-08-samsung-electronics",
+      "name": "Samsung Electronics",
+      "name_local": "Samsung Electronics Co., Ltd.",
+      "country": "KR",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "Suwon",
+      "founded": 1969,
+      "employees_approx": 267000,
+      "revenue_usd_bn_approx": 230,
+      "website": "https://www.samsung.com",
+      "careers_url": "https://www.samsung.com",
+      "wikidata_id": "Q20718",
+      "hiring_focus": [
+        "Semiconductors",
+        "Mobile & devices R&D",
+        "Display technology",
+        "Manufacturing",
+        "Global marketing"
+      ],
+      "hiring_focus_vi": [
+        "Bán dẫn",
+        "R&D di động & thiết bị",
+        "Công nghệ màn hình",
+        "Sản xuất",
+        "Marketing toàn cầu"
+      ],
+      "rank_global": 8,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-09-toyota",
+      "name": "Toyota",
+      "name_local": "Toyota Motor Corporation",
+      "country": "JP",
+      "region": "GLOBAL",
+      "industry_gics": "GICS20_30",
+      "hq_city": "Toyota City",
+      "founded": 1937,
+      "employees_approx": 380000,
+      "revenue_usd_bn_approx": 310,
+      "website": "https://global.toyota",
+      "careers_url": "https://global.toyota",
+      "wikidata_id": "Q53268",
+      "hiring_focus": [
+        "Automotive engineering",
+        "Manufacturing (TPS)",
+        "Electrification & hydrogen",
+        "Software-defined vehicles",
+        "Global supply chain"
+      ],
+      "hiring_focus_vi": [
+        "Kỹ thuật ô tô",
+        "Sản xuất (TPS)",
+        "Điện hóa & hydro",
+        "Xe định nghĩa bằng phần mềm",
+        "Chuỗi cung ứng toàn cầu"
+      ],
+      "rank_global": 9,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-10-siemens",
+      "name": "Siemens",
+      "name_local": "Siemens AG",
+      "country": "DE",
+      "region": "GLOBAL",
+      "industry_gics": "GICS20_30",
+      "hq_city": "Munich",
+      "founded": 1847,
+      "employees_approx": 320000,
+      "revenue_usd_bn_approx": 82,
+      "website": "https://www.siemens.com",
+      "careers_url": "https://www.siemens.com",
+      "wikidata_id": "Q81230",
+      "hiring_focus": [
+        "Industrial automation",
+        "Smart infrastructure",
+        "Rail & mobility",
+        "Industrial software",
+        "Project management"
+      ],
+      "hiring_focus_vi": [
+        "Tự động hóa công nghiệp",
+        "Hạ tầng thông minh",
+        "Đường sắt & giao thông",
+        "Phần mềm công nghiệp",
+        "Quản lý dự án"
+      ],
+      "rank_global": 10,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-11-unilever",
+      "name": "Unilever",
+      "name_local": "Unilever PLC",
+      "country": "UK",
+      "region": "GLOBAL",
+      "industry_gics": "GICS25_30",
+      "hq_city": "London",
+      "founded": 1929,
+      "employees_approx": 128000,
+      "revenue_usd_bn_approx": 65,
+      "website": "https://www.unilever.com",
+      "careers_url": "https://careers.unilever.com",
+      "wikidata_id": "Q156578",
+      "hiring_focus": [
+        "Brand & marketing",
+        "Supply chain",
+        "R&D",
+        "Customer development",
+        "Finance"
+      ],
+      "hiring_focus_vi": [
+        "Thương hiệu & marketing",
+        "Chuỗi cung ứng",
+        "Nghiên cứu & phát triển",
+        "Phát triển khách hàng",
+        "Tài chính"
+      ],
+      "rank_global": 11,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-12-procter-gamble",
+      "name": "Procter & Gamble",
+      "name_local": "The Procter & Gamble Company",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS25_30",
+      "hq_city": "Cincinnati",
+      "founded": 1837,
+      "employees_approx": 108000,
+      "revenue_usd_bn_approx": 84,
+      "website": "https://www.pg.com",
+      "careers_url": "https://www.pgcareers.com",
+      "wikidata_id": "Q212405",
+      "hiring_focus": [
+        "Brand management",
+        "Product supply",
+        "R&D",
+        "Sales",
+        "Finance & analytics"
+      ],
+      "hiring_focus_vi": [
+        "Quản trị thương hiệu",
+        "Cung ứng sản phẩm",
+        "Nghiên cứu & phát triển",
+        "Bán hàng",
+        "Tài chính & phân tích"
+      ],
+      "rank_global": 12,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-13-johnson-johnson",
+      "name": "Johnson & Johnson",
+      "name_local": "Johnson & Johnson",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS35",
+      "hq_city": "New Brunswick",
+      "founded": 1886,
+      "employees_approx": 138000,
+      "revenue_usd_bn_approx": 89,
+      "website": "https://www.jnj.com",
+      "careers_url": "https://www.careers.jnj.com",
+      "wikidata_id": "Q333718",
+      "hiring_focus": [
+        "Pharmaceutical R&D",
+        "MedTech engineering",
+        "Clinical & regulatory",
+        "Manufacturing & quality",
+        "Commercial"
+      ],
+      "hiring_focus_vi": [
+        "R&D dược phẩm",
+        "Kỹ thuật thiết bị y tế",
+        "Lâm sàng & pháp quy",
+        "Sản xuất & chất lượng",
+        "Thương mại"
+      ],
+      "rank_global": 13,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-14-pfizer",
+      "name": "Pfizer",
+      "name_local": "Pfizer Inc.",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS35",
+      "hq_city": "New York",
+      "founded": 1849,
+      "employees_approx": 88000,
+      "revenue_usd_bn_approx": 64,
+      "website": "https://www.pfizer.com",
+      "careers_url": "https://www.pfizer.com",
+      "wikidata_id": "Q206921",
+      "hiring_focus": [
+        "Drug discovery & development",
+        "Clinical operations",
+        "Manufacturing & supply",
+        "Regulatory affairs",
+        "Medical & commercial"
+      ],
+      "hiring_focus_vi": [
+        "Khám phá & phát triển thuốc",
+        "Vận hành lâm sàng",
+        "Sản xuất & cung ứng",
+        "Pháp quy",
+        "Y khoa & thương mại"
+      ],
+      "rank_global": 14,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-15-jpmorgan-chase",
+      "name": "JPMorgan Chase",
+      "name_local": "JPMorgan Chase & Co.",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS40",
+      "hq_city": "New York",
+      "founded": 2000,
+      "employees_approx": 317000,
+      "revenue_usd_bn_approx": 180,
+      "website": "https://www.jpmorganchase.com",
+      "careers_url": "https://careers.jpmorgan.com",
+      "wikidata_id": "Q192314",
+      "hiring_focus": [
+        "Investment banking",
+        "Technology engineering",
+        "Asset & wealth management",
+        "Risk & compliance",
+        "Quantitative research"
+      ],
+      "hiring_focus_vi": [
+        "Ngân hàng đầu tư",
+        "Kỹ thuật công nghệ",
+        "Quản lý tài sản",
+        "Rủi ro & tuân thủ",
+        "Nghiên cứu định lượng"
+      ],
+      "rank_global": 15,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-16-goldman-sachs",
+      "name": "Goldman Sachs",
+      "name_local": "The Goldman Sachs Group, Inc.",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS40",
+      "hq_city": "New York",
+      "founded": 1869,
+      "employees_approx": 46000,
+      "revenue_usd_bn_approx": 53,
+      "website": "https://www.goldmansachs.com",
+      "careers_url": "https://www.goldmansachs.com/careers",
+      "wikidata_id": "Q193326",
+      "hiring_focus": [
+        "Investment banking",
+        "Global markets & trading",
+        "Asset management",
+        "Engineering",
+        "Risk"
+      ],
+      "hiring_focus_vi": [
+        "Ngân hàng đầu tư",
+        "Thị trường & giao dịch",
+        "Quản lý tài sản",
+        "Kỹ thuật",
+        "Rủi ro"
+      ],
+      "rank_global": 16,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-17-mckinsey-company",
+      "name": "McKinsey & Company",
+      "name_local": "McKinsey & Company",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS25_30",
+      "hq_city": "New York",
+      "founded": 1926,
+      "employees_approx": 45000,
+      "revenue_usd_bn_approx": 16,
+      "website": "https://www.mckinsey.com",
+      "careers_url": "https://www.mckinsey.com/careers",
+      "wikidata_id": "Q271366",
+      "hiring_focus": [
+        "Management consulting",
+        "Digital & analytics (QuantumBlack)",
+        "Operations",
+        "Strategy & corporate finance",
+        "Implementation"
+      ],
+      "hiring_focus_vi": [
+        "Tư vấn quản trị",
+        "Số hóa & phân tích (QuantumBlack)",
+        "Vận hành",
+        "Chiến lược & tài chính doanh nghiệp",
+        "Triển khai"
+      ],
+      "rank_global": 17,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-18-boston-consulting-group",
+      "name": "Boston Consulting Group",
+      "name_local": "Boston Consulting Group",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS25_30",
+      "hq_city": "Boston",
+      "founded": 1963,
+      "employees_approx": 32000,
+      "revenue_usd_bn_approx": 13,
+      "website": "https://www.bcg.com",
+      "careers_url": "https://careers.bcg.com",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Strategy consulting",
+        "Digital (BCG X)",
+        "Operations",
+        "People & organization",
+        "Climate & sustainability"
+      ],
+      "hiring_focus_vi": [
+        "Tư vấn chiến lược",
+        "Số hóa (BCG X)",
+        "Vận hành",
+        "Con người & tổ chức",
+        "Khí hậu & bền vững"
+      ],
+      "rank_global": 18,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-19-bain-company",
+      "name": "Bain & Company",
+      "name_local": "Bain & Company",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS25_30",
+      "hq_city": "Boston",
+      "founded": 1973,
+      "employees_approx": 19000,
+      "revenue_usd_bn_approx": 6,
+      "website": "https://www.bain.com",
+      "careers_url": "https://www.bain.com/careers",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Strategy consulting",
+        "Private equity advisory",
+        "Advanced analytics",
+        "Operations",
+        "Customer strategy"
+      ],
+      "hiring_focus_vi": [
+        "Tư vấn chiến lược",
+        "Tư vấn quỹ đầu tư tư nhân",
+        "Phân tích nâng cao",
+        "Vận hành",
+        "Chiến lược khách hàng"
+      ],
+      "rank_global": 19,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-20-deloitte",
+      "name": "Deloitte",
+      "name_local": "Deloitte Touche Tohmatsu Limited",
+      "country": "UK",
+      "region": "GLOBAL",
+      "industry_gics": "GICS25_30",
+      "hq_city": "London",
+      "founded": 1845,
+      "employees_approx": 460000,
+      "revenue_usd_bn_approx": 67,
+      "website": "https://www.deloitte.com",
+      "careers_url": "https://www.deloitte.com",
+      "wikidata_id": "Q491748",
+      "hiring_focus": [
+        "Audit & assurance",
+        "Consulting",
+        "Tax & legal",
+        "Risk advisory",
+        "Financial advisory"
+      ],
+      "hiring_focus_vi": [
+        "Kiểm toán & đảm bảo",
+        "Tư vấn",
+        "Thuế & pháp lý",
+        "Tư vấn rủi ro",
+        "Tư vấn tài chính"
+      ],
+      "rank_global": 20,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-21-pwc",
+      "name": "PwC",
+      "name_local": "PricewaterhouseCoopers International Limited",
+      "country": "UK",
+      "region": "GLOBAL",
+      "industry_gics": "GICS25_30",
+      "hq_city": "London",
+      "founded": 1998,
+      "employees_approx": 370000,
+      "revenue_usd_bn_approx": 55,
+      "website": "https://www.pwc.com",
+      "careers_url": "https://www.pwc.com",
+      "wikidata_id": "Q488048",
+      "hiring_focus": [
+        "Assurance",
+        "Advisory & deals",
+        "Tax",
+        "Technology consulting",
+        "ESG & sustainability"
+      ],
+      "hiring_focus_vi": [
+        "Kiểm toán",
+        "Tư vấn & thương vụ",
+        "Thuế",
+        "Tư vấn công nghệ",
+        "ESG & bền vững"
+      ],
+      "rank_global": 21,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-22-ey",
+      "name": "EY",
+      "name_local": "Ernst & Young Global Limited",
+      "country": "UK",
+      "region": "GLOBAL",
+      "industry_gics": "GICS25_30",
+      "hq_city": "London",
+      "founded": 1989,
+      "employees_approx": 400000,
+      "revenue_usd_bn_approx": 51,
+      "website": "https://www.ey.com",
+      "careers_url": "https://www.ey.com",
+      "wikidata_id": "Q489097",
+      "hiring_focus": [
+        "Assurance",
+        "Consulting",
+        "Tax",
+        "Strategy & transactions",
+        "Technology"
+      ],
+      "hiring_focus_vi": [
+        "Kiểm toán",
+        "Tư vấn",
+        "Thuế",
+        "Chiến lược & giao dịch",
+        "Công nghệ"
+      ],
+      "rank_global": 22,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-23-kpmg",
+      "name": "KPMG",
+      "name_local": "KPMG International Limited",
+      "country": "NL",
+      "region": "GLOBAL",
+      "industry_gics": "GICS25_30",
+      "hq_city": "Amstelveen",
+      "founded": 1987,
+      "employees_approx": 275000,
+      "revenue_usd_bn_approx": 38,
+      "website": "https://kpmg.com",
+      "careers_url": "https://kpmg.com",
+      "wikidata_id": "Q493751",
+      "hiring_focus": [
+        "Audit",
+        "Tax & legal",
+        "Advisory",
+        "Technology & cyber",
+        "Deal advisory"
+      ],
+      "hiring_focus_vi": [
+        "Kiểm toán",
+        "Thuế & pháp lý",
+        "Tư vấn",
+        "Công nghệ & an ninh mạng",
+        "Tư vấn thương vụ"
+      ],
+      "rank_global": 23,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-24-accenture",
+      "name": "Accenture",
+      "name_local": "Accenture plc",
+      "country": "IE",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "Dublin",
+      "founded": 1989,
+      "employees_approx": 774000,
+      "revenue_usd_bn_approx": 65,
+      "website": "https://www.accenture.com",
+      "careers_url": "https://www.accenture.com",
+      "wikidata_id": "Q10494",
+      "hiring_focus": [
+        "Technology consulting",
+        "Cloud & data/AI",
+        "Managed services",
+        "Strategy & consulting",
+        "Industry X (engineering)"
+      ],
+      "hiring_focus_vi": [
+        "Tư vấn công nghệ",
+        "Cloud & dữ liệu/AI",
+        "Dịch vụ quản lý",
+        "Chiến lược & tư vấn",
+        "Industry X (kỹ thuật)"
+      ],
+      "rank_global": 24,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-25-ibm",
+      "name": "IBM",
+      "name_local": "International Business Machines Corporation",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "Armonk",
+      "founded": 1911,
+      "employees_approx": 283000,
+      "revenue_usd_bn_approx": 63,
+      "website": "https://www.ibm.com",
+      "careers_url": "https://www.ibm.com/careers",
+      "wikidata_id": "Q37156",
+      "hiring_focus": [
+        "Hybrid cloud & Red Hat",
+        "AI (watsonx)",
+        "Consulting",
+        "Quantum & research",
+        "Infrastructure"
+      ],
+      "hiring_focus_vi": [
+        "Hybrid cloud & Red Hat",
+        "AI (watsonx)",
+        "Tư vấn",
+        "Lượng tử & nghiên cứu",
+        "Hạ tầng"
+      ],
+      "rank_global": 25,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-26-oracle",
+      "name": "Oracle",
+      "name_local": "Oracle Corporation",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "Austin",
+      "founded": 1977,
+      "employees_approx": 159000,
+      "revenue_usd_bn_approx": 57,
+      "website": "https://www.oracle.com",
+      "careers_url": "https://www.oracle.com/careers",
+      "wikidata_id": "Q185173",
+      "hiring_focus": [
+        "Cloud infrastructure (OCI)",
+        "Database engineering",
+        "Enterprise applications",
+        "Sales & consulting",
+        "Health (Cerner)"
+      ],
+      "hiring_focus_vi": [
+        "Hạ tầng cloud (OCI)",
+        "Kỹ thuật cơ sở dữ liệu",
+        "Ứng dụng doanh nghiệp",
+        "Bán hàng & tư vấn",
+        "Y tế (Cerner)"
+      ],
+      "rank_global": 26,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-27-sap",
+      "name": "SAP",
+      "name_local": "SAP SE",
+      "country": "DE",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "Walldorf",
+      "founded": 1972,
+      "employees_approx": 108000,
+      "revenue_usd_bn_approx": 37,
+      "website": "https://www.sap.com",
+      "careers_url": "https://jobs.sap.com",
+      "wikidata_id": "Q166542",
+      "hiring_focus": [
+        "Enterprise software engineering",
+        "Cloud ERP (S/4HANA)",
+        "Business AI",
+        "Consulting & services",
+        "Sales"
+      ],
+      "hiring_focus_vi": [
+        "Kỹ thuật phần mềm doanh nghiệp",
+        "Cloud ERP (S/4HANA)",
+        "AI doanh nghiệp",
+        "Tư vấn & dịch vụ",
+        "Bán hàng"
+      ],
+      "rank_global": 27,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-28-salesforce",
+      "name": "Salesforce",
+      "name_local": "Salesforce, Inc.",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "San Francisco",
+      "founded": 1999,
+      "employees_approx": 73000,
+      "revenue_usd_bn_approx": 38,
+      "website": "https://www.salesforce.com",
+      "careers_url": "https://careers.salesforce.com",
+      "wikidata_id": "Q941127",
+      "hiring_focus": [
+        "CRM platform engineering",
+        "AI (Agentforce)",
+        "Customer success",
+        "Sales",
+        "Data cloud"
+      ],
+      "hiring_focus_vi": [
+        "Kỹ thuật nền tảng CRM",
+        "AI (Agentforce)",
+        "Thành công khách hàng",
+        "Bán hàng",
+        "Data cloud"
+      ],
+      "rank_global": 28,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-29-netflix",
+      "name": "Netflix",
+      "name_local": "Netflix, Inc.",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "Los Gatos",
+      "founded": 1997,
+      "employees_approx": 14000,
+      "revenue_usd_bn_approx": 39,
+      "website": "https://www.netflix.com",
+      "careers_url": "https://jobs.netflix.com",
+      "wikidata_id": "Q907311",
+      "hiring_focus": [
+        "Streaming engineering",
+        "Content & production",
+        "Data science & ML",
+        "Product design",
+        "Marketing"
+      ],
+      "hiring_focus_vi": [
+        "Kỹ thuật streaming",
+        "Nội dung & sản xuất",
+        "Khoa học dữ liệu & ML",
+        "Thiết kế sản phẩm",
+        "Marketing"
+      ],
+      "rank_global": 29,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-30-nike",
+      "name": "Nike",
+      "name_local": "Nike, Inc.",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS25_30",
+      "hq_city": "Beaverton",
+      "founded": 1964,
+      "employees_approx": 79000,
+      "revenue_usd_bn_approx": 51,
+      "website": "https://www.nike.com",
+      "careers_url": "https://jobs.nike.com",
+      "wikidata_id": "Q483915",
+      "hiring_focus": [
+        "Product design & innovation",
+        "Digital & e-commerce",
+        "Supply chain & sourcing",
+        "Brand marketing",
+        "Retail"
+      ],
+      "hiring_focus_vi": [
+        "Thiết kế & đổi mới sản phẩm",
+        "Số hóa & thương mại điện tử",
+        "Chuỗi cung ứng & nguồn hàng",
+        "Marketing thương hiệu",
+        "Bán lẻ"
+      ],
+      "rank_global": 30,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-31-the-coca-cola-company",
+      "name": "The Coca-Cola Company",
+      "name_local": "The Coca-Cola Company",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS25_30",
+      "hq_city": "Atlanta",
+      "founded": 1892,
+      "employees_approx": 70000,
+      "revenue_usd_bn_approx": 47,
+      "website": "https://www.coca-colacompany.com",
+      "careers_url": "https://www.coca-colacompany.com",
+      "wikidata_id": "Q3295867",
+      "hiring_focus": [
+        "Brand marketing",
+        "Franchise & bottler management",
+        "Supply chain",
+        "Finance",
+        "Sustainability"
+      ],
+      "hiring_focus_vi": [
+        "Marketing thương hiệu",
+        "Quản lý nhượng quyền & đóng chai",
+        "Chuỗi cung ứng",
+        "Tài chính",
+        "Bền vững"
+      ],
+      "rank_global": 31,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-32-pepsico",
+      "name": "PepsiCo",
+      "name_local": "PepsiCo, Inc.",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS25_30",
+      "hq_city": "Purchase, New York",
+      "founded": 1965,
+      "employees_approx": 318000,
+      "revenue_usd_bn_approx": 92,
+      "website": "https://www.pepsico.com",
+      "careers_url": "https://www.pepsicojobs.com",
+      "wikidata_id": "Q334800",
+      "hiring_focus": [
+        "Sales & go-to-market",
+        "Supply chain & manufacturing",
+        "Brand marketing",
+        "R&D",
+        "Finance & digital"
+      ],
+      "hiring_focus_vi": [
+        "Bán hàng & go-to-market",
+        "Chuỗi cung ứng & sản xuất",
+        "Marketing thương hiệu",
+        "Nghiên cứu & phát triển",
+        "Tài chính & số hóa"
+      ],
+      "rank_global": 32,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-33-nestle",
+      "name": "Nestlé",
+      "name_local": "Nestlé S.A.",
+      "country": "CH",
+      "region": "GLOBAL",
+      "industry_gics": "GICS25_30",
+      "hq_city": "Vevey",
+      "founded": 1866,
+      "employees_approx": 277000,
+      "revenue_usd_bn_approx": 105,
+      "website": "https://www.nestle.com",
+      "careers_url": "https://www.nestle.com",
+      "wikidata_id": "Q160746",
+      "hiring_focus": [
+        "Manufacturing & quality",
+        "Marketing",
+        "Supply chain",
+        "R&D nutrition",
+        "Sales"
+      ],
+      "hiring_focus_vi": [
+        "Sản xuất & chất lượng",
+        "Marketing",
+        "Chuỗi cung ứng",
+        "R&D dinh dưỡng",
+        "Bán hàng"
+      ],
+      "rank_global": 33,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-34-l-oreal",
+      "name": "L'Oréal",
+      "name_local": "L'Oréal S.A.",
+      "country": "FR",
+      "region": "GLOBAL",
+      "industry_gics": "GICS25_30",
+      "hq_city": "Clichy",
+      "founded": 1909,
+      "employees_approx": 90000,
+      "revenue_usd_bn_approx": 47,
+      "website": "https://www.loreal.com",
+      "careers_url": "https://careers.loreal.com",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Brand marketing",
+        "Digital & e-commerce",
+        "R&I (research & innovation)",
+        "Operations & supply chain",
+        "Sales"
+      ],
+      "hiring_focus_vi": [
+        "Marketing thương hiệu",
+        "Số hóa & thương mại điện tử",
+        "Nghiên cứu & đổi mới",
+        "Vận hành & chuỗi cung ứng",
+        "Bán hàng"
+      ],
+      "rank_global": 34,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-35-lvmh",
+      "name": "LVMH",
+      "name_local": "LVMH Moët Hennessy Louis Vuitton",
+      "country": "FR",
+      "region": "GLOBAL",
+      "industry_gics": "GICS25_30",
+      "hq_city": "Paris",
+      "founded": 1987,
+      "employees_approx": 213000,
+      "revenue_usd_bn_approx": 93,
+      "website": "https://www.lvmh.com",
+      "careers_url": "https://www.lvmh.com",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Retail & client experience",
+        "Craftsmanship & production",
+        "Brand marketing",
+        "Supply chain",
+        "Finance"
+      ],
+      "hiring_focus_vi": [
+        "Bán lẻ & trải nghiệm khách hàng",
+        "Thủ công & sản xuất",
+        "Marketing thương hiệu",
+        "Chuỗi cung ứng",
+        "Tài chính"
+      ],
+      "rank_global": 35,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-36-walmart",
+      "name": "Walmart",
+      "name_local": "Walmart Inc.",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS25_30",
+      "hq_city": "Bentonville",
+      "founded": 1962,
+      "employees_approx": 2100000,
+      "revenue_usd_bn_approx": 681,
+      "website": "https://www.walmart.com",
+      "careers_url": "https://careers.walmart.com",
+      "wikidata_id": "Q483551",
+      "hiring_focus": [
+        "Store & supply chain operations",
+        "E-commerce & technology",
+        "Merchandising",
+        "Data & AI",
+        "Health & wellness"
+      ],
+      "hiring_focus_vi": [
+        "Vận hành cửa hàng & chuỗi cung ứng",
+        "Thương mại điện tử & công nghệ",
+        "Ngành hàng",
+        "Dữ liệu & AI",
+        "Sức khỏe"
+      ],
+      "rank_global": 36,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-37-costco",
+      "name": "Costco",
+      "name_local": "Costco Wholesale Corporation",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS25_30",
+      "hq_city": "Issaquah",
+      "founded": 1983,
+      "employees_approx": 333000,
+      "revenue_usd_bn_approx": 254,
+      "website": "https://www.costco.com",
+      "careers_url": "https://www.costco.com",
+      "wikidata_id": "Q715583",
+      "hiring_focus": [
+        "Warehouse operations",
+        "Merchandising & buying",
+        "Logistics",
+        "E-commerce",
+        "Pharmacy & services"
+      ],
+      "hiring_focus_vi": [
+        "Vận hành kho hàng",
+        "Ngành hàng & mua hàng",
+        "Logistics",
+        "Thương mại điện tử",
+        "Dược & dịch vụ"
+      ],
+      "rank_global": 37,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-38-shell",
+      "name": "Shell",
+      "name_local": "Shell plc",
+      "country": "UK",
+      "region": "GLOBAL",
+      "industry_gics": "GICS20_30",
+      "hq_city": "London",
+      "founded": 1907,
+      "employees_approx": 96000,
+      "revenue_usd_bn_approx": 285,
+      "website": "https://www.shell.com",
+      "careers_url": "https://www.shell.com",
+      "wikidata_id": "Q154950",
+      "hiring_focus": [
+        "Energy engineering",
+        "Trading & supply",
+        "LNG & gas",
+        "Renewables & low carbon",
+        "Projects & technology"
+      ],
+      "hiring_focus_vi": [
+        "Kỹ thuật năng lượng",
+        "Giao dịch & cung ứng",
+        "LNG & khí",
+        "Năng lượng tái tạo & phát thải thấp",
+        "Dự án & công nghệ"
+      ],
+      "rank_global": 38,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-39-exxonmobil",
+      "name": "ExxonMobil",
+      "name_local": "Exxon Mobil Corporation",
+      "country": "US",
+      "region": "GLOBAL",
+      "industry_gics": "GICS20_30",
+      "hq_city": "Spring, Texas",
+      "founded": 1999,
+      "employees_approx": 61000,
+      "revenue_usd_bn_approx": 350,
+      "website": "https://corporate.exxonmobil.com",
+      "careers_url": "https://corporate.exxonmobil.com",
+      "wikidata_id": "Q156238",
+      "hiring_focus": [
+        "Upstream engineering",
+        "Refining & chemicals",
+        "Low carbon solutions",
+        "Project management",
+        "Trading"
+      ],
+      "hiring_focus_vi": [
+        "Kỹ thuật thượng nguồn",
+        "Lọc dầu & hóa chất",
+        "Giải pháp phát thải thấp",
+        "Quản lý dự án",
+        "Giao dịch"
+      ],
+      "rank_global": 39,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-40-bp",
+      "name": "BP",
+      "name_local": "BP p.l.c.",
+      "country": "UK",
+      "region": "GLOBAL",
+      "industry_gics": "GICS20_30",
+      "hq_city": "London",
+      "founded": 1909,
+      "employees_approx": 90000,
+      "revenue_usd_bn_approx": 195,
+      "website": "https://www.bp.com",
+      "careers_url": "https://www.bp.com",
+      "wikidata_id": "Q152057",
+      "hiring_focus": [
+        "Oil & gas production",
+        "Trading & shipping",
+        "Renewables & EV charging",
+        "Engineering",
+        "Digital"
+      ],
+      "hiring_focus_vi": [
+        "Khai thác dầu khí",
+        "Giao dịch & vận tải",
+        "Tái tạo & sạc xe điện",
+        "Kỹ thuật",
+        "Số hóa"
+      ],
+      "rank_global": 40,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-41-tsmc",
+      "name": "TSMC",
+      "name_local": "Taiwan Semiconductor Manufacturing Company",
+      "country": "TW",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "Hsinchu",
+      "founded": 1987,
+      "employees_approx": 83000,
+      "revenue_usd_bn_approx": 90,
+      "website": "https://www.tsmc.com",
+      "careers_url": "https://careers.tsmc.com",
+      "wikidata_id": "Q713418",
+      "hiring_focus": [
+        "Process R&D",
+        "Fab operations & equipment engineering",
+        "Design enablement",
+        "Quality & reliability",
+        "Facilities"
+      ],
+      "hiring_focus_vi": [
+        "R&D quy trình",
+        "Vận hành fab & kỹ thuật thiết bị",
+        "Hỗ trợ thiết kế",
+        "Chất lượng & độ tin cậy",
+        "Cơ sở vật chất"
+      ],
+      "rank_global": 41,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-42-sony",
+      "name": "Sony",
+      "name_local": "Sony Group Corporation",
+      "country": "JP",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "Tokyo",
+      "founded": 1946,
+      "employees_approx": 113000,
+      "revenue_usd_bn_approx": 85,
+      "website": "https://www.sony.com",
+      "careers_url": "https://www.sony.com",
+      "wikidata_id": "Q41187",
+      "hiring_focus": [
+        "Game & network services (PlayStation)",
+        "Image sensors",
+        "Entertainment (music, pictures)",
+        "Electronics R&D",
+        "Financial services"
+      ],
+      "hiring_focus_vi": [
+        "Game & dịch vụ mạng (PlayStation)",
+        "Cảm biến hình ảnh",
+        "Giải trí (âm nhạc, điện ảnh)",
+        "R&D điện tử",
+        "Dịch vụ tài chính"
+      ],
+      "rank_global": 42,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-43-hitachi",
+      "name": "Hitachi",
+      "name_local": "Hitachi, Ltd.",
+      "country": "JP",
+      "region": "GLOBAL",
+      "industry_gics": "GICS20_30",
+      "hq_city": "Tokyo",
+      "founded": 1910,
+      "employees_approx": 270000,
+      "revenue_usd_bn_approx": 65,
+      "website": "https://www.hitachi.com",
+      "careers_url": "https://www.hitachi.com",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Digital systems & services (Lumada)",
+        "Green energy & mobility",
+        "Connective industries",
+        "Rail systems",
+        "R&D"
+      ],
+      "hiring_focus_vi": [
+        "Hệ thống & dịch vụ số (Lumada)",
+        "Năng lượng xanh & giao thông",
+        "Công nghiệp kết nối",
+        "Hệ thống đường sắt",
+        "Nghiên cứu & phát triển"
+      ],
+      "rank_global": 43,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-44-tata-consultancy-services",
+      "name": "Tata Consultancy Services",
+      "name_local": "Tata Consultancy Services Limited",
+      "country": "IN",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "Mumbai",
+      "founded": 1968,
+      "employees_approx": 600000,
+      "revenue_usd_bn_approx": 30,
+      "website": "https://www.tcs.com",
+      "careers_url": "https://www.tcs.com/careers",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "IT services & consulting",
+        "Cloud & AI",
+        "Digital engineering",
+        "BFSI solutions",
+        "Cybersecurity"
+      ],
+      "hiring_focus_vi": [
+        "Dịch vụ & tư vấn CNTT",
+        "Cloud & AI",
+        "Kỹ thuật số",
+        "Giải pháp tài chính - ngân hàng",
+        "An ninh mạng"
+      ],
+      "rank_global": 44,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-45-infosys",
+      "name": "Infosys",
+      "name_local": "Infosys Limited",
+      "country": "IN",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "Bengaluru",
+      "founded": 1981,
+      "employees_approx": 320000,
+      "revenue_usd_bn_approx": 19,
+      "website": "https://www.infosys.com",
+      "careers_url": "https://www.infosys.com/careers",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Digital services",
+        "Cloud (Cobalt)",
+        "AI (Topaz)",
+        "Engineering services",
+        "Consulting"
+      ],
+      "hiring_focus_vi": [
+        "Dịch vụ số",
+        "Cloud (Cobalt)",
+        "AI (Topaz)",
+        "Dịch vụ kỹ thuật",
+        "Tư vấn"
+      ],
+      "rank_global": 45,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-46-alibaba-group",
+      "name": "Alibaba Group",
+      "name_local": "Alibaba Group Holding Limited",
+      "country": "CN",
+      "region": "GLOBAL",
+      "industry_gics": "GICS25_30",
+      "hq_city": "Hangzhou",
+      "founded": 1999,
+      "employees_approx": 200000,
+      "revenue_usd_bn_approx": 130,
+      "website": "https://www.alibabagroup.com",
+      "careers_url": "https://www.alibabagroup.com",
+      "wikidata_id": "Q1359568",
+      "hiring_focus": [
+        "E-commerce platforms",
+        "Cloud intelligence (Alibaba Cloud)",
+        "Logistics (Cainiao)",
+        "AI & algorithms",
+        "International commerce"
+      ],
+      "hiring_focus_vi": [
+        "Nền tảng thương mại điện tử",
+        "Cloud (Alibaba Cloud)",
+        "Logistics (Cainiao)",
+        "AI & thuật toán",
+        "Thương mại quốc tế"
+      ],
+      "rank_global": 46,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-47-tencent",
+      "name": "Tencent",
+      "name_local": "Tencent Holdings Ltd.",
+      "country": "CN",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "Shenzhen",
+      "founded": 1998,
+      "employees_approx": 105000,
+      "revenue_usd_bn_approx": 92,
+      "website": "https://www.tencent.com",
+      "careers_url": "https://careers.tencent.com",
+      "wikidata_id": "Q860580",
+      "hiring_focus": [
+        "Games",
+        "WeChat platform engineering",
+        "Cloud & AI",
+        "Fintech",
+        "Content & media"
+      ],
+      "hiring_focus_vi": [
+        "Game",
+        "Kỹ thuật nền tảng WeChat",
+        "Cloud & AI",
+        "Fintech",
+        "Nội dung & truyền thông"
+      ],
+      "rank_global": 47,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-48-bytedance",
+      "name": "ByteDance",
+      "name_local": "ByteDance Ltd.",
+      "country": "CN",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "Beijing",
+      "founded": 2012,
+      "employees_approx": 150000,
+      "revenue_usd_bn_approx": 120,
+      "website": "https://www.bytedance.com",
+      "careers_url": "https://jobs.bytedance.com",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Recommendation algorithms & AI",
+        "TikTok product & engineering",
+        "Trust & safety",
+        "E-commerce (TikTok Shop)",
+        "Global operations"
+      ],
+      "hiring_focus_vi": [
+        "Thuật toán gợi ý & AI",
+        "Sản phẩm & kỹ thuật TikTok",
+        "Tin cậy & an toàn",
+        "Thương mại điện tử (TikTok Shop)",
+        "Vận hành toàn cầu"
+      ],
+      "rank_global": 48,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-49-huawei",
+      "name": "Huawei",
+      "name_local": "Huawei Technologies Co., Ltd.",
+      "country": "CN",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "Shenzhen",
+      "founded": 1987,
+      "employees_approx": 207000,
+      "revenue_usd_bn_approx": 118,
+      "website": "https://www.huawei.com",
+      "careers_url": "https://career.huawei.com",
+      "wikidata_id": "Q160120",
+      "hiring_focus": [
+        "Telecom R&D (5G/6G)",
+        "Cloud & AI computing",
+        "Consumer devices",
+        "Digital power",
+        "Intelligent automotive solutions"
+      ],
+      "hiring_focus_vi": [
+        "R&D viễn thông (5G/6G)",
+        "Cloud & tính toán AI",
+        "Thiết bị tiêu dùng",
+        "Năng lượng số",
+        "Giải pháp ô tô thông minh"
+      ],
+      "rank_global": 49,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    },
+    {
+      "id": "global-50-grab",
+      "name": "Grab",
+      "name_local": "Grab Holdings Limited",
+      "country": "SG",
+      "region": "GLOBAL",
+      "industry_gics": "GICS45",
+      "hq_city": "Singapore",
+      "founded": 2012,
+      "employees_approx": 10000,
+      "revenue_usd_bn_approx": 2.8,
+      "website": "https://www.grab.com",
+      "careers_url": "https://www.grab.careers",
+      "wikidata_id": "",
+      "hiring_focus": [
+        "Product & engineering",
+        "Data science",
+        "Operations (mobility, deliveries)",
+        "Fintech & lending",
+        "Regional business development"
+      ],
+      "hiring_focus_vi": [
+        "Sản phẩm & kỹ thuật",
+        "Khoa học dữ liệu",
+        "Vận hành (di chuyển, giao hàng)",
+        "Fintech & cho vay",
+        "Phát triển kinh doanh khu vực"
+      ],
+      "rank_global": 50,
+      "sources": [
+        "Fortune Global 500 (tham khảo)",
+        "Forbes Global 2000 (tham khảo)",
+        "Wikidata (tham khảo)"
+      ],
+      "updated_at": "2026-10-29T00:00:00Z"
+    }
+  ]
+}
