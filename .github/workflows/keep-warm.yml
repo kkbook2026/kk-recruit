@@ -1,0 +1,24 @@
+name: Giu may chu Backend luon san sang
+# Render Free tạm ngủ sau ~15 phút không có truy cập; lần mở đầu tiên phải chờ 30-60 giây.
+# Cứ 10 phút gọi endpoint liveness (không chạm CSDL - Neon vẫn tự nghỉ để tiết kiệm hạn mức).
+# 1 dịch vụ chạy 24/7 dùng tối đa 744 giờ/tháng, nằm trong 750 giờ miễn phí của Render. Tác giả: Nguyễn Duy Điển
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+permissions: {}
+concurrency:
+  group: keep-warm
+  cancel-in-progress: true
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Gọi liveness Backend
+        run: |
+          for i in 1 2 3; do
+            if curl -fsS --max-time 75 https://kk-recruit-api.onrender.com/api/v1/admin/health/live; then echo; echo "OK"; exit 0; fi
+            sleep 10
+          done
+          echo "Máy chủ chưa phản hồi sau 3 lần thử (sẽ thử lại ở lượt sau)"
