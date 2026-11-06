@@ -1,0 +1,1484 @@
+{
+ "v": 1,
+ "updated_at": "2026-11-06T17:08:06.638Z",
+ "policy": {
+  "vnLimit": 300,
+  "intlLimit": 20,
+  "keepStaleHours": 72,
+  "minRatio": 0.4,
+  "maxTotal": 4000,
+  "rediscoverDays": 7,
+  "concurrency": 6
+ },
+ "stats": {
+  "total": 633,
+  "vn": 283,
+  "intl": 350,
+  "new_24h": 633,
+  "employers_with_jobs": 24,
+  "sources_ok": 24,
+  "employers_checked": 100,
+  "requests": 299,
+  "duration_s": 53,
+  "kept_stale": 0,
+  "degraded": false
+ },
+ "employers": [
+  {
+   "id": "global-01-alphabet-google",
+   "name": "Alphabet (Google)",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 2437,
+   "error": "HTTP 404",
+   "tried": []
+  },
+  {
+   "id": "global-02-microsoft",
+   "name": "Microsoft",
+   "region": "GLOBAL",
+   "status": "error",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 1739,
+   "error": "HTTP 403",
+   "tried": [
+    {
+     "key": "eightfold:apply.careers.microsoft.com",
+     "ok": false,
+     "error": "HTTP 403"
+    }
+   ]
+  },
+  {
+   "id": "global-03-apple",
+   "name": "Apple",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 2449,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-04-amazon",
+   "name": "Amazon",
+   "region": "GLOBAL",
+   "status": "ok",
+   "source": "amazon",
+   "jobs": 39,
+   "vn": 19,
+   "total": 10000,
+   "ms": 2022,
+   "error": "",
+   "tried": [
+    {
+     "key": "amazon",
+     "ok": true,
+     "jobs": 39
+    }
+   ]
+  },
+  {
+   "id": "global-05-meta",
+   "name": "Meta",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 2711,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-06-nvidia",
+   "name": "NVIDIA",
+   "region": "GLOBAL",
+   "status": "ok",
+   "source": "workday:nvidia/NVIDIAExternalCareerSite",
+   "jobs": 45,
+   "vn": 25,
+   "total": 2000,
+   "ms": 4566,
+   "error": "",
+   "tried": [
+    {
+     "key": "workday:nvidia/NVIDIAExternalCareerSite",
+     "ok": true,
+     "jobs": 45
+    }
+   ]
+  },
+  {
+   "id": "global-07-tesla",
+   "name": "Tesla",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 837,
+   "error": "HTTP 403",
+   "tried": []
+  },
+  {
+   "id": "global-08-samsung-electronics",
+   "name": "Samsung Electronics",
+   "region": "GLOBAL",
+   "status": "ok",
+   "source": "workday:sec/Samsung_Careers",
+   "jobs": 20,
+   "vn": 0,
+   "total": 623,
+   "ms": 2196,
+   "error": "",
+   "tried": [
+    {
+     "key": "workday:sec/Samsung_Careers",
+     "ok": true,
+     "jobs": 20
+    }
+   ]
+  },
+  {
+   "id": "global-09-toyota",
+   "name": "Toyota",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 1004,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-10-siemens",
+   "name": "Siemens",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 1355,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-11-unilever",
+   "name": "Unilever",
+   "region": "GLOBAL",
+   "status": "ok",
+   "source": "workday:unilever/Unilever_Experienced_Professionals",
+   "jobs": 20,
+   "vn": 0,
+   "total": 270,
+   "ms": 2148,
+   "error": "",
+   "tried": [
+    {
+     "key": "workday:unilever/Unilever_Experienced_Professionals",
+     "ok": true,
+     "jobs": 20
+    }
+   ]
+  },
+  {
+   "id": "global-12-procter-gamble",
+   "name": "Procter & Gamble",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 3279,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-13-johnson-johnson",
+   "name": "Johnson & Johnson",
+   "region": "GLOBAL",
+   "status": "ok",
+   "source": "workday:jj/JJ",
+   "jobs": 24,
+   "vn": 5,
+   "total": 1775,
+   "ms": 1973,
+   "error": "",
+   "tried": [
+    {
+     "key": "workday:jj/JJ",
+     "ok": true,
+     "jobs": 24
+    }
+   ]
+  },
+  {
+   "id": "global-14-pfizer",
+   "name": "Pfizer",
+   "region": "GLOBAL",
+   "status": "ok",
+   "source": "workday:pfizer/PfizerCareers",
+   "jobs": 27,
+   "vn": 7,
+   "total": 641,
+   "ms": 2681,
+   "error": "",
+   "tried": [
+    {
+     "key": "workday:pfizer/PfizerCareers",
+     "ok": true,
+     "jobs": 27
+    }
+   ]
+  },
+  {
+   "id": "global-15-jpmorgan-chase",
+   "name": "JPMorgan Chase",
+   "region": "GLOBAL",
+   "status": "ok",
+   "source": "oracle:jpmc/CX_1001",
+   "jobs": 20,
+   "vn": 0,
+   "total": 7143,
+   "ms": 7463,
+   "error": "",
+   "tried": [
+    {
+     "key": "oracle:jpmc/CX_1001",
+     "ok": true,
+     "jobs": 20
+    }
+   ]
+  },
+  {
+   "id": "global-16-goldman-sachs",
+   "name": "Goldman Sachs",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 829,
+   "error": "HTTP 403",
+   "tried": []
+  },
+  {
+   "id": "global-17-mckinsey-company",
+   "name": "McKinsey & Company",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 20002,
+   "error": "robots.txt chặn trang tuyển dụng",
+   "tried": []
+  },
+  {
+   "id": "global-18-boston-consulting-group",
+   "name": "Boston Consulting Group",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 2092,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-19-bain-company",
+   "name": "Bain & Company",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 2553,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-20-deloitte",
+   "name": "Deloitte",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 2724,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-21-pwc",
+   "name": "PwC",
+   "region": "GLOBAL",
+   "status": "ok",
+   "source": "workday:pwc/Global_Experienced_Careers",
+   "jobs": 20,
+   "vn": 0,
+   "total": 3793,
+   "ms": 1706,
+   "error": "",
+   "tried": [
+    {
+     "key": "workday:pwc/Global_Experienced_Careers",
+     "ok": true,
+     "jobs": 20
+    }
+   ]
+  },
+  {
+   "id": "global-22-ey",
+   "name": "EY",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 1696,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-23-kpmg",
+   "name": "KPMG",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 1698,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-24-accenture",
+   "name": "Accenture",
+   "region": "GLOBAL",
+   "status": "ok",
+   "source": "workday:accenture/AccentureCareers",
+   "jobs": 28,
+   "vn": 8,
+   "total": 2000,
+   "ms": 5289,
+   "error": "",
+   "tried": [
+    {
+     "key": "workday:accenture/AccentureCareers",
+     "ok": true,
+     "jobs": 28
+    }
+   ]
+  },
+  {
+   "id": "global-25-ibm",
+   "name": "IBM",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 1096,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-26-oracle",
+   "name": "Oracle",
+   "region": "GLOBAL",
+   "status": "ok",
+   "source": "oracle:eeho/CX_45001",
+   "jobs": 20,
+   "vn": 0,
+   "total": 2826,
+   "ms": 10516,
+   "error": "",
+   "tried": [
+    {
+     "key": "oracle:eeho/CX_45001",
+     "ok": true,
+     "jobs": 20
+    }
+   ]
+  },
+  {
+   "id": "global-27-sap",
+   "name": "SAP",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 811,
+   "error": "HTTP 403",
+   "tried": []
+  },
+  {
+   "id": "global-28-salesforce",
+   "name": "Salesforce",
+   "region": "GLOBAL",
+   "status": "ok",
+   "source": "workday:salesforce/External_Career_Site",
+   "jobs": 20,
+   "vn": 0,
+   "total": 1560,
+   "ms": 2194,
+   "error": "",
+   "tried": [
+    {
+     "key": "workday:salesforce/External_Career_Site",
+     "ok": true,
+     "jobs": 20
+    }
+   ]
+  },
+  {
+   "id": "global-29-netflix",
+   "name": "Netflix",
+   "region": "GLOBAL",
+   "status": "ok",
+   "source": "eightfold:netflix.com",
+   "jobs": 10,
+   "vn": 0,
+   "total": 394,
+   "ms": 1832,
+   "error": "",
+   "tried": [
+    {
+     "key": "eightfold:netflix.com",
+     "ok": true,
+     "jobs": 10
+    }
+   ]
+  },
+  {
+   "id": "global-30-nike",
+   "name": "Nike",
+   "region": "GLOBAL",
+   "status": "ok",
+   "source": "workday:nike/nke",
+   "jobs": 28,
+   "vn": 8,
+   "total": 737,
+   "ms": 2449,
+   "error": "",
+   "tried": [
+    {
+     "key": "workday:nike/nke",
+     "ok": true,
+     "jobs": 28
+    }
+   ]
+  },
+  {
+   "id": "global-31-the-coca-cola-company",
+   "name": "The Coca-Cola Company",
+   "region": "GLOBAL",
+   "status": "ok",
+   "source": "workday:coke/coca-cola-careers",
+   "jobs": 21,
+   "vn": 1,
+   "total": 234,
+   "ms": 8905,
+   "error": "",
+   "tried": [
+    {
+     "key": "workday:coke/coca-cola-careers",
+     "ok": true,
+     "jobs": 21
+    }
+   ]
+  },
+  {
+   "id": "global-32-pepsico",
+   "name": "PepsiCo",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 3226,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-33-nestle",
+   "name": "Nestlé",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 816,
+   "error": "HTTP 403",
+   "tried": []
+  },
+  {
+   "id": "global-34-l-oreal",
+   "name": "L'Oréal",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 2508,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-35-lvmh",
+   "name": "LVMH",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 2684,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-36-walmart",
+   "name": "Walmart",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 2716,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-37-costco",
+   "name": "Costco",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 1001,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-38-shell",
+   "name": "Shell",
+   "region": "GLOBAL",
+   "status": "ok",
+   "source": "workday:shell/ShellCareers",
+   "jobs": 20,
+   "vn": 0,
+   "total": 137,
+   "ms": 2333,
+   "error": "",
+   "tried": [
+    {
+     "key": "workday:shell/ShellCareers",
+     "ok": true,
+     "jobs": 20
+    }
+   ]
+  },
+  {
+   "id": "global-39-exxonmobil",
+   "name": "ExxonMobil",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 2672,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-40-bp",
+   "name": "BP",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 911,
+   "error": "HTTP 403",
+   "tried": []
+  },
+  {
+   "id": "global-41-tsmc",
+   "name": "TSMC",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 874,
+   "error": "HTTP 403",
+   "tried": []
+  },
+  {
+   "id": "global-42-sony",
+   "name": "Sony",
+   "region": "GLOBAL",
+   "status": "ok",
+   "source": "workday:sonyglobal/SonyGlobalCareers",
+   "jobs": 22,
+   "vn": 4,
+   "total": 123,
+   "ms": 2907,
+   "error": "",
+   "tried": [
+    {
+     "key": "workday:sonyglobal/SonyGlobalCareers",
+     "ok": true,
+     "jobs": 22
+    }
+   ]
+  },
+  {
+   "id": "global-43-hitachi",
+   "name": "Hitachi",
+   "region": "GLOBAL",
+   "status": "ok",
+   "source": "workday:hitachi/hitachi",
+   "jobs": 115,
+   "vn": 95,
+   "total": 2000,
+   "ms": 6627,
+   "error": "",
+   "tried": [
+    {
+     "key": "workday:hitachi/hitachi",
+     "ok": true,
+     "jobs": 115
+    }
+   ]
+  },
+  {
+   "id": "global-44-tata-consultancy-services",
+   "name": "Tata Consultancy Services",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 826,
+   "error": "HTTP 403",
+   "tried": []
+  },
+  {
+   "id": "global-45-infosys",
+   "name": "Infosys",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 826,
+   "error": "HTTP 403",
+   "tried": []
+  },
+  {
+   "id": "global-46-alibaba-group",
+   "name": "Alibaba Group",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 2092,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-47-tencent",
+   "name": "Tencent",
+   "region": "GLOBAL",
+   "status": "ok",
+   "source": "tencent",
+   "jobs": 20,
+   "vn": 0,
+   "total": 2188,
+   "ms": 2488,
+   "error": "",
+   "tried": [
+    {
+     "key": "tencent",
+     "ok": true,
+     "jobs": 20
+    }
+   ]
+  },
+  {
+   "id": "global-48-bytedance",
+   "name": "ByteDance",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 3645,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-49-huawei",
+   "name": "Huawei",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 2883,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "global-50-grab",
+   "name": "Grab",
+   "region": "GLOBAL",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 2667,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-01-vingroup",
+   "name": "Vingroup",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 2588,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-02-viettel-group",
+   "name": "Viettel Group",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 4273,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-03-fpt-corporation",
+   "name": "FPT Corporation",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 1388,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-04-samsung-electronics-vietnam",
+   "name": "Samsung Electronics Vietnam",
+   "region": "VN",
+   "status": "ok",
+   "source": "workday:sec/Samsung_Careers",
+   "jobs": 4,
+   "vn": 4,
+   "total": 623,
+   "ms": 2777,
+   "error": "",
+   "tried": [
+    {
+     "key": "workday:sec/Samsung_Careers",
+     "ok": true,
+     "jobs": 4
+    }
+   ]
+  },
+  {
+   "id": "vn-05-vinfast",
+   "name": "VinFast",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 836,
+   "error": "HTTP 403",
+   "tried": []
+  },
+  {
+   "id": "vn-06-masan-group",
+   "name": "Masan Group",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 1196,
+   "error": "HTTP 403",
+   "tried": []
+  },
+  {
+   "id": "vn-07-techcombank",
+   "name": "Techcombank",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 1029,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-08-vietcombank",
+   "name": "Vietcombank",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 3883,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-09-bidv",
+   "name": "BIDV",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 9873,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-10-vietinbank",
+   "name": "VietinBank",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 806,
+   "error": "HTTP 405",
+   "tried": []
+  },
+  {
+   "id": "vn-11-agribank",
+   "name": "Agribank",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 3767,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-12-mb-bank",
+   "name": "MB Bank",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 1602,
+   "error": "HTTP 403",
+   "tried": []
+  },
+  {
+   "id": "vn-13-vpbank",
+   "name": "VPBank",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 1606,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-14-acb",
+   "name": "ACB",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 3168,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-15-tpbank",
+   "name": "TPBank",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 3026,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-16-sacombank",
+   "name": "Sacombank",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 2938,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-17-momo",
+   "name": "MoMo",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 1982,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-18-vng-corporation",
+   "name": "VNG Corporation",
+   "region": "VN",
+   "status": "ok",
+   "source": "json:career.vng.com.vn",
+   "jobs": 64,
+   "vn": 61,
+   "total": 64,
+   "ms": 9244,
+   "error": "",
+   "tried": [
+    {
+     "key": "json:career.vng.com.vn",
+     "ok": true,
+     "jobs": 64
+    }
+   ]
+  },
+  {
+   "id": "vn-19-petrovietnam",
+   "name": "Petrovietnam",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 4951,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-20-evn",
+   "name": "EVN",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 4324,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-21-hoa-phat-group",
+   "name": "Hoa Phat Group",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 3949,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-22-mobile-world-group",
+   "name": "Mobile World Group",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 3123,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-23-unilever-vietnam",
+   "name": "Unilever Vietnam",
+   "region": "VN",
+   "status": "ok",
+   "source": "workday:unilever/Unilever_Experienced_Professionals",
+   "jobs": 12,
+   "vn": 12,
+   "total": 270,
+   "ms": 2546,
+   "error": "",
+   "tried": [
+    {
+     "key": "workday:unilever/Unilever_Experienced_Professionals",
+     "ok": true,
+     "jobs": 12
+    }
+   ]
+  },
+  {
+   "id": "vn-24-nestle-vietnam",
+   "name": "Nestlé Vietnam",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 814,
+   "error": "HTTP 403",
+   "tried": []
+  },
+  {
+   "id": "vn-25-intel-products-vietnam",
+   "name": "Intel Products Vietnam",
+   "region": "VN",
+   "status": "ok",
+   "source": "workday:intel/External",
+   "jobs": 10,
+   "vn": 10,
+   "total": 857,
+   "ms": 2645,
+   "error": "",
+   "tried": [
+    {
+     "key": "workday:intel/External",
+     "ok": true,
+     "jobs": 10
+    }
+   ]
+  },
+  {
+   "id": "vn-26-bosch-vietnam",
+   "name": "Bosch Vietnam",
+   "region": "VN",
+   "status": "robots",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 3011,
+   "error": "robots.txt không cho phép",
+   "tried": [
+    {
+     "key": "smartrecruiters:BoschGroup",
+     "ok": false,
+     "error": "robots"
+    }
+   ]
+  },
+  {
+   "id": "vn-27-lg-electronics-vietnam",
+   "name": "LG Electronics Vietnam",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 1055,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-28-shopee-vietnam",
+   "name": "Shopee Vietnam",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 1346,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-29-grab-vietnam",
+   "name": "Grab Vietnam",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 2062,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-30-vinamilk",
+   "name": "Vinamilk",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 803,
+   "error": "HTTP 403",
+   "tried": []
+  },
+  {
+   "id": "vn-31-sabeco",
+   "name": "Sabeco",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 2842,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-32-pnj",
+   "name": "PNJ",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 813,
+   "error": "HTTP 403",
+   "tried": []
+  },
+  {
+   "id": "vn-33-novaland",
+   "name": "Novaland",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 11549,
+   "error": "robots.txt chặn trang tuyển dụng",
+   "tried": []
+  },
+  {
+   "id": "vn-34-sun-group",
+   "name": "Sun Group",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 7202,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-35-coteccons",
+   "name": "Coteccons",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 5823,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-36-deloitte-vietnam",
+   "name": "Deloitte Vietnam",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 5380,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-37-pwc-vietnam",
+   "name": "PwC Vietnam",
+   "region": "VN",
+   "status": "ok",
+   "source": "workday:pwc/Global_Experienced_Careers",
+   "jobs": 10,
+   "vn": 10,
+   "total": 3793,
+   "ms": 3060,
+   "error": "",
+   "tried": [
+    {
+     "key": "workday:pwc/Global_Experienced_Careers",
+     "ok": true,
+     "jobs": 10
+    }
+   ]
+  },
+  {
+   "id": "vn-38-kpmg-vietnam",
+   "name": "KPMG Vietnam",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 8155,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-39-ey-vietnam",
+   "name": "EY Vietnam",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 3906,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-40-manulife-vietnam",
+   "name": "Manulife Vietnam",
+   "region": "VN",
+   "status": "ok",
+   "source": "workday:manulife/MFCJH_Jobs",
+   "jobs": 16,
+   "vn": 16,
+   "total": 615,
+   "ms": 2717,
+   "error": "",
+   "tried": [
+    {
+     "key": "workday:manulife/MFCJH_Jobs",
+     "ok": true,
+     "jobs": 16
+    }
+   ]
+  },
+  {
+   "id": "vn-41-prudential-vietnam",
+   "name": "Prudential Vietnam",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 2120,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-42-honda-vietnam",
+   "name": "Honda Vietnam",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 3562,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-43-toyota-vietnam",
+   "name": "Toyota Vietnam",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 3182,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-44-vietjet-air",
+   "name": "Vietjet Air",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 811,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-45-vietnam-airlines",
+   "name": "Vietnam Airlines",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 3694,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-46-viettel-post",
+   "name": "Viettel Post",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 2625,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  },
+  {
+   "id": "vn-47-vinhomes",
+   "name": "Vinhomes",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 857,
+   "error": "HTTP 403",
+   "tried": []
+  },
+  {
+   "id": "vn-48-masan-consumer",
+   "name": "Masan Consumer",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 1186,
+   "error": "HTTP 403",
+   "tried": []
+  },
+  {
+   "id": "vn-49-fpt-software",
+   "name": "FPT Software",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 830,
+   "error": "HTTP 403",
+   "tried": []
+  },
+  {
+   "id": "vn-50-viettel-solutions",
+   "name": "Viettel Solutions",
+   "region": "VN",
+   "status": "nosource",
+   "source": "",
+   "jobs": 0,
+   "vn": 0,
+   "total": 0,
+   "ms": 3781,
+   "error": "chưa có kênh dữ liệu máy đọc được",
+   "tried": []
+  }
+ ]
+}
