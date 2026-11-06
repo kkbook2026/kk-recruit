@@ -1,12 +1,15 @@
 name: KK JobHunter - San tin tuyen dung 2 lan moi ngay
 # Lịch 06:17 và 18:17 giờ Việt Nam (23:17 và 11:17 UTC): thu thập tin tuyển dụng đang mở từ kênh CHÍNH THỨC
 # của 100 nhà tuyển dụng (API công khai của hệ thống tuyển dụng + JobPosting JSON-LD), tôn trọng robots.txt,
-# cập nhật data/jobs*.json, commit rồi yêu cầu GitHub Pages dựng lại. Chạy tay: tab Actions -> Run workflow.
+# cập nhật data/jobs*.json, commit rồi yêu cầu GitHub Pages dựng lại. Lịch dự phòng 09:47/21:47 chỉ chạy khi lần chính
+# bị GitHub bỏ lỡ (dữ liệu cũ hơn 5 giờ). Chạy tay: tab Actions -> Run workflow.
 # Bản quyền: Nguyễn Duy Điển
 on:
   schedule:
-    - cron: '17 23 * * *'
-    - cron: '17 11 * * *'
+    - cron: '17 23 * * *' # 06:17 giờ VN (chính)
+    - cron: '17 11 * * *' # 18:17 giờ VN (chính)
+    - cron: '47 2 * * *' # 09:47 giờ VN (dự phòng: chỉ chạy nếu lần chính bị GitHub bỏ lỡ)
+    - cron: '47 14 * * *' # 21:47 giờ VN (dự phòng)
   workflow_dispatch:
     inputs:
       mode:
@@ -32,9 +35,21 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Lịch dự phòng - bỏ qua nếu dữ liệu vừa được cập nhật (< 5 giờ)
+        id: guard
+        run: |
+          SKIP=false
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "${{ github.event.schedule }}" = "47 2 * * *" -o "${{ github.event.schedule }}" = "47 14 * * *" ]; then
+            AGE=$(node -e "try{const m=require('./data/jobs_meta.json');console.log(Math.round((Date.now()-Date.parse(m.updated_at))/36e5))}catch(e){console.log(99)}")
+            echo "Dữ liệu cập nhật cách đây ${AGE} giờ"
+            if [ "$AGE" -lt 5 ]; then SKIP=true; fi
+          fi
+          echo "skip=$SKIP" >> "$GITHUB_OUTPUT"
       - name: Kiểm thử ngoại tuyến bộ thu thập (lỗi -> dừng, không ghi đè dữ liệu)
+        if: steps.guard.outputs.skip != 'true'
         run: node scripts/test_update_jobs.js
       - name: Thu thập tin tuyển dụng
+        if: steps.guard.outputs.skip != 'true'
         env:
           MODE: ${{ github.event.inputs.mode || 'run' }}
           ONLY: ${{ github.event.inputs.only || '' }}
@@ -45,12 +60,12 @@ jobs:
           node scripts/update_jobs.js $ARGS
           mkdir -p site/data && cp data/jobs_meta.json site/data/ 2>/dev/null || true
       - name: Tóm tắt lần chạy
-        if: always()
+        if: always() && steps.guard.outputs.skip != 'true'
         run: |
           node -e "const r=require('./data/jobs_report.json');const s=r.stats;console.log('## KK JobHunter '+r.updated_at+'\n\n- Tổng tin: '+s.total+' (Việt Nam '+s.vn+', toàn cầu '+s.intl+', mới 24h '+s.new_24h+')\n- Nhà tuyển dụng có tin: '+s.employers_with_jobs+'/'+s.employers_checked+'\n- Yêu cầu HTTP: '+s.requests+', thời gian '+s.duration_s+' giây'+(s.degraded?'\n- CẢNH BÁO: giữ bản trước do tổng giảm bất thường':''))" >> "$GITHUB_STEP_SUMMARY" 2>/dev/null || true
       - name: Commit nếu có thay đổi
         id: commit
-        if: ${{ (github.event.inputs.mode || 'run') == 'run' }}
+        if: ${{ (github.event.inputs.mode || 'run') == 'run' && steps.guard.outputs.skip != 'true' }}
         run: |
           git config user.name "kk-recruit-bot"
           git config user.email "actions@users.noreply.github.com"
