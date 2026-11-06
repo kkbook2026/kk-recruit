@@ -1,0 +1,69 @@
+name: KK JobHunter - San tin tuyen dung 2 lan moi ngay
+# Lịch 06:17 và 18:17 giờ Việt Nam (23:17 và 11:17 UTC): thu thập tin tuyển dụng đang mở từ kênh CHÍNH THỨC
+# của 100 nhà tuyển dụng (API công khai của hệ thống tuyển dụng + JobPosting JSON-LD), tôn trọng robots.txt,
+# cập nhật data/jobs*.json, commit rồi yêu cầu GitHub Pages dựng lại. Chạy tay: tab Actions -> Run workflow.
+# Bản quyền: Nguyễn Duy Điển
+on:
+  schedule:
+    - cron: '17 23 * * *'
+    - cron: '17 11 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'run = thu thập và cập nhật web; probe = chỉ thử mọi nguồn, không ghi dữ liệu'
+        required: false
+        default: 'run'
+      only:
+        description: 'Chỉ chạy các nhà tuyển dụng (id cách nhau dấu phẩy, để trống = tất cả)'
+        required: false
+        default: ''
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: jobs-update
+  cancel-in-progress: false
+jobs:
+  hunt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Kiểm thử ngoại tuyến bộ thu thập (lỗi -> dừng, không ghi đè dữ liệu)
+        run: node scripts/test_update_jobs.js
+      - name: Thu thập tin tuyển dụng
+        env:
+          MODE: ${{ github.event.inputs.mode || 'run' }}
+          ONLY: ${{ github.event.inputs.only || '' }}
+        run: |
+          ARGS="--timeout=20000"
+          if [ "$MODE" = "probe" ]; then ARGS="$ARGS --probe"; fi
+          if [ -n "$ONLY" ]; then ARGS="$ARGS --only=$ONLY"; fi
+          node scripts/update_jobs.js $ARGS
+          mkdir -p site/data && cp data/jobs_meta.json site/data/ 2>/dev/null || true
+      - name: Tóm tắt lần chạy
+        if: always()
+        run: |
+          node -e "const r=require('./data/jobs_report.json');const s=r.stats;console.log('## KK JobHunter '+r.updated_at+'\n\n- Tổng tin: '+s.total+' (Việt Nam '+s.vn+', toàn cầu '+s.intl+', mới 24h '+s.new_24h+')\n- Nhà tuyển dụng có tin: '+s.employers_with_jobs+'/'+s.employers_checked+'\n- Yêu cầu HTTP: '+s.requests+', thời gian '+s.duration_s+' giây'+(s.degraded?'\n- CẢNH BÁO: giữ bản trước do tổng giảm bất thường':''))" >> "$GITHUB_STEP_SUMMARY" 2>/dev/null || true
+      - name: Commit nếu có thay đổi
+        id: commit
+        if: ${{ (github.event.inputs.mode || 'run') == 'run' }}
+        run: |
+          git config user.name "kk-recruit-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/jobs.json data/jobs_meta.json data/jobs_report.json data/jobs_sources_auto.json
+          if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git commit -m "KK JobHunter: cập nhật tin tuyển dụng $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git pull --rebase -q origin main && git push -q origin HEAD:main && echo "changed=true" >> "$GITHUB_OUTPUT" && exit 0
+            sleep $((i * 10))
+          done
+          echo "Không đẩy được sau 3 lần thử"; exit 1
+      - name: Yêu cầu GitHub Pages dựng lại
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || true

@@ -1,0 +1,229 @@
+{
+ "_doc": "KK JobHunter - kênh dữ liệu tin tuyển dụng CHÍNH THỨC của từng nhà tuyển dụng (id theo data/employers.json). Mỗi nhà tuyển dụng có thể khai báo nhiều nguồn, công cụ dùng nguồn đầu tiên trả về tin. Nhà tuyển dụng không khai báo: tự dò từ careers_url (tạo data/jobs_sources_auto.json). Kiểu nguồn: greenhouse{token} lever{site} ashby{org} smartrecruiters{company} workable{account} recruitee{sub} workday{host,tenant,site} oracle{host,site,scan} eightfold{host,domain} amazon tencent page{url}. scope: VN = chỉ lấy tin tại Việt Nam (pháp nhân VN), INTL = chỉ lấy tin ngoài Việt Nam (tránh trùng). Tác giả: Nguyễn Duy Điển",
+ "policy": {
+  "vnLimit": 300,
+  "intlLimit": 20,
+  "keepStaleHours": 72,
+  "minRatio": 0.4,
+  "maxTotal": 4000,
+  "rediscoverDays": 7,
+  "concurrency": 6
+ },
+ "sources": {
+  "vn-25-intel-products-vietnam": [
+   {
+    "type": "workday",
+    "host": "intel.wd1.myworkdayjobs.com",
+    "tenant": "intel",
+    "site": "External",
+    "scope": "VN"
+   }
+  ],
+  "vn-26-bosch-vietnam": [
+   {
+    "type": "smartrecruiters",
+    "company": "BoschGroup",
+    "scope": "VN"
+   }
+  ],
+  "vn-37-pwc-vietnam": [
+   {
+    "type": "workday",
+    "host": "pwc.wd3.myworkdayjobs.com",
+    "tenant": "pwc",
+    "site": "Global_Experienced_Careers",
+    "scope": "VN"
+   }
+  ],
+  "vn-40-manulife-vietnam": [
+   {
+    "type": "workday",
+    "host": "manulife.wd3.myworkdayjobs.com",
+    "tenant": "manulife",
+    "site": "MFCJH_Jobs",
+    "scope": "VN"
+   }
+  ],
+  "vn-29-grab-vietnam": [
+   {
+    "type": "workday",
+    "host": "grab.wd3.myworkdayjobs.com",
+    "tenant": "grab",
+    "site": "Careers",
+    "scope": "VN"
+   }
+  ],
+  "global-02-microsoft": [
+   {
+    "type": "eightfold",
+    "host": "apply.careers.microsoft.com",
+    "domain": "microsoft.com"
+   }
+  ],
+  "global-04-amazon": [
+   {
+    "type": "amazon"
+   }
+  ],
+  "global-06-nvidia": [
+   {
+    "type": "workday",
+    "host": "nvidia.wd5.myworkdayjobs.com",
+    "tenant": "nvidia",
+    "site": "NVIDIAExternalCareerSite"
+   }
+  ],
+  "global-08-samsung-electronics": [
+   {
+    "type": "workday",
+    "host": "sec.wd3.myworkdayjobs.com",
+    "tenant": "sec",
+    "site": "Samsung_Careers",
+    "scope": "INTL"
+   }
+  ],
+  "global-13-johnson-johnson": [
+   {
+    "type": "workday",
+    "host": "jj.wd5.myworkdayjobs.com",
+    "tenant": "jj",
+    "site": "JJ"
+   }
+  ],
+  "global-14-pfizer": [
+   {
+    "type": "workday",
+    "host": "pfizer.wd1.myworkdayjobs.com",
+    "tenant": "pfizer",
+    "site": "PfizerCareers"
+   }
+  ],
+  "global-15-jpmorgan-chase": [
+   {
+    "type": "oracle",
+    "host": "jpmc.fa.oraclecloud.com",
+    "site": "CX_1001",
+    "scan": 200
+   }
+  ],
+  "global-21-pwc": [
+   {
+    "type": "workday",
+    "host": "pwc.wd3.myworkdayjobs.com",
+    "tenant": "pwc",
+    "site": "Global_Experienced_Careers",
+    "scope": "INTL"
+   }
+  ],
+  "global-24-accenture": [
+   {
+    "type": "workday",
+    "host": "accenture.wd103.myworkdayjobs.com",
+    "tenant": "accenture",
+    "site": "AccentureCareers"
+   }
+  ],
+  "global-26-oracle": [
+   {
+    "type": "oracle",
+    "host": "eeho.fa.us2.oraclecloud.com",
+    "site": "CX_45001",
+    "scan": 200
+   }
+  ],
+  "global-28-salesforce": [
+   {
+    "type": "workday",
+    "host": "salesforce.wd12.myworkdayjobs.com",
+    "tenant": "salesforce",
+    "site": "External_Career_Site"
+   }
+  ],
+  "global-29-netflix": [
+   {
+    "type": "eightfold",
+    "host": "explore.jobs.netflix.net",
+    "domain": "netflix.com"
+   }
+  ],
+  "global-30-nike": [
+   {
+    "type": "workday",
+    "host": "nike.wd1.myworkdayjobs.com",
+    "tenant": "nike",
+    "site": "nke"
+   }
+  ],
+  "global-31-the-coca-cola-company": [
+   {
+    "type": "workday",
+    "host": "coke.wd1.myworkdayjobs.com",
+    "tenant": "coke",
+    "site": "coca-cola-careers"
+   }
+  ],
+  "global-36-walmart": [
+   {
+    "type": "workday",
+    "host": "walmart.wd5.myworkdayjobs.com",
+    "tenant": "walmart",
+    "site": "WalmartExternal"
+   }
+  ],
+  "global-38-shell": [
+   {
+    "type": "workday",
+    "host": "shell.wd3.myworkdayjobs.com",
+    "tenant": "shell",
+    "site": "ShellCareers"
+   }
+  ],
+  "global-40-bp": [
+   {
+    "type": "workday",
+    "host": "bp.wd3.myworkdayjobs.com",
+    "tenant": "bp",
+    "site": "bpCareers"
+   }
+  ],
+  "global-42-sony": [
+   {
+    "type": "workday",
+    "host": "sonyglobal.wd1.myworkdayjobs.com",
+    "tenant": "sonyglobal",
+    "site": "SonyGlobalCareers"
+   }
+  ],
+  "global-43-hitachi": [
+   {
+    "type": "workday",
+    "host": "hitachi.wd1.myworkdayjobs.com",
+    "tenant": "hitachi",
+    "site": "hitachi"
+   }
+  ],
+  "global-47-tencent": [
+   {
+    "type": "tencent"
+   }
+  ],
+  "global-50-grab": [
+   {
+    "type": "workday",
+    "host": "grab.wd3.myworkdayjobs.com",
+    "tenant": "grab",
+    "site": "Careers",
+    "scope": "INTL"
+   }
+  ],
+  "vn-04-samsung-electronics-vietnam": [
+   {
+    "type": "workday",
+    "host": "sec.wd3.myworkdayjobs.com",
+    "tenant": "sec",
+    "site": "Samsung_Careers",
+    "scope": "VN"
+   }
+  ]
+ }
+}
