@@ -72,6 +72,42 @@ const res = (body, status = 200, type = "application/json") => ({
     "careerLinks",
   );
 
+  /* 3b. API JSON / __NEXT_DATA__ có phân trang */
+  const nd = (n) =>
+    `<html><script id="__NEXT_DATA__" type="application/json">${JSON.stringify({
+      props: {
+        pageProps: {
+          total: 3,
+          jobs:
+            n === 1
+              ? [
+                  { title: "Kỹ sư Dữ liệu", location: "Thành phố Hồ Chí Minh", slug: "1-ky-su", job_family: "Data" },
+                  { title: "Chuyên viên Pháp chế", location: "Hà Nội", slug: "2-phap-che" },
+                ]
+              : n === 2
+                ? [{ title: "Thực tập sinh", location: "Hà Nội", slug: "3-tts" }]
+                : [],
+        },
+      },
+    })}</script></html>`;
+  const httpNd = { text: async (u) => nd(Number(new URL(u).searchParams.get("page"))) };
+  const ndOut = await J.adapters.json(
+    {
+      format: "nextdata",
+      url: "https://c.vn/jobs?page={page}",
+      pages: 5,
+      pageSize: 2,
+      list: "props.pageProps.jobs",
+      totalPath: "props.pageProps.total",
+      fields: { title: "title", location: "location", department: "job_family", url: "https://c.vn/job/{slug}" },
+    },
+    httpNd,
+  );
+  ok(
+    ndOut.jobs.length === 3 && ndOut.total === 3 && ndOut.jobs[0].url === "https://c.vn/job/1-ky-su" && ndOut.jobs[0].department === "Data",
+    "json/nextdata: phân trang + ánh xạ trường",
+  );
+
   /* 4. Chạy đầy đủ với máy chủ giả lập */
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "jh-"));
   fs.mkdirSync(path.join(dir, "data"));

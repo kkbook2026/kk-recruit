@@ -1,5 +1,5 @@
 {
- "_doc": "KK JobHunter - kênh dữ liệu tin tuyển dụng CHÍNH THỨC của từng nhà tuyển dụng (id theo data/employers.json). Mỗi nhà tuyển dụng có thể khai báo nhiều nguồn, công cụ dùng nguồn đầu tiên trả về tin. Nhà tuyển dụng không khai báo: tự dò từ careers_url (tạo data/jobs_sources_auto.json). Kiểu nguồn: greenhouse{token} lever{site} ashby{org} smartrecruiters{company} workable{account} recruitee{sub} workday{host,tenant,site} oracle{host,site,scan} eightfold{host,domain} amazon tencent page{url}. scope: VN = chỉ lấy tin tại Việt Nam (pháp nhân VN), INTL = chỉ lấy tin ngoài Việt Nam (tránh trùng). Tác giả: Nguyễn Duy Điển",
+ "_doc": "KK JobHunter - kênh dữ liệu tin tuyển dụng CHÍNH THỨC của từng nhà tuyển dụng (id theo data/employers.json). Mỗi nhà tuyển dụng có thể khai báo nhiều nguồn, công cụ dùng nguồn đầu tiên trả về tin. Nhà tuyển dụng không khai báo: tự dò từ careers_url (tạo data/jobs_sources_auto.json). Kiểu nguồn: greenhouse{token} lever{site} ashby{org} smartrecruiters{company} workable{account} recruitee{sub} workday{host,tenant,site} oracle{host,site,scan} eightfold{host,domain} amazon tencent page{url} json{url,format?,list,fields} (API JSON / __NEXT_DATA__ của trang tuyển dụng tự xây). scope: VN = chỉ lấy tin tại Việt Nam (pháp nhân VN), INTL = chỉ lấy tin ngoài Việt Nam (tránh trùng). Tác giả: Nguyễn Duy Điển",
  "policy": {
   "vnLimit": 300,
   "intlLimit": 20,
@@ -41,15 +41,6 @@
     "host": "manulife.wd3.myworkdayjobs.com",
     "tenant": "manulife",
     "site": "MFCJH_Jobs",
-    "scope": "VN"
-   }
-  ],
-  "vn-29-grab-vietnam": [
-   {
-    "type": "workday",
-    "host": "grab.wd3.myworkdayjobs.com",
-    "tenant": "grab",
-    "site": "Careers",
     "scope": "VN"
    }
   ],
@@ -162,28 +153,12 @@
     "site": "coca-cola-careers"
    }
   ],
-  "global-36-walmart": [
-   {
-    "type": "workday",
-    "host": "walmart.wd5.myworkdayjobs.com",
-    "tenant": "walmart",
-    "site": "WalmartExternal"
-   }
-  ],
   "global-38-shell": [
    {
     "type": "workday",
     "host": "shell.wd3.myworkdayjobs.com",
     "tenant": "shell",
     "site": "ShellCareers"
-   }
-  ],
-  "global-40-bp": [
-   {
-    "type": "workday",
-    "host": "bp.wd3.myworkdayjobs.com",
-    "tenant": "bp",
-    "site": "bpCareers"
    }
   ],
   "global-42-sony": [
@@ -207,15 +182,6 @@
     "type": "tencent"
    }
   ],
-  "global-50-grab": [
-   {
-    "type": "workday",
-    "host": "grab.wd3.myworkdayjobs.com",
-    "tenant": "grab",
-    "site": "Careers",
-    "scope": "INTL"
-   }
-  ],
   "vn-04-samsung-electronics-vietnam": [
    {
     "type": "workday",
@@ -223,6 +189,42 @@
     "tenant": "sec",
     "site": "Samsung_Careers",
     "scope": "VN"
+   }
+  ],
+  "vn-23-unilever-vietnam": [
+   {
+    "type": "workday",
+    "host": "unilever.wd3.myworkdayjobs.com",
+    "tenant": "unilever",
+    "site": "Unilever_Experienced_Professionals",
+    "scope": "VN"
+   }
+  ],
+  "global-11-unilever": [
+   {
+    "type": "workday",
+    "host": "unilever.wd3.myworkdayjobs.com",
+    "tenant": "unilever",
+    "site": "Unilever_Experienced_Professionals",
+    "scope": "INTL"
+   }
+  ],
+  "vn-18-vng-corporation": [
+   {
+    "type": "json",
+    "format": "nextdata",
+    "url": "https://career.vng.com.vn/vi/tim-kiem-viec-lam?page={page}",
+    "pages": 15,
+    "pageSize": 10,
+    "list": "props.pageProps.jobs",
+    "totalPath": "props.pageProps.total",
+    "fields": {
+     "title": "title",
+     "location": "location",
+     "department": "job_family",
+     "type": "workingType",
+     "url": "https://career.vng.com.vn/tim-kiem-viec-lam/chi-tiet/{slug}"
+    }
    }
   ]
  }

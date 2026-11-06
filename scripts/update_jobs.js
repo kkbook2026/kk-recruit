@@ -485,6 +485,45 @@ const adapters = {
     }));
     return { jobs, total: D.Count || jobs.length, key: "tencent" };
   },
+  /** API JSON công khai của trang tuyển dụng tự xây (cấu hình ánh xạ trường):
+   *  {type:'json', url, method?, body?, format?:'nextdata', list:'data.items', fields:{title, location, department, type, posted, url}}
+   *  Giá trị trường: đường dẫn 'a.b.c' hoặc mẫu chứa {a.b} (vd 'https://x.vn/job/{id}'); nhiều trang: pages + {page} trong url/body */
+  async json(s, http) {
+    const get = (o, p) =>
+      String(p)
+        .split(".")
+        .reduce((x, k) => (x == null ? x : x[k]), o);
+    const val = (o, spec) =>
+      spec == null ? "" : String(spec).includes("{") ? String(spec).replace(/\{([^}]+)\}/g, (_, p) => encodeURIComponent(get(o, p) ?? "")) : get(o, spec);
+    const jobs = [];
+    let total = 0;
+    for (let page = s.firstPage ?? 1, n = 0; n < (s.pages || 1); n++, page++) {
+      const url = String(s.url).replace("{page}", page);
+      let d;
+      if (s.format === "nextdata") {
+        // Trang Next.js dựng sẵn phía máy chủ: dữ liệu nằm trong <script id="__NEXT_DATA__">
+        const html = await http.text(url, { headers: { Accept: "text/html,application/xhtml+xml" } });
+        const m = /<script[^>]+id=["']__NEXT_DATA__["'][^>]*>([\s\S]*?)<\/script>/.exec(html);
+        d = m ? JSON.parse(m[1]) : {};
+      } else d = s.method === "POST" ? await http.post(url, JSON.parse(JSON.stringify(s.body || {}).replace('"{page}"', page))) : await http.json(url);
+      const list = get(d, s.list) || [];
+      if (s.totalPath) total = Number(get(d, s.totalPath)) || total;
+      list.forEach((o) => {
+        const f = s.fields || {};
+        jobs.push({
+          title: val(o, f.title),
+          location: val(o, f.location),
+          department: val(o, f.department),
+          type: val(o, f.type),
+          posted: val(o, f.posted),
+          url: val(o, f.url),
+          remote: false,
+        });
+      });
+      if (!Array.isArray(list) || list.length === 0 || (s.pageSize && list.length < s.pageSize)) break;
+    }
+    return { jobs, total: total || jobs.length, key: "json:" + new URL(String(s.url).replace("{page}", "1")).host };
+  },
   /** Trang HTML có JobPosting JSON-LD (một hoặc nhiều URL) */
   async page(s, http) {
     const jobs = [];
@@ -665,53 +704,68 @@ async function run(args, deps = {}) {
     if (a && a.sources && a.sources.length) list = list.concat(a.sources.filter((s) => !list.some((x) => x.type === s.type)));
     if (args.discover && (!list.length || (stale && !(cfg.sources || {})[emp.id]))) {
       const d = await discover(emp, http);
+      if (emp.region === "VN") d.sources.forEach((x) => (x.scope = x.scope || "VN")); // pháp nhân VN: chỉ lấy tin tại Việt Nam
       autoOut.sources[emp.id] = { checked_at: nowIso, sources: d.sources, pages: d.pages, note: d.note };
       d.sources.forEach((s) => {
         if (!list.some((x) => JSON.stringify({ ...x, discovered: 0 }) === JSON.stringify({ ...s, discovered: 0 }))) list.push(s);
       });
       if (!d.sources.length && d.note) r.error = d.note;
     }
-    for (const s of list) {
-      const fn = adapters[s.type];
-      if (!fn) continue;
-      try {
-        const out = await fn(s, http, ctxFor(s));
-        // scope: 'VN' = chỉ tin tại Việt Nam (pháp nhân VN của tập đoàn), 'INTL' = chỉ tin ngoài VN (tránh trùng với pháp nhân VN)
-        const jobs = out.jobs
-          .map((j) => normalize(j, emp, out.key, nowIso))
-          .filter(Boolean)
-          .filter((j) => !s.scope || (s.scope === "VN" ? j.c === "VN" : j.c !== "VN"));
-        r.tried.push({ key: out.key, ok: true, jobs: jobs.length });
-        if (!jobs.length && !args.probe) {
-          r.status = r.status === "ok" ? "ok" : "empty";
-          if (!r.source) r.source = out.key;
-          continue;
-        }
-        // chọn tin: toàn bộ tin VN (<= vnLimit) + intlLimit tin toàn cầu mới nhất
-        const vn = jobs.filter((j) => j.c === "VN").slice(0, P.vnLimit);
-        const intl = jobs
-          .filter((j) => j.c !== "VN")
-          .sort((x, y) => (y.p || "").localeCompare(x.p || ""))
-          .slice(0, emp.region === "GLOBAL" ? P.intlLimit : P.vnLimit);
-        const pick = vn.concat(intl);
-        pick.forEach((j) => fresh.push(j));
-        r.status = "ok";
-        r.source = out.key;
-        r.jobs += pick.length;
-        r.vn += vn.length;
-        r.total = Math.max(r.total, out.total || 0);
-        if (!args.probe) break; // nguồn đầu tiên có tin là đủ
-      } catch (e) {
-        r.tried.push({
-          key: s.type + ":" + (s.token || s.site || s.org || s.company || s.account || s.sub || s.tenant || s.host || s.domain || ""),
-          ok: false,
-          error: e.code === "ROBOTS" ? "robots" : e.name === "TimeoutError" ? "timeout" : e.message,
-        });
-        if (r.status !== "ok") {
-          r.status = e.code === "ROBOTS" ? "robots" : "error";
-          r.error = e.code === "ROBOTS" ? "robots.txt không cho phép" : e.name === "TimeoutError" ? "hết thời gian chờ" : e.message;
+    const tryAll = async (srcs) => {
+      for (const s of srcs) {
+        const fn = adapters[s.type];
+        if (!fn) continue;
+        try {
+          const out = await fn(s, http, ctxFor(s));
+          // scope: 'VN' = chỉ tin tại Việt Nam (pháp nhân VN của tập đoàn), 'INTL' = chỉ tin ngoài VN (tránh trùng với pháp nhân VN)
+          const jobs = out.jobs
+            .map((j) => normalize(j, emp, out.key, nowIso))
+            .filter(Boolean)
+            .filter((j) => !s.scope || (s.scope === "VN" ? j.c === "VN" : j.c !== "VN"));
+          r.tried.push({ key: out.key, ok: true, jobs: jobs.length });
+          if (!jobs.length && !args.probe) {
+            r.status = r.status === "ok" ? "ok" : "empty";
+            if (!r.source) r.source = out.key;
+            continue;
+          }
+          // chọn tin: toàn bộ tin VN (<= vnLimit) + intlLimit tin toàn cầu mới nhất
+          const vn = jobs.filter((j) => j.c === "VN").slice(0, P.vnLimit);
+          const intl = jobs
+            .filter((j) => j.c !== "VN")
+            .sort((x, y) => (y.p || "").localeCompare(x.p || ""))
+            .slice(0, emp.region === "GLOBAL" ? P.intlLimit : P.vnLimit);
+          const pick = vn.concat(intl);
+          pick.forEach((j) => fresh.push(j));
+          r.status = "ok";
+          r.source = out.key;
+          r.jobs += pick.length;
+          r.vn += vn.length;
+          r.total = Math.max(r.total, out.total || 0);
+          if (!args.probe) break; // nguồn đầu tiên có tin là đủ
+        } catch (e) {
+          r.tried.push({
+            key: s.type + ":" + (s.token || s.site || s.org || s.company || s.account || s.sub || s.tenant || s.host || s.domain || ""),
+            ok: false,
+            error: e.code === "ROBOTS" ? "robots" : e.name === "TimeoutError" ? "timeout" : e.message,
+          });
+          if (r.status !== "ok") {
+            r.status = e.code === "ROBOTS" ? "robots" : "error";
+            r.error = e.code === "ROBOTS" ? "robots.txt không cho phép" : e.name === "TimeoutError" ? "hết thời gian chờ" : e.message;
+          }
         }
       }
+    };
+    await tryAll(list);
+    // Tự phục hồi: nguồn khai báo lỗi / không có tin -> dò lại từ trang tuyển dụng chính thức (tối đa 1 lần / rediscoverDays)
+    const done = autoOut.sources[emp.id] && autoOut.sources[emp.id].checked_at === nowIso;
+    if (r.status !== "ok" && args.discover && !done && stale && list.length) {
+      const d = await discover(emp, http);
+      if (emp.region === "VN") d.sources.forEach((x) => (x.scope = x.scope || "VN"));
+      autoOut.sources[emp.id] = { checked_at: nowIso, sources: d.sources, pages: d.pages, note: d.note };
+      const extra = d.sources.filter(
+        (s) => !list.some((x) => JSON.stringify({ ...x, discovered: 0, scope: 0 }) === JSON.stringify({ ...s, discovered: 0, scope: 0 })),
+      );
+      if (extra.length) await tryAll(extra);
     }
     if (r.status === "ok") r.error = "";
     if (!list.length && r.status === "nosource" && !r.error) r.error = "chưa có kênh dữ liệu máy đọc được";
@@ -732,8 +786,10 @@ async function run(args, deps = {}) {
   // Hợp nhất với dữ liệu cũ: giữ first_seen; nguồn lỗi -> giữ tin cũ tối đa keepStaleHours
   const okEmp = new Set(report.filter((r) => r.status === "ok" || r.status === "empty").map((r) => r.id));
   const byId = new Map();
+  const regionOf = Object.fromEntries(empDoc.employers.map((e) => [e.id, e.region]));
   for (const j of fresh) {
-    if (byId.has(j.i)) continue;
+    // cùng một tin do 2 pháp nhân cùng tập đoàn trả về: tin tại VN ưu tiên gán cho pháp nhân Việt Nam
+    if (byId.has(j.i) && !(j.c === "VN" && regionOf[j.e] === "VN" && regionOf[byId.get(j.i).e] !== "VN")) continue;
     const old = prevById.get(j.i);
     if (old && old.f) j.f = old.f;
     byId.set(j.i, j);
