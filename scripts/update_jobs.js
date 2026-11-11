@@ -354,7 +354,7 @@ const adapters = {
     const map = (j) => ({
       title: j.title,
       location: j.locationsText,
-      posted: relDate(j.postedOn),
+      posted: relDate(j.postedOn, (ctx && ctx.now) || Date.now()),
       url: `https://${s.host}/${s.site}${j.externalPath || ""}`,
       department: "",
     });
@@ -673,7 +673,9 @@ const readJson = (f, d) => {
 
 async function run(args, deps = {}) {
   const t0 = Date.now();
-  const nowIso = new Date(deps.now || Date.now()).toISOString();
+  // Đồng hồ dùng cho mọi phép tính ngày (tin mới 24h, giữ tin cũ 72h, ngày đăng tương đối); kiểm thử truyền deps.now cố định
+  const nowMs = deps.now || Date.now();
+  const nowIso = new Date(nowMs).toISOString();
   const log = args.quiet ? () => {} : deps.log || console.log;
   const D = (f) => path.join(args.dir, f);
   const empDoc = readJson(D("data/employers.json"), null);
@@ -696,11 +698,11 @@ async function run(args, deps = {}) {
   async function handle(emp) {
     const r = { id: emp.id, name: emp.name, region: emp.region, status: "nosource", source: "", jobs: 0, vn: 0, total: 0, ms: 0, error: "", tried: [] };
     const t1 = Date.now();
-    const ctx = { vnLimit: P.vnLimit, intlLimit: emp.region === "GLOBAL" ? P.intlLimit : P.vnLimit };
+    const ctx = { vnLimit: P.vnLimit, intlLimit: emp.region === "GLOBAL" ? P.intlLimit : P.vnLimit, now: nowMs };
     const ctxFor = (s) => (s.scope === "VN" ? Object.assign({}, ctx, { intlLimit: 0 }) : ctx);
     let list = [].concat((cfg.sources || {})[emp.id] || []);
     const a = autoOut.sources[emp.id];
-    const stale = !a || !a.checked_at || Date.now() - Date.parse(a.checked_at) > P.rediscoverDays * 864e5;
+    const stale = !a || !a.checked_at || nowMs - Date.parse(a.checked_at) > P.rediscoverDays * 864e5;
     if (a && a.sources && a.sources.length) list = list.concat(a.sources.filter((s) => !list.some((x) => x.type === s.type)));
     if (args.discover && (!list.length || (stale && !(cfg.sources || {})[emp.id]))) {
       const d = await discover(emp, http);
@@ -794,7 +796,7 @@ async function run(args, deps = {}) {
     if (old && old.f) j.f = old.f;
     byId.set(j.i, j);
   }
-  const keepBefore = Date.now() - P.keepStaleHours * 36e5;
+  const keepBefore = nowMs - P.keepStaleHours * 36e5;
   let kept = 0;
   for (const j of prev.jobs || []) {
     if (byId.has(j.i) || okEmp.has(j.e)) continue; // nguồn chạy tốt mà không còn tin -> tin đã đóng
@@ -822,7 +824,7 @@ async function run(args, deps = {}) {
     log(`CẢNH BÁO: tổng tin giảm bất thường ${prevTotal} -> ${jobs.length}; giữ bản trước`);
     jobs = prev.jobs;
   }
-  const dayAgo = Date.now() - 864e5;
+  const dayAgo = nowMs - 864e5;
   const byEmp = {};
   jobs.forEach((j) => (byEmp[j.e] = (byEmp[j.e] || 0) + 1));
   const stats = {
