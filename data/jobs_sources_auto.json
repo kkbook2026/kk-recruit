@@ -1,146 +1,146 @@
 {
- "updated_at": "2026-11-14T03:22:30.612Z",
+ "updated_at": "2026-11-14T09:26:50.635Z",
  "sources": {
   "vn-05-vinfast": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": "HTTP 403"
   },
   "vn-06-masan-group": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": "HTTP 403"
   },
   "vn-03-fpt-corporation": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "vn-07-techcombank": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "vn-01-vingroup": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 2,
    "note": ""
   },
   "vn-10-vietinbank": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": "HTTP 405"
   },
   "vn-02-viettel-group": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "vn-12-mb-bank": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": "HTTP 403"
   },
   "vn-13-vpbank": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "vn-08-vietcombank": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "vn-11-agribank": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "vn-17-momo": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "vn-15-tpbank": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "vn-16-sacombank": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "vn-14-acb": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "vn-22-mobile-world-group": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "vn-09-bidv": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "vn-21-hoa-phat-group": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "vn-20-evn": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "vn-19-petrovietnam": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "vn-24-nestle-vietnam": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": "HTTP 403"
   },
   "vn-27-lg-electronics-vietnam": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "vn-28-shopee-vietnam": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "vn-30-vinamilk": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": "HTTP 403"
@@ -152,109 +152,109 @@
    "note": ""
   },
   "vn-32-pnj": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": "HTTP 403"
   },
   "vn-29-grab-vietnam": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "vn-31-sabeco": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "vn-36-deloitte-vietnam": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "vn-35-coteccons": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 2,
    "note": ""
   },
   "vn-34-sun-group": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "vn-39-ey-vietnam": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "vn-41-prudential-vietnam": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 2,
    "note": ""
   },
   "vn-44-vietjet-air": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "vn-38-kpmg-vietnam": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "vn-47-vinhomes": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": "HTTP 403"
   },
   "vn-42-honda-vietnam": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "vn-33-novaland": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 2,
    "note": "robots.txt chặn trang tuyển dụng"
   },
   "vn-43-toyota-vietnam": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "vn-46-viettel-post": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "vn-49-fpt-software": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": "HTTP 403"
   },
   "vn-48-masan-consumer": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": "HTTP 403"
   },
   "vn-45-vietnam-airlines": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 2,
    "note": ""
@@ -266,193 +266,193 @@
    "note": ""
   },
   "global-01-alphabet-google": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": "HTTP 404"
   },
   "global-03-apple": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "global-07-tesla": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": "HTTP 403"
   },
   "vn-50-viettel-solutions": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 2,
    "note": ""
   },
   "global-05-meta": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "global-09-toyota": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "global-10-siemens": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "global-16-goldman-sachs": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": "HTTP 403"
   },
   "global-12-procter-gamble": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "global-18-boston-consulting-group": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "global-19-bain-company": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "global-20-deloitte": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "global-22-ey": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "global-23-kpmg": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "global-25-ibm": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "global-27-sap": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": "HTTP 403"
   },
   "global-33-nestle": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": "HTTP 403"
   },
   "global-32-pepsico": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "global-34-l-oreal": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "global-35-lvmh": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "global-37-costco": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "global-36-walmart": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "global-40-bp": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": "HTTP 403"
   },
   "global-39-exxonmobil": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
   },
   "global-41-tsmc": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": "HTTP 403"
   },
   "global-44-tata-consultancy-services": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": "HTTP 403"
   },
   "global-45-infosys": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": "HTTP 403"
   },
   "global-46-alibaba-group": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 2,
    "note": ""
   },
   "global-48-bytedance": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "global-17-mckinsey-company": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": "robots.txt chặn trang tuyển dụng"
   },
   "global-49-huawei": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 1,
    "note": ""
   },
   "global-50-grab": {
-   "checked_at": "2026-11-14T03:22:30.612Z",
+   "checked_at": "2026-11-14T09:26:50.635Z",
    "sources": [],
    "pages": 3,
    "note": ""
