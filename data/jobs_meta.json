@@ -1,12 +1,12 @@
 {
  "v": 1,
- "updated_at": "2026-11-17T05:07:01.236Z",
+ "updated_at": "2026-11-17T11:12:12.727Z",
  "schedule_vn": [
   "06:17",
   "18:17"
  ],
  "by_employer": {
-  "vn-18-vng-corporation": 68,
+  "vn-18-vng-corporation": 70,
   "global-15-jpmorgan-chase": 20,
   "global-04-amazon": 38,
   "global-26-oracle": 20,
@@ -31,15 +31,15 @@
   "vn-25-intel-products-vietnam": 7,
   "vn-37-pwc-vietnam": 9
  },
- "total": 631,
- "vn": 282,
+ "total": 633,
+ "vn": 284,
  "intl": 349,
- "new_24h": 85,
+ "new_24h": 67,
  "employers_with_jobs": 24,
  "sources_ok": 6,
  "employers_checked": 100,
  "requests": 289,
- "duration_s": 54,
+ "duration_s": 52,
  "kept_stale": 455,
  "degraded": false,
  "runs": [
@@ -181,6 +181,13 @@
    "total": 631,
    "vn": 282,
    "new": 85,
+   "ok": 6
+  },
+  {
+   "at": "2026-11-17T11:12:12.727Z",
+   "total": 633,
+   "vn": 284,
+   "new": 67,
    "ok": 6
   }
  ]
