@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated_at": "2026-11-21T10:14:42.668Z",
+ "updated_at": "2026-11-21T18:03:28.683Z",
  "schedule_vn": [
   "06:17",
   "18:17"
@@ -8,6 +8,7 @@
  "by_employer": {
   "global-28-salesforce": 20,
   "global-15-jpmorgan-chase": 20,
+  "global-14-pfizer": 28,
   "global-04-amazon": 33,
   "global-13-johnson-johnson": 24,
   "global-26-oracle": 20,
@@ -15,22 +16,23 @@
   "vn-18-vng-corporation": 69,
   "global-43-hitachi": 111,
   "vn-40-manulife-vietnam": 17,
+  "global-30-nike": 29,
   "global-42-sony": 20,
+  "global-31-the-coca-cola-company": 20,
   "global-29-netflix": 10,
-  "global-30-nike": 28,
-  "global-31-the-coca-cola-company": 21,
-  "global-47-tencent": 20
+  "global-47-tencent": 20,
+  "vn-25-intel-products-vietnam": 6
  },
- "total": 459,
- "vn": 227,
- "intl": 232,
- "new_24h": 286,
- "employers_with_jobs": 14,
- "sources_ok": 11,
+ "total": 493,
+ "vn": 243,
+ "intl": 250,
+ "new_24h": 358,
+ "employers_with_jobs": 16,
+ "sources_ok": 13,
  "employers_checked": 100,
- "requests": 297,
- "duration_s": 56,
- "kept_stale": 160,
+ "requests": 291,
+ "duration_s": 54,
+ "kept_stale": 152,
  "degraded": false,
  "runs": [
   {
@@ -263,6 +265,13 @@
    "vn": 227,
    "new": 286,
    "ok": 11
+  },
+  {
+   "at": "2026-11-21T18:03:28.683Z",
+   "total": 493,
+   "vn": 243,
+   "new": 358,
+   "ok": 13
   }
  ]
 }
