@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated_at": "2026-11-22T10:20:27.698Z",
+ "updated_at": "2026-11-22T18:34:29.204Z",
  "schedule_vn": [
   "06:17",
   "18:17"
@@ -27,13 +27,13 @@
  "total": 513,
  "vn": 243,
  "intl": 270,
- "new_24h": 127,
+ "new_24h": 37,
  "employers_with_jobs": 17,
- "sources_ok": 7,
+ "sources_ok": 6,
  "employers_checked": 100,
- "requests": 291,
- "duration_s": 57,
- "kept_stale": 312,
+ "requests": 290,
+ "duration_s": 50,
+ "kept_stale": 341,
  "degraded": false,
  "runs": [
   {
@@ -287,6 +287,13 @@
    "vn": 243,
    "new": 127,
    "ok": 7
+  },
+  {
+   "at": "2026-11-22T18:34:29.204Z",
+   "total": 513,
+   "vn": 243,
+   "new": 37,
+   "ok": 6
   }
  ]
 }
