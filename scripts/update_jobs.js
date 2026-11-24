@@ -11,6 +11,12 @@
  * (chức danh, nơi làm việc, bộ phận, ngày đăng, liên kết gốc) - không chép mô tả công việc, không dữ liệu cá nhân;
  * ứng viên luôn ứng tuyển tại trang gốc của doanh nghiệp.
  * An toàn dữ liệu: nguồn lỗi -> giữ tin cũ tối đa 72 giờ; tổng tin giảm bất thường (< 40%) -> giữ bản trước.
+ * v1.1 (24/11/2026) - chống giới hạn tần suất (HTTP 429): các máy chủ dùng chung hạ tầng (mọi tenant *.myworkdayjobs.com,
+ *   *.oraclecloud.com...) xếp chung MỘT hàng giãn cách; gặp 429 thì chờ theo Retry-After hoặc lũy tiến 3-8-20 giây rồi thử lại;
+ *   cuối lượt chạy, nhà tuyển dụng còn lỗi tạm thời (429, 5xx, hết thời gian chờ) được thử lại một lần sau thời gian nghỉ.
+ *   Có chốt an toàn để lượt chạy luôn kết thúc: máy chủ đã thử hết lượt vẫn 429 thì ngừng gửi tới máy chủ đó; 2 máy chủ khác nhau
+ *   của cùng một nhóm cùng bị như vậy thì ngắt mạch cả nhóm (không gửi thêm yêu cầu); Retry-After dài hơn 60 giây thì tôn trọng,
+ *   không thử lại trong lượt; quá ngân sách thời gian (policy.maxRunMs, mặc định 25 phút) thì không chờ / thử lại nữa.
  *
  * Chạy:  node scripts/update_jobs.js [--dir=.] [--only=id1,id2] [--probe] [--no-discover]
  *                                    [--timeout=20000] [--dry-run] [--quiet]
@@ -70,37 +76,128 @@ const VN_RE =
 const countryOf = (...parts) => (VN_RE.test(parts.filter(Boolean).join(" | ")) ? "VN" : "INTL");
 const remoteOf = (...parts) => /remote|từ xa|work from home|wfh|anywhere/i.test(parts.filter(Boolean).join(" "));
 
-/* ---------------- HTTP: giãn cách theo máy chủ + robots.txt ---------------- */
+/* ---------------- HTTP: giãn cách theo nhóm máy chủ + robots.txt + chống giới hạn tần suất ---------------- */
+/** Nhóm máy chủ dùng chung hạ tầng (cùng giới hạn tần suất theo IP): mọi tenant *.myworkdayjobs.com tính là MỘT nhóm */
+const FAMILY_RE =
+  /(?:^|\.)(myworkdayjobs\.com|oraclecloud\.com|greenhouse\.io|lever\.co|smartrecruiters\.com|ashbyhq\.com|workable\.com|recruitee\.com|eightfold\.ai)$/i;
+const familyOf = (host) => {
+  const h = String(host || "").toLowerCase();
+  const m = FAMILY_RE.exec(h);
+  return m ? m[1].toLowerCase() : h;
+};
+/** Retry-After (số giây hoặc ngày giờ HTTP) -> mili giây; không có / không đọc được -> null */
+function retryAfterMs(r, nowMs) {
+  let v = null;
+  try {
+    v = r && r.headers && r.headers.get ? r.headers.get("retry-after") : null;
+  } catch (e) {
+    v = null;
+  }
+  if (v == null || v === "") return null;
+  const t = String(v).trim();
+  if (/^\d+(\.\d+)?$/.test(t)) return Math.round(Number(t) * 1000);
+  if (!/\d{4}/.test(t)) return null; // không phải ngày giờ HTTP
+  const d = Date.parse(t);
+  return isNaN(d) ? null : Math.max(0, d - (nowMs || Date.now()));
+}
 function makeHttp(opts) {
   const fetchImpl = opts.fetchImpl || globalThis.fetch;
   const timeout = opts.timeout || 20000;
   const gap = opts.gap == null ? 800 : opts.gap; // ms giữa 2 yêu cầu cùng máy chủ
-  const last = new Map();
+  // gap = 0 là chế độ kiểm thử: không chờ thật (kiểm thử có thể tiêm opts.sleep để ghi nhận thời gian chờ)
+  const nap = opts.sleep || (gap === 0 ? async () => {} : sleep);
+  const familyGap = opts.familyGap == null ? (gap === 0 ? 0 : Math.max(gap, 1500)) : opts.familyGap; // nhóm dùng chung hạ tầng: giãn rộng hơn
+  const backoff = opts.backoff || [3000, 8000, 20000]; // chờ lũy tiến khi bị 429 mà máy chủ không gửi Retry-After
+  const maxWait = opts.maxWait || 60000;
+  const jitter = () => (opts.jitter == null ? Math.random() * 0.25 : opts.jitter);
+  const clock = opts.clock || (() => Date.now());
+  const next = new Map(); // nhóm máy chủ -> thời điểm sớm nhất được gửi yêu cầu kế tiếp
   const robots = new Map();
-  let count = 0;
+  const robotsTemp = new Set(); // máy chủ mà robots.txt tạm thời không đọc được (429/408/5xx/mạng)
+  const stat = { count: 0, r429: 0, retries: 0, waitedMs: 0, skipped: 0 };
+  // Chốt an toàn (ngắt mạch): bảo đảm lượt chạy luôn kết thúc và không dội thêm yêu cầu vào máy chủ đang giới hạn tần suất
+  const breakHosts = opts.breakHosts == null ? 2 : opts.breakHosts; // số MÁY CHỦ khác nhau của một nhóm liên tiếp hết lượt thử vẫn 429 -> ngắt cả nhóm
+  const deadline = opts.deadline || 0; // mốc thời gian (theo clock): quá mốc thì không chờ / thử lại vì 429 nữa
+  const BLOCK_MS = 6 * 3600000; // "tới hết lượt": resetBreakers() mở lại trước lượt thử lại cuối
+  const blockedHost = new Map(); // máy chủ -> { until, hard }   (hard = máy chủ yêu cầu chờ lâu qua Retry-After: không mở lại)
+  const blockedFam = new Map(); // nhóm máy chủ -> { until, hard }
+  const failHosts = new Map(); // nhóm -> tập máy chủ vừa hết lượt thử vẫn 429 (xóa khi nhóm trả lời bình thường)
+  const live = (m, k) => {
+    const b = m.get(k);
+    return !!b && b.until > clock();
+  };
+  const isBlocked = (fam, host) => live(blockedHost, host) || live(blockedFam, fam);
+  const SKIP = () => ({ ok: false, status: 429, skipped: true, headers: { get: () => null }, text: async () => "", json: async () => ({}) });
+  /** Giữ chỗ theo hàng: yêu cầu cùng nhóm cách nhau >= g ms, kể cả khi nhiều luồng gọi cùng lúc */
+  async function slot(fam, g) {
+    const now = clock();
+    const at = Math.max(now, next.get(fam) || 0);
+    next.set(fam, at + g);
+    if (at > now) {
+      stat.waitedMs += at - now;
+      await nap(at - now);
+    }
+  }
+  /** Bị giới hạn tần suất: lùi mốc của CẢ NHÓM để các tenant khác cùng hạ tầng cũng tạm dừng */
+  const cool = (fam, ms) => next.set(fam, Math.max(next.get(fam) || 0, clock() + ms));
   async function raw(url, init = {}, tries = 2) {
-    const host = new URL(url).host;
-    const wait = (last.get(host) || 0) + gap - Date.now();
-    if (wait > 0) await sleep(wait);
-    last.set(host, Date.now());
-    count++;
-    const headers = Object.assign(
-      { "User-Agent": UA, Accept: "application/json, text/html;q=0.9, */*;q=0.5", "Accept-Language": "en-US,en;q=0.9,vi;q=0.8" },
-      init.headers || {},
-    );
-    try {
-      const r = await fetchImpl(url, Object.assign({}, init, { headers, redirect: "follow", signal: AbortSignal.timeout(timeout) }));
-      if ((r.status === 429 || r.status >= 500) && tries > 1) {
-        await sleep(2500);
-        return raw(url, init, tries - 1);
+    const host = new URL(url).host.toLowerCase();
+    const fam = familyOf(host);
+    const g = fam === host ? gap : familyGap;
+    // 429: thử tới backoff.length + 1 lần (mặc định 4), kể cả robots.txt; lỗi mạng / 5xx vẫn theo tries (robots.txt: không thử lại)
+    const lim429 = Math.max(tries, backoff.length + 1);
+    const isRobots = /\/robots\.txt$/i.test(new URL(url).pathname);
+    for (let attempt = 1; ; attempt++) {
+      // ngắt mạch: máy chủ / nhóm đang giới hạn tần suất -> không gửi thêm yêu cầu, báo 429 ngay (kiểm tra cả sau khi chờ tới lượt)
+      if (isBlocked(fam, host)) {
+        stat.skipped++;
+        return SKIP();
       }
+      await slot(fam, g);
+      if (isBlocked(fam, host)) {
+        stat.skipped++;
+        return SKIP();
+      }
+      stat.count++;
+      const headers = Object.assign(
+        { "User-Agent": UA, Accept: "application/json, text/html;q=0.9, */*;q=0.5", "Accept-Language": "en-US,en;q=0.9,vi;q=0.8" },
+        init.headers || {},
+      );
+      let r;
+      try {
+        r = await fetchImpl(url, Object.assign({}, init, { headers, redirect: "follow", signal: AbortSignal.timeout(timeout) }));
+      } catch (e) {
+        if (attempt >= tries) throw e;
+        stat.retries++;
+        await nap(1500);
+        continue;
+      }
+      if (r.status === 429) {
+        stat.r429++;
+        const ra = retryAfterMs(r, clock());
+        const tooLong = ra != null && ra > maxWait; // máy chủ yêu cầu chờ lâu hơn mức cho phép: tôn trọng, không thử lại trong lượt chạy này
+        const late = deadline > 0 && clock() >= deadline; // đã hết ngân sách thời gian của lượt chạy
+        if (attempt >= lim429 || tooLong || late) {
+          blockedHost.set(host, { until: clock() + (tooLong ? Math.min(ra, BLOCK_MS) : BLOCK_MS), hard: tooLong });
+          const set = failHosts.get(fam) || new Set();
+          set.add(host);
+          failHosts.set(fam, set);
+          if (fam !== host && set.size >= breakHosts) blockedFam.set(fam, { until: clock() + BLOCK_MS, hard: false });
+          return r;
+        }
+        const base = ra != null ? ra : backoff[Math.min(attempt - 1, backoff.length - 1)];
+        cool(fam, Math.min(maxWait, Math.round(base * (1 + jitter()))));
+        stat.retries++;
+        continue; // slot() ở vòng sau chờ đúng tới mốc đã lùi
+      }
+      if (r.status >= 500 && attempt < tries) {
+        stat.retries++;
+        await nap(2500);
+        continue;
+      }
+      // nhóm trả lời bình thường cho một yêu cầu dữ liệu (không tính robots.txt) -> chưa phải bị chặn theo IP: xóa bộ đếm ngắt mạch
+      if (!isRobots && failHosts.has(fam)) failHosts.get(fam).clear();
       return r;
-    } catch (e) {
-      if (tries > 1) {
-        await sleep(1500);
-        return raw(url, init, tries - 1);
-      }
-      throw e;
     }
   }
   async function allowed(url) {
@@ -112,21 +209,34 @@ function makeHttp(opts) {
         (async () => {
           try {
             const r = await raw(key + "/robots.txt", { headers: { Accept: "text/plain,*/*" } }, 1);
+            if (r.status === 429 || r.status === 408) return { error: "robots " + r.status, temp: true }; // bị giới hạn tần suất: chưa biết luật
             if (r.status >= 400 && r.status < 500) return null; // không có robots.txt -> được phép
-            if (!r.ok) return { error: "robots " + r.status };
+            if (!r.ok) return { error: "robots " + r.status, temp: true };
             return parseRobots(await r.text());
           } catch (e) {
-            return { error: "robots " + (e.name === "TimeoutError" ? "timeout" : e.message) };
+            return { error: "robots " + (e.name === "TimeoutError" ? "timeout" : e.message), temp: true };
           }
         })(),
       );
     }
     const rules = await robots.get(key);
-    if (rules && rules.error) return false; // không đọc được robots.txt (5xx/mạng) -> thận trọng: bỏ qua lần này
+    if (rules && rules.error) {
+      if (rules.temp) robotsTemp.add(key);
+      return false; // không đọc được robots.txt (429/5xx/mạng) -> thận trọng: bỏ qua lần này
+    }
     return robotsAllowed(rules, u.pathname + u.search);
   }
   async function get(url, init = {}, kind = "json") {
     if (!(await allowed(url))) {
+      const u0 = new URL(url);
+      const rules = await robots.get(u0.protocol + "//" + u0.host);
+      if (rules && rules.error && rules.temp) {
+        // robots.txt tạm thời không đọc được: lỗi TẠM THỜI (được thử lại cuối lượt), không ghi nhận là "bị robots.txt chặn"
+        const m = /(\d{3})/.exec(rules.error);
+        const e = new Error(m ? "HTTP " + m[1] + " (robots.txt)" : "hết thời gian chờ (robots.txt)");
+        e.code = "ROBOTS_TEMP";
+        throw e;
+      }
       const e = new Error("robots.txt không cho phép");
       e.code = "ROBOTS";
       throw e;
@@ -157,7 +267,29 @@ function makeHttp(opts) {
         "json",
       ),
     allowed,
-    count: () => count,
+    count: () => stat.count,
+    stats: () => Object.assign({}, stat),
+    /** Mở lại các chốt ngắt mạch trước lượt thử lại cuối (chốt do Retry-After dài thì giữ nguyên cho tới hạn) */
+    resetBreakers: () => {
+      for (const m of [blockedHost, blockedFam]) for (const [k, b] of Array.from(m.entries())) if (!b.hard) m.delete(k);
+      failHosts.clear();
+    },
+    /** Nhóm / máy chủ đang bị ngắt mạch (để ghi vào báo cáo) */
+    blocked: () => {
+      const fams = Array.from(blockedFam.keys()).filter((k) => live(blockedFam, k));
+      const hosts = Array.from(blockedHost.keys()).filter((k) => live(blockedHost, k) && !fams.includes(familyOf(k)));
+      return fams.map((f) => "*." + f).concat(hosts);
+    },
+    /** Quên các robots.txt đọc lỗi tạm thời để lượt thử lại đọc lại từ đầu */
+    forgetRobotsErrors: async () => {
+      for (const [k, pr] of Array.from(robots.entries())) {
+        const v = await pr;
+        if (v && v.error && v.temp) {
+          robots.delete(k);
+          robotsTemp.delete(k);
+        }
+      }
+    },
   };
 }
 
@@ -688,7 +820,11 @@ async function run(args, deps = {}) {
     { vnLimit: 300, intlLimit: 20, keepStaleHours: 72, minRatio: 0.4, maxTotal: 4000, rediscoverDays: 7, concurrency: 6 },
     cfg.policy || {},
   );
-  const http = makeHttp({ fetchImpl: deps.fetchImpl, timeout: args.timeout, gap: args.gap });
+  // Ngân sách thời gian của cả lượt chạy (workflow GitHub Actions giới hạn 40 phút): quá mốc này không chờ / thử lại vì 429 nữa
+  const clock = deps.clock || (() => Date.now());
+  const deadline = clock() + (P.maxRunMs == null ? 25 * 60000 : P.maxRunMs);
+  const http = makeHttp({ fetchImpl: deps.fetchImpl, timeout: args.timeout, gap: args.gap, sleep: deps.sleep, clock, jitter: deps.jitter, deadline });
+  const nap = deps.sleep || (args.gap === 0 ? async () => {} : sleep); // gap = 0: chế độ kiểm thử, không chờ thật
   const prevById = new Map((prev.jobs || []).map((j) => [j.i, j]));
   const emps = empDoc.employers.filter((e) => !args.only.length || args.only.includes(e.id));
   const report = [];
@@ -785,6 +921,38 @@ async function run(args, deps = {}) {
     }),
   );
 
+  // Lượt thử lại: nhà tuyển dụng lỗi TẠM THỜI (bị giới hạn tần suất HTTP 429, máy chủ quá tải 5xx, hết thời gian chờ)
+  // được thử lại MỘT lần, tuần tự, sau thời gian nghỉ (policy.retryPassWaitMs, mặc định 45 giây)
+  const RETRY_RE = /^HTTP (429|5\d\d)|hết thời gian chờ/;
+  const again = args.probe ? [] : report.filter((r) => r.status === "error" && RETRY_RE.test(r.error));
+  let recovered = 0;
+  let retriedN = 0;
+  const wait = P.retryPassWaitMs == null ? 45000 : P.retryPassWaitMs;
+  if (again.length && clock() + wait >= deadline) {
+    log(`\nBỏ qua lượt thử lại (${again.length} nhà tuyển dụng lỗi tạm thời): đã hết ngân sách thời gian của lượt chạy.`);
+  } else if (again.length) {
+    log(`\nThử lại ${again.length} nhà tuyển dụng lỗi tạm thời (429 / 5xx / hết thời gian chờ) sau ${Math.round(wait / 1000)} giây...`);
+    await nap(wait);
+    await http.forgetRobotsErrors();
+    http.resetBreakers();
+    for (const old of again) {
+      if (clock() >= deadline) {
+        log("Dừng lượt thử lại: đã hết ngân sách thời gian của lượt chạy.");
+        break;
+      }
+      const emp = emps.find((e) => e.id === old.id);
+      const idx = report.indexOf(old);
+      if (!emp || idx < 0) continue;
+      report.splice(idx, 1);
+      await handle(emp);
+      const cur = report[report.length - 1];
+      cur.retried = true;
+      retriedN++;
+      if (cur.status === "ok" || cur.status === "empty") recovered++;
+    }
+    log(`Thử lại xong: phục hồi ${recovered}/${retriedN} nhà tuyển dụng.`);
+  }
+
   // Hợp nhất với dữ liệu cũ: giữ first_seen; nguồn lỗi -> giữ tin cũ tối đa keepStaleHours
   const okEmp = new Set(report.filter((r) => r.status === "ok" || r.status === "empty").map((r) => r.id));
   const byId = new Map();
@@ -847,6 +1015,18 @@ async function run(args, deps = {}) {
     updated_at: nowIso,
     policy: P,
     stats,
+    net: (() => {
+      const n = http.stats();
+      return {
+        requests: n.count,
+        rate_limited: n.r429,
+        retries: n.retries,
+        waited_s: Math.round(n.waitedMs / 1000),
+        skipped: n.skipped, // yêu cầu KHÔNG gửi vì máy chủ / nhóm đang bị ngắt mạch
+        blocked: http.blocked(),
+        retry_pass: { tried: retriedN, recovered },
+      };
+    })(),
     employers: report.sort((a, b) => a.id.localeCompare(b.id)).map((r) => ({ ...r, tried: r.tried.slice(0, 6) })),
   };
   if (!args.dryRun && !args.probe) {
@@ -870,7 +1050,7 @@ async function run(args, deps = {}) {
   return { jobs, meta, report: rep };
 }
 
-module.exports = { run, adapters, detectSources, careerLinks, parseRobots, robotsAllowed, countryOf, parseJsonLd, relDate, normalize, makeHttp, parseArgs };
+module.exports = { run, adapters, detectSources, careerLinks, parseRobots, robotsAllowed, countryOf, parseJsonLd, relDate, normalize, makeHttp, parseArgs, familyOf, retryAfterMs };
 
 if (require.main === module) {
   run(parseArgs(process.argv.slice(2))).catch((e) => {
