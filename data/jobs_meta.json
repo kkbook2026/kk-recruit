@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated_at": "2026-11-25T11:45:09.933Z",
+ "updated_at": "2026-11-25T20:30:09.303Z",
  "schedule_vn": [
   "06:17",
   "18:17"
@@ -9,10 +9,10 @@
   "vn-18-vng-corporation": 76,
   "global-14-pfizer": 31,
   "global-13-johnson-johnson": 24,
-  "global-28-salesforce": 20,
+  "global-04-amazon": 34,
   "global-15-jpmorgan-chase": 20,
   "global-26-oracle": 20,
-  "global-04-amazon": 34,
+  "global-28-salesforce": 20,
   "vn-25-intel-products-vietnam": 6,
   "global-29-netflix": 10,
   "global-30-nike": 29,
@@ -26,13 +26,13 @@
  "total": 404,
  "vn": 151,
  "intl": 253,
- "new_24h": 192,
+ "new_24h": 157,
  "employers_with_jobs": 16,
- "sources_ok": 10,
+ "sources_ok": 6,
  "employers_checked": 100,
- "requests": 291,
- "duration_s": 52,
- "kept_stale": 143,
+ "requests": 295,
+ "duration_s": 61,
+ "kept_stale": 214,
  "degraded": false,
  "runs": [
   {
@@ -349,6 +349,13 @@
    "vn": 151,
    "new": 192,
    "ok": 10
+  },
+  {
+   "at": "2026-11-25T20:30:09.303Z",
+   "total": 404,
+   "vn": 151,
+   "new": 157,
+   "ok": 6
   }
  ]
 }
