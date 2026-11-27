@@ -1,15 +1,15 @@
 {
  "v": 1,
- "updated_at": "2026-11-26T20:15:34.108Z",
+ "updated_at": "2026-11-27T05:06:17.689Z",
  "schedule_vn": [
   "06:17",
   "18:17"
  ],
  "by_employer": {
-  "vn-18-vng-corporation": 77,
+  "vn-18-vng-corporation": 79,
+  "global-28-salesforce": 20,
   "global-15-jpmorgan-chase": 20,
   "global-04-amazon": 34,
-  "global-28-salesforce": 20,
   "global-30-nike": 29,
   "global-21-pwc": 20,
   "global-42-sony": 20,
@@ -21,19 +21,18 @@
   "global-29-netflix": 10,
   "vn-25-intel-products-vietnam": 6,
   "global-47-tencent": 20,
-  "global-38-shell": 20,
   "vn-04-samsung-electronics-vietnam": 6
  },
- "total": 425,
- "vn": 152,
- "intl": 273,
- "new_24h": 172,
- "employers_with_jobs": 17,
- "sources_ok": 8,
+ "total": 407,
+ "vn": 154,
+ "intl": 253,
+ "new_24h": 174,
+ "employers_with_jobs": 16,
+ "sources_ok": 7,
  "employers_checked": 100,
- "requests": 294,
- "duration_s": 50,
- "kept_stale": 195,
+ "requests": 290,
+ "duration_s": 58,
+ "kept_stale": 204,
  "degraded": false,
  "runs": [
   {
@@ -378,6 +377,13 @@
    "vn": 152,
    "new": 172,
    "ok": 8
+  },
+  {
+   "at": "2026-11-27T05:06:17.689Z",
+   "total": 407,
+   "vn": 154,
+   "new": 174,
+   "ok": 7
   }
  ]
 }
