@@ -1,6 +1,6 @@
 {
  "v": 1,
- "updated_at": "2026-11-27T05:06:17.689Z",
+ "updated_at": "2026-11-27T11:26:51.361Z",
  "policy": {
   "vnLimit": 300,
   "intlLimit": 20,
@@ -11,16 +11,16 @@
   "concurrency": 6
  },
  "stats": {
-  "total": 407,
-  "vn": 154,
+  "total": 401,
+  "vn": 148,
   "intl": 253,
-  "new_24h": 174,
-  "employers_with_jobs": 16,
-  "sources_ok": 7,
+  "new_24h": 118,
+  "employers_with_jobs": 15,
+  "sources_ok": 6,
   "employers_checked": 100,
-  "requests": 290,
-  "duration_s": 58,
-  "kept_stale": 204,
+  "requests": 291,
+  "duration_s": 51,
+  "kept_stale": 218,
   "degraded": false
  },
  "employers": [
@@ -33,7 +33,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2734,
+   "ms": 2435,
    "error": "HTTP 404",
    "tried": []
   },
@@ -46,7 +46,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 890,
+   "ms": 908,
    "error": "HTTP 403",
    "tried": [
     {
@@ -65,7 +65,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2624,
+   "ms": 2482,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -78,7 +78,7 @@
    "jobs": 34,
    "vn": 14,
    "total": 10000,
-   "ms": 3227,
+   "ms": 1980,
    "error": "",
    "tried": [
     {
@@ -97,7 +97,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2108,
+   "ms": 2003,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -110,7 +110,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3397,
+   "ms": 3355,
    "error": "HTTP 429",
    "tried": [
     {
@@ -129,7 +129,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 4875,
+   "ms": 833,
    "error": "HTTP 403",
    "tried": []
   },
@@ -142,7 +142,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3132,
+   "ms": 3594,
    "error": "HTTP 429",
    "tried": [
     {
@@ -161,7 +161,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 1009,
+   "ms": 1281,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -174,7 +174,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 1213,
+   "ms": 1541,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -187,7 +187,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3139,
+   "ms": 3658,
    "error": "HTTP 429",
    "tried": [
     {
@@ -206,7 +206,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2731,
+   "ms": 3766,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -219,7 +219,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3391,
+   "ms": 3364,
    "error": "HTTP 429",
    "tried": [
     {
@@ -238,7 +238,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3409,
+   "ms": 3343,
    "error": "HTTP 429",
    "tried": [
     {
@@ -256,8 +256,8 @@
    "source": "oracle:jpmc/CX_1001",
    "jobs": 20,
    "vn": 0,
-   "total": 6727,
-   "ms": 7942,
+   "total": 6738,
+   "ms": 7062,
    "error": "",
    "tried": [
     {
@@ -276,7 +276,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 844,
+   "ms": 870,
    "error": "HTTP 403",
    "tried": []
   },
@@ -289,7 +289,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 20002,
+   "ms": 20001,
    "error": "robots.txt chặn trang tuyển dụng",
    "tried": []
   },
@@ -302,7 +302,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2049,
+   "ms": 1474,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -315,7 +315,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2481,
+   "ms": 2574,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -328,7 +328,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2484,
+   "ms": 2449,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -341,7 +341,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3174,
+   "ms": 3548,
    "error": "HTTP 429",
    "tried": [
     {
@@ -360,7 +360,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 1707,
+   "ms": 1800,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -373,7 +373,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 1702,
+   "ms": 1657,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -386,7 +386,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3991,
+   "ms": 4361,
    "error": "HTTP 429",
    "tried": [
     {
@@ -405,7 +405,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 990,
+   "ms": 901,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -417,8 +417,8 @@
    "source": "oracle:eeho/CX_45001",
    "jobs": 20,
    "vn": 0,
-   "total": 2878,
-   "ms": 9069,
+   "total": 2879,
+   "ms": 9782,
    "error": "",
    "tried": [
     {
@@ -437,7 +437,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 817,
+   "ms": 808,
    "error": "HTTP 403",
    "tried": []
   },
@@ -445,18 +445,18 @@
    "id": "global-28-salesforce",
    "name": "Salesforce",
    "region": "GLOBAL",
-   "status": "ok",
-   "source": "workday:salesforce/External_Career_Site",
-   "jobs": 20,
+   "status": "error",
+   "source": "",
+   "jobs": 0,
    "vn": 0,
-   "total": 1584,
-   "ms": 2173,
-   "error": "",
+   "total": 0,
+   "ms": 3359,
+   "error": "HTTP 429",
    "tried": [
     {
-     "key": "workday:salesforce/External_Career_Site",
-     "ok": true,
-     "jobs": 20
+     "key": "workday:External_Career_Site",
+     "ok": false,
+     "error": "HTTP 429"
     }
    ]
   },
@@ -468,8 +468,8 @@
    "source": "eightfold:netflix.com",
    "jobs": 10,
    "vn": 0,
-   "total": 450,
-   "ms": 1856,
+   "total": 451,
+   "ms": 1755,
    "error": "",
    "tried": [
     {
@@ -488,7 +488,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3393,
+   "ms": 3349,
    "error": "HTTP 429",
    "tried": [
     {
@@ -507,7 +507,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3407,
+   "ms": 3352,
    "error": "HTTP 429",
    "tried": [
     {
@@ -526,7 +526,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 4149,
+   "ms": 3397,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -539,7 +539,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 814,
+   "ms": 837,
    "error": "HTTP 403",
    "tried": []
   },
@@ -552,7 +552,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2445,
+   "ms": 2475,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -565,7 +565,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2637,
+   "ms": 3081,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -578,7 +578,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2562,
+   "ms": 2661,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -591,7 +591,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 1081,
+   "ms": 1009,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -604,7 +604,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3994,
+   "ms": 4369,
    "error": "HTTP 429",
    "tried": [
     {
@@ -623,7 +623,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2640,
+   "ms": 2750,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -636,7 +636,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 908,
+   "ms": 973,
    "error": "HTTP 403",
    "tried": []
   },
@@ -649,7 +649,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 881,
+   "ms": 864,
    "error": "HTTP 403",
    "tried": []
   },
@@ -662,7 +662,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3423,
+   "ms": 3361,
    "error": "HTTP 429",
    "tried": [
     {
@@ -681,7 +681,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3466,
+   "ms": 3351,
    "error": "HTTP 429",
    "tried": [
     {
@@ -700,7 +700,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 845,
+   "ms": 840,
    "error": "HTTP 403",
    "tried": []
   },
@@ -713,7 +713,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 947,
+   "ms": 842,
    "error": "HTTP 403",
    "tried": []
   },
@@ -726,7 +726,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 1886,
+   "ms": 6073,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -738,8 +738,8 @@
    "source": "tencent",
    "jobs": 20,
    "vn": 0,
-   "total": 2047,
-   "ms": 2606,
+   "total": 2049,
+   "ms": 1464,
    "error": "",
    "tried": [
     {
@@ -758,7 +758,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 7946,
+   "ms": 2794,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -771,7 +771,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 4009,
+   "ms": 3237,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -784,7 +784,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2660,
+   "ms": 2750,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -797,7 +797,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2699,
+   "ms": 2496,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -810,7 +810,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 4942,
+   "ms": 3335,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -823,7 +823,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 1616,
+   "ms": 1816,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -836,7 +836,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3878,
+   "ms": 5645,
    "error": "HTTP 429",
    "tried": [
     {
@@ -855,7 +855,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 826,
+   "ms": 836,
    "error": "HTTP 403",
    "tried": []
   },
@@ -868,7 +868,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 1391,
+   "ms": 1127,
    "error": "HTTP 403",
    "tried": []
   },
@@ -881,7 +881,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 1571,
+   "ms": 1176,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -894,7 +894,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3375,
+   "ms": 3562,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -907,7 +907,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 10354,
+   "ms": 6421,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -920,7 +920,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 1208,
+   "ms": 805,
    "error": "HTTP 405",
    "tried": []
   },
@@ -933,7 +933,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 4702,
+   "ms": 3827,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -946,7 +946,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 843,
+   "ms": 937,
    "error": "HTTP 403",
    "tried": []
   },
@@ -959,7 +959,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 1618,
+   "ms": 1428,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -972,7 +972,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 4896,
+   "ms": 3442,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -985,7 +985,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3866,
+   "ms": 2893,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -998,7 +998,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 4145,
+   "ms": 1914,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1011,7 +1011,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2363,
+   "ms": 1484,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1024,7 +1024,7 @@
    "jobs": 79,
    "vn": 75,
    "total": 79,
-   "ms": 10360,
+   "ms": 9310,
    "error": "",
    "tried": [
     {
@@ -1043,7 +1043,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 6068,
+   "ms": 5239,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1056,7 +1056,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 4915,
+   "ms": 3684,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1069,7 +1069,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3466,
+   "ms": 3679,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1082,7 +1082,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2475,
+   "ms": 1871,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1095,7 +1095,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3962,
+   "ms": 4524,
    "error": "HTTP 429",
    "tried": [
     {
@@ -1114,7 +1114,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 888,
+   "ms": 843,
    "error": "HTTP 403",
    "tried": []
   },
@@ -1127,7 +1127,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 4071,
+   "ms": 3393,
    "error": "HTTP 429",
    "tried": [
     {
@@ -1146,7 +1146,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 92,
+   "ms": 86,
    "error": "robots.txt không cho phép",
    "tried": [
     {
@@ -1165,7 +1165,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 1132,
+   "ms": 937,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1178,7 +1178,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 1051,
+   "ms": 979,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1191,7 +1191,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2634,
+   "ms": 1248,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1204,7 +1204,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 870,
+   "ms": 805,
    "error": "HTTP 403",
    "tried": []
   },
@@ -1217,7 +1217,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2738,
+   "ms": 2004,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1230,7 +1230,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 813,
+   "ms": 811,
    "error": "HTTP 403",
    "tried": []
   },
@@ -1243,7 +1243,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 11718,
+   "ms": 12231,
    "error": "robots.txt chặn trang tuyển dụng",
    "tried": []
   },
@@ -1256,7 +1256,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 6962,
+   "ms": 5103,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1269,7 +1269,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 4181,
+   "ms": 4184,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1282,7 +1282,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3600,
+   "ms": 3705,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1295,7 +1295,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 4285,
+   "ms": 4507,
    "error": "HTTP 429",
    "tried": [
     {
@@ -1314,7 +1314,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2611,
+   "ms": 2603,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1327,7 +1327,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3720,
+   "ms": 4851,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1340,7 +1340,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3869,
+   "ms": 4680,
    "error": "HTTP 429",
    "tried": [
     {
@@ -1359,7 +1359,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3803,
+   "ms": 2591,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1372,7 +1372,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 5165,
+   "ms": 3550,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1385,7 +1385,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3891,
+   "ms": 3689,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1398,7 +1398,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 1522,
+   "ms": 827,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1411,7 +1411,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2709,
+   "ms": 3296,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1424,7 +1424,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 2334,
+   "ms": 1980,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   },
@@ -1437,7 +1437,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 839,
+   "ms": 849,
    "error": "HTTP 403",
    "tried": []
   },
@@ -1450,7 +1450,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 1179,
+   "ms": 1139,
    "error": "HTTP 403",
    "tried": []
   },
@@ -1463,7 +1463,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 842,
+   "ms": 830,
    "error": "HTTP 403",
    "tried": []
   },
@@ -1476,7 +1476,7 @@
    "jobs": 0,
    "vn": 0,
    "total": 0,
-   "ms": 3815,
+   "ms": 2895,
    "error": "chưa có kênh dữ liệu máy đọc được",
    "tried": []
   }
