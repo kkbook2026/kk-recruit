@@ -1,15 +1,15 @@
 {
  "v": 1,
- "updated_at": "2026-11-28T04:45:19.291Z",
+ "updated_at": "2026-11-28T10:54:26.543Z",
  "schedule_vn": [
   "06:17",
   "18:17"
  ],
  "by_employer": {
   "global-26-oracle": 20,
+  "global-15-jpmorgan-chase": 20,
   "vn-18-vng-corporation": 79,
   "global-28-salesforce": 20,
-  "global-15-jpmorgan-chase": 20,
   "global-04-amazon": 34,
   "global-30-nike": 29,
   "global-21-pwc": 20,
@@ -25,12 +25,12 @@
  "total": 401,
  "vn": 148,
  "intl": 253,
- "new_24h": 63,
+ "new_24h": 61,
  "employers_with_jobs": 15,
  "sources_ok": 6,
  "employers_checked": 100,
- "requests": 288,
- "duration_s": 227,
+ "requests": 262,
+ "duration_s": 222,
  "kept_stale": 218,
  "degraded": false,
  "runs": [
@@ -403,6 +403,13 @@
    "total": 401,
    "vn": 148,
    "new": 63,
+   "ok": 6
+  },
+  {
+   "at": "2026-11-28T10:54:26.543Z",
+   "total": 401,
+   "vn": 148,
+   "new": 61,
    "ok": 6
   }
  ]
